@@ -94,21 +94,23 @@ def save_urls_to_file(urls, file_path, mode='a'):
 def main():
     """主函数"""
     print("=" * 60)
-    print("图片 URL 提取工具")
+    print("图片 URL 提取工具（支持批量处理）")
     print("=" * 60)
 
     # 检查命令行参数
     if len(sys.argv) >= 2:
         # 命令行模式
-        page_url = sys.argv[1]
+        page_urls_input = sys.argv[1]
         save_mode = 'w' if (len(sys.argv) >= 3 and sys.argv[2] == '2') else 'a'
-        print(f"\n[命令行模式] URL: {page_url}")
+        print(f"\n[命令行模式]")
     else:
         # 交互模式
         # 获取用户输入的 URL
-        page_url = input("\n请输入网页 URL: ").strip()
+        print("\n提示：可以输入多个 URL，用逗号分隔")
+        print("示例：http://example.com/page1, http://example.com/page2")
+        page_urls_input = input("\n请输入网页 URL: ").strip()
 
-        if not page_url:
+        if not page_urls_input:
             print("错误: URL 不能为空")
             return
 
@@ -120,41 +122,71 @@ def main():
 
         save_mode = 'w' if mode_choice == '2' else 'a'
 
-    # 验证 URL 格式
-    parsed = urlparse(page_url)
-    if not parsed.scheme or not parsed.netloc:
-        print("错误: URL 格式不正确，请输入完整的 URL（如 http://example.com）")
+    # 分割多个 URL（用逗号分隔）
+    page_urls = [url.strip() for url in page_urls_input.split(',') if url.strip()]
+
+    if not page_urls:
+        print("错误: 没有有效的 URL")
         return
+
+    print(f"\n共找到 {len(page_urls)} 个网页 URL 待处理")
 
     mode_text = "覆盖" if save_mode == 'w' else "追加"
 
-    print(f"\n正在获取网页内容: {page_url}")
+    # 汇总所有图片 URL
+    all_image_urls = []
 
-    # 获取网页内容
-    html_content = fetch_webpage(page_url)
-    if not html_content:
-        print("无法获取网页内容，请检查 URL 是否正确")
+    # 处理每个 URL
+    for idx, page_url in enumerate(page_urls, 1):
+        print("\n" + "=" * 60)
+        print(f"正在处理 [{idx}/{len(page_urls)}]: {page_url}")
+        print("=" * 60)
+
+        # 验证 URL 格式
+        parsed = urlparse(page_url)
+        if not parsed.scheme or not parsed.netloc:
+            print(f"[警告] URL 格式不正确，跳过: {page_url}")
+            continue
+
+        # 获取网页内容
+        html_content = fetch_webpage(page_url)
+        if not html_content:
+            print(f"[警告] 无法获取网页内容，跳过: {page_url}")
+            continue
+
+        print(f"网页内容获取成功，大小: {len(html_content)} 字符")
+
+        # 提取图片 URL
+        print("正在提取图片 URL...")
+        image_urls = extract_image_urls(html_content, page_url)
+
+        if not image_urls:
+            print("未找到任何图片 URL")
+            continue
+
+        print(f"找到 {len(image_urls)} 个图片 URL:")
+        print("-" * 60)
+        for url_idx, url in enumerate(image_urls, 1):
+            print(f"{url_idx}. {url}")
+        print("-" * 60)
+
+        # 添加到总列表
+        all_image_urls.extend(image_urls)
+
+    # 汇总结果
+    print("\n" + "=" * 60)
+    print("批量处理完成")
+    print("=" * 60)
+
+    if not all_image_urls:
+        print("所有网页均未找到图片 URL")
         return
 
-    print(f"网页内容获取成功，大小: {len(html_content)} 字符")
-
-    # 提取图片 URL
-    print("\n正在提取图片 URL...")
-    image_urls = extract_image_urls(html_content, page_url)
-
-    if not image_urls:
-        print("未找到任何图片 URL")
-        return
-
-    print(f"\n找到 {len(image_urls)} 个图片 URL:")
-    print("-" * 60)
-    for idx, url in enumerate(image_urls, 1):
-        print(f"{idx}. {url}")
-    print("-" * 60)
+    print(f"\n总共找到 {len(all_image_urls)} 个图片 URL")
 
     # 保存到文件
     print(f"\n正在保存到文件 ({mode_text}模式): {OUTPUT_FILE}")
-    saved_count = save_urls_to_file(image_urls, OUTPUT_FILE, mode=save_mode)
+    saved_count = save_urls_to_file(all_image_urls, OUTPUT_FILE, mode=save_mode)
 
     if saved_count > 0:
         print(f"\n[成功] 已保存 {saved_count} 个图片 URL 到 {OUTPUT_FILE}")
