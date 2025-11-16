@@ -1,0 +1,269 @@
+{
+  "84": {
+    "inputs": {
+      "clip_name": "umt5_xxl_fp8_e4m3fn_scaled.safetensors",
+      "type": "wan",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "加载CLIP"
+    }
+  },
+  "85": {
+    "inputs": {
+      "add_noise": "disable",
+      "noise_seed": 0,
+      "steps": 4,
+      "cfg": 1,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "start_at_step": 2,
+      "end_at_step": 4,
+      "return_with_leftover_noise": "disable",
+      "model": [
+        "103",
+        0
+      ],
+      "positive": [
+        "98",
+        0
+      ],
+      "negative": [
+        "98",
+        1
+      ],
+      "latent_image": [
+        "86",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced",
+    "_meta": {
+      "title": "K采样器（高级）"
+    }
+  },
+  "86": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 436598171524569,
+      "steps": 4,
+      "cfg": 1,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "start_at_step": 0,
+      "end_at_step": 2,
+      "return_with_leftover_noise": "enable",
+      "model": [
+        "104",
+        0
+      ],
+      "positive": [
+        "98",
+        0
+      ],
+      "negative": [
+        "98",
+        1
+      ],
+      "latent_image": [
+        "98",
+        2
+      ]
+    },
+    "class_type": "KSamplerAdvanced",
+    "_meta": {
+      "title": "K采样器（高级）"
+    }
+  },
+  "87": {
+    "inputs": {
+      "samples": [
+        "85",
+        0
+      ],
+      "vae": [
+        "90",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "89": {
+    "inputs": {
+      "text": "色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走",
+      "clip": [
+        "84",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Negative Prompt)"
+    }
+  },
+  "90": {
+    "inputs": {
+      "vae_name": "wan_2.1_vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "加载VAE"
+    }
+  },
+  "93": {
+    "inputs": {
+      "text": "Traditional Chinese line drawing illustration style, black ink on aged paper texture, classical folklore narrative aesthetic, ominous court conspiracy scene depicting Shang dynasty's response to rising Zhou threat, upper portion featuring rectangular banner or tapestry displaying mythical creature, banner showing龙 dragon or beast in dynamic running pose rendered in bold flowing lines with swirling decorative elements, creature's supernatural form suggesting divine or demonic forces, banner's decorative geometric borders framing mythical image, tapestry creating auspicious or threatening symbolism depending on interpretation, banner positioned between two decorative pillars with云纹 cloud pattern borders creating formal frame, pillars rendered in outlined style with geometric Greek key patterns emphasizing palace architecture, left side dominated by ornate ceremonial candelabra or torch stand with multiple tiers, candelabra featuring elaborate branching arms holding flames rendered as pointed shapes, candelabra's ornate base with decorative patterns showing palace luxury, flames creating atmospheric lighting suggesting nighttime or indoor setting, left showing闻太师 Grand Preceptor Wen Zhong seated on ornate throne or chair在朝辅佐纣王 at court assisting King Zhou, Wen Zhong wearing elaborate dark ministerial robes with intricate decorative patterns including spiral and geometric motifs, minister's distinctive fierce官帽 ceremonial cap with unique architectural elements suggesting high rank and supernatural affiliation, Wen Zhong's robust powerful physique showing martial authority beyond typical scholarly minister, minister's facial features showing stern determined expression with distinctive beard and fierce eyes, one hand raised in commanding gesture showing authority, other hand holding ceremonial implement or positioned on armrest, Wen Zhong seated on elaborate chair with geometric云纹 cloud and ruyi pattern decorations showing ministerial status, minister's entire bearing radiating power and determination as he听说姜子牙在西周为相扶助武王 hears that Jiang Ziya serves as Chancellor in Western Zhou assisting King Wu, sense of dangerous capable minister recognizing serious threat to Shang dynasty, Wen Zhong's expression showing恐有后患 fear of future troubles, minister's body language suggesting he is formulating response strategy, cosmic significance as Shang's most capable minister recognizes Zhou's acquisition of supernatural strategist as existential threat, center showing ornate ceremonial altar or table with ritual implements, altar rendered with geometric patterns and decorative elements, small ritual vessel visible on altar suggesting ceremonial or divination context, altar creating formal sacred space for important court deliberations, right side showing King Zhou纣王 seated on elevated throne in magnificent imperial robes, tyrant king wearing elaborate ceremonial dress with rich decorative patterns, King Zhou's distinctive tall royal crown showing sovereign authority, king's characteristic appearance showing mixture of imperial majesty and underlying corruption, tyrant's posture commanding but also showing he relies heavily on Wen Zhong's counsel, sense of corrupt sovereign depending on capable minister to maintain power, King Zhou listening to Wen Zhong's concerns about Western Zhou threat, spatial arrangement showing minister and king in strategic consultation, sense of Shang court plotting response to emerging Zhou challenge, Wen Zhong's plan visible in narrative要去九龙岛请道友攻打西岐 wanting to go to Nine Dragon Island to invite Daoist friends to attack Xiqi, minister recognizing supernatural threat requires supernatural response, famous decision to recruit道友 fellow Daoists showing conflict escalating to divine warfare, sense of capable minister understanding Jiang Ziya's supernatural nature requires equally powerful opposition, ironic parallel as both sides recruit supernatural allies for cosmic battle, Wen Zhong's determination to去九龙岛 go to Nine Dragon Island showing personal commitment to confronting threat, minister's strategic thinking recognizing need for攻打西岐 attacking Xiqi before Zhou grows stronger, fateful decision setting stage for supernatural battles between Daoist immortals on opposing sides, cosmic conflict expanding as earthly political struggle becomes arena for divine warfare, ground showing ornate palace floor with geometric patterns suggesting formal throne room, scattered decorative elements creating luxurious imperial setting, entire composition radiating ominous atmosphere of powerful forces mobilizing for conflict, sense of capable dangerous opposition recognizing Jiang Ziya's appointment as turning point requiring immediate response, contrast between righteous Zhou court with humble sage and corrupt Shang court with fierce minister, animated subtle movements showing Wen Zhong's commanding gesture explaining threat and strategy, King Zhou's attentive listening showing he trusts minister's judgment, sense of court deliberation as powerful figures plot countermeasures, flames flickering creating dramatic shadows, dragon banner overhead symbolizing supernatural forces being invoked, monochromatic sepia tones with dramatic contrasts creating atmosphere of ominous power and dangerous conspiracy, vintage aged paper with historical weathering lending authenticity to legendary court conspiracy scene, classical Chinese palace intrigue illustration aesthetic emphasizing supernatural dimensions of political conflict, masterpiece folkloric opposing forces scene showing tyrannical dynasty's response to righteous challenge, 4k quality, legendary counter-strategy moment visualization, cosmic conflict escalating as Grand Preceptor Wen Zhong闻太师在朝辅佐纣王 serving at court assisting King Zhou听说姜子牙在西周为相扶助武王 hears that Jiang Ziya serves as Chancellor in Western Zhou helping King Wu恐有后患 fearing future troubles决定要去九龙岛请道友攻打西岐 decides to go to Nine Dragon Island to invite Daoist friends to attack Xiqi, capable minister's strategic response recognizing supernatural threat requires supernatural solution, fateful decision beginning recruitment of opposing Daoist immortals transforming political conflict into cosmic battle between divine forces aligned with tyrannical Shang dynasty versus heaven-mandated Zhou dynasty, Wen Zhong's九龙岛 Nine Dragon Island mission setting stage for legendary supernatural warfare that will determine China's dynastic fate",
+      "clip": [
+        "84",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Positive Prompt)"
+    }
+  },
+  "94": {
+    "inputs": {
+      "fps": 16,
+      "images": [
+        "87",
+        0
+      ]
+    },
+    "class_type": "CreateVideo",
+    "_meta": {
+      "title": "创建视频"
+    }
+  },
+  "95": {
+    "inputs": {
+      "unet_name": "wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "96": {
+    "inputs": {
+      "unet_name": "wan2.2_i2v_low_noise_14B_fp8_scaled.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "97": {
+    "inputs": {
+      "image": "51.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "98": {
+    "inputs": {
+      "width": 832,
+      "height": 640,
+      "length": 121,
+      "batch_size": 1,
+      "positive": [
+        "93",
+        0
+      ],
+      "negative": [
+        "89",
+        0
+      ],
+      "vae": [
+        "90",
+        0
+      ],
+      "start_image": [
+        "97",
+        0
+      ]
+    },
+    "class_type": "WanImageToVideo",
+    "_meta": {
+      "title": "Wan图像到视频"
+    }
+  },
+  "101": {
+    "inputs": {
+      "lora_name": "wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors",
+      "strength_model": 1.0000000000000002,
+      "model": [
+        "95",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "102": {
+    "inputs": {
+      "lora_name": "wan2.2_i2v_lightx2v_4steps_lora_v1_low_noise.safetensors",
+      "strength_model": 1.0000000000000002,
+      "model": [
+        "96",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "103": {
+    "inputs": {
+      "shift": 5.000000000000001,
+      "model": [
+        "102",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingSD3",
+    "_meta": {
+      "title": "采样算法（SD3）"
+    }
+  },
+  "104": {
+    "inputs": {
+      "shift": 5.000000000000001,
+      "model": [
+        "101",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingSD3",
+    "_meta": {
+      "title": "采样算法（SD3）"
+    }
+  },
+  "108": {
+    "inputs": {
+      "filename_prefix": "video/ComfyUI",
+      "format": "auto",
+      "codec": "auto",
+      "video": [
+        "94",
+        0
+      ]
+    },
+    "class_type": "SaveVideo",
+    "_meta": {
+      "title": "保存视频"
+    }
+  }
+}

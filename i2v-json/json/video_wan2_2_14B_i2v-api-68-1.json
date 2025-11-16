@@ -1,0 +1,269 @@
+{
+  "84": {
+    "inputs": {
+      "clip_name": "umt5_xxl_fp8_e4m3fn_scaled.safetensors",
+      "type": "wan",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "加载CLIP"
+    }
+  },
+  "85": {
+    "inputs": {
+      "add_noise": "disable",
+      "noise_seed": 0,
+      "steps": 4,
+      "cfg": 1,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "start_at_step": 2,
+      "end_at_step": 4,
+      "return_with_leftover_noise": "disable",
+      "model": [
+        "103",
+        0
+      ],
+      "positive": [
+        "98",
+        0
+      ],
+      "negative": [
+        "98",
+        1
+      ],
+      "latent_image": [
+        "86",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced",
+    "_meta": {
+      "title": "K采样器（高级）"
+    }
+  },
+  "86": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 436598171524569,
+      "steps": 4,
+      "cfg": 1,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "start_at_step": 0,
+      "end_at_step": 2,
+      "return_with_leftover_noise": "enable",
+      "model": [
+        "104",
+        0
+      ],
+      "positive": [
+        "98",
+        0
+      ],
+      "negative": [
+        "98",
+        1
+      ],
+      "latent_image": [
+        "98",
+        2
+      ]
+    },
+    "class_type": "KSamplerAdvanced",
+    "_meta": {
+      "title": "K采样器（高级）"
+    }
+  },
+  "87": {
+    "inputs": {
+      "samples": [
+        "85",
+        0
+      ],
+      "vae": [
+        "90",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "89": {
+    "inputs": {
+      "text": "色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走",
+      "clip": [
+        "84",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Negative Prompt)"
+    }
+  },
+  "90": {
+    "inputs": {
+      "vae_name": "wan_2.1_vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "加载VAE"
+    }
+  },
+  "93": {
+    "inputs": {
+      "text": "Traditional Chinese line drawing illustration style, black ink on aged paper texture, classical folklore narrative aesthetic, explosive decisive combat scene depicting divine youth warrior's devastating magical ring strike killing second remaining Nine Dragon Island Daoist, scattered decorative云纹 cloud formations in solid black with swirling ruyi patterns positioned in upper corners suggesting heavenly witness to cosmic justice, clouds creating supernatural atmospheric battlefield, left side showing杨森 Yang Sen second surviving Nine Dragon Island Daoist on monstrous beast in moment of catastrophic fatal impact, Yang Sen wearing elaborate dark Daoist robes with intricate decorative patterns showing immortal cultivator status now in violent disarray, cultivator's expression frozen in shock and death as devastating blow strikes, critically showing explosive impact moment as乾坤圈 Qiankun Circle Heaven-Earth Ring strikes Yang Sen, impact visualization rendered as massive explosive starburst pattern with radiating lines showing tremendous supernatural force release, explosion centered on Yang Sen's body showing devastating crushing impact, sense of magical ring's tremendous kinetic energy crushing immortal cultivator, Yang Sen's body recoiling violently from powerful strike showing被砸死 being smashed to death, cultivator's limbs splayed showing instant death from overwhelming force, Yang Sen mounted on fierce monstrous beast possibly Jiaoni狡猊 rendered with leonine or chimeric features, beast's powerful form showing supernatural nature with elaborate mane and fierce expression, creature in shocked reaction to rider's sudden violent death, monstrous mount's aggressive stance transformed to confusion as master killed, beast possibly rearing or stumbling from impact shockwave, sense of supernatural creature powerless to prevent rider's death, upper center showing spectacular curved trajectory line representing乾坤圈 Qiankun Circle's flight path, curved line rendered as elegant flowing arc showing magical ring's supernatural guidance, trajectory creating graceful curve from Nezha to impact point, ring's path emphasizing precision and supernatural control, upper right showing哪吒 Nezha divine youth warrior in commanding throwing pose, Nezha wearing distinctive armor with decorative patterns showing supernatural warrior status, young deity's fierce determined expression showing combat prowess, Nezha's characteristic youthful appearance as divine child warrior, critically showing Nezha丢起乾坤圈 throwing up Qiankun Circle magical implement in devastating attack, divine youth's powerful throwing motion with arm extended showing perfect technique, Nezha's posture dynamic showing he has just released magical ring with tremendous force, sense of divine warrior's supernatural strength propelling ring with devastating velocity, Nezha possibly riding云 cloud formation or standing in combat stance, divine youth's confident bearing showing he knows strike will be fatal, 乾坤圈 Qiankun Circle visible as circular ring object possibly shown in flight or at impact, magical ring rendered as solid circular implement with supernatural properties, ring's name Heaven-Earth Circle suggesting cosmic-level power, implement representing one of Nezha's signature divine weapons, ring's tremendous mass and magical enhancement creating devastating kinetic impact, sense of magical treasure specifically designed for crushing blows not cutting strikes, lower portion showing stylized ground rendered with flowing curved patterns suggesting battlefield terrain, scattered decorative云纹 motifs near ground level suggesting supernatural energy permeating battlefield, ground elements creating foundation for combat while allowing focus on explosive aerial strike, cosmic significance as third九龙岛道人 Nine Dragon Island Daoist killed reducing Shang-allied forces from two survivors to single remaining cultivator李兴霸 Li Xingba, strategic importance as Zhou forces systematically eliminate enemy immortals through superior divine weapons and coordinated tactics, Yang Sen's instant death through被砸死 being smashed demonstrating乾坤圈 Qiankun Circle's devastating crushing power, magical ring proving as effective as打神鞭 God-Striking Whip and金吒's sword in killing accomplished Daoist immortals, famous victory showing multiple divine champions possess devastating implements, Nezha's participation demonstrating young deity has recovered from earlier defeat by开天珠 Heaven-Opening Pearl, divine youth's return to combat showing resilience and determination, ironic reversal as Nezha who was knocked off风火轮 Wind Fire Wheels now successfully kills Yang Sen who participated in that earlier assault, cosmic justice as Yang Sen's earlier aggression结果 results in his own death, sense of coordinated Zhou assault with multiple divine champions working together, Jiang Ziya's leadership enabling effective tactical coordination, remaining single Daoist李兴霸 Li Xingba now facing overwhelming opposition alone, famous scene demonstrating escalating divine warfare where increasingly powerful implements deployed, Nezha's乾坤圈 representing additional devastating weapon in Zhou arsenal, magical ring's crushing impact creating different killing method from sword decapitation or鞭 whip strike, diversity of divine weapons showing Zhou forces possess complete supernatural arsenal, Yang Sen's death marking continued momentum shift toward Zhou victory, animated explosive dynamic movements showing Nezha's powerful throwing motion with full body commitment, divine youth's arm extending in perfect throwing arc, 乾坤圈 magical ring flying through air with tremendous velocity, ring guided by supernatural force toward precise target, magical implement striking Yang Sen with devastating explosive impact, crushing force creating massive shockwave visualization, Yang Sen's body violently crushed and thrown by tremendous kinetic energy, cultivator's instant death from overwhelming blunt force trauma, monstrous beast rearing in shock and panic, creature's confusion as rider suddenly killed, clouds swirling from supernatural energies released, explosive impact radiating outward showing tremendous force, sense of devastating single strike achieving instant fatal result, cosmic power manifesting as simple ring becomes devastating weapon in divine warrior's hands, monochromatic sepia tones with dramatic contrasts creating visual impact of explosive crushing strike, vintage aged paper with historical weathering lending authenticity to legendary decisive combat scene, classical Chinese divine warfare devastating strike illustration aesthetic emphasizing magical implement's overwhelming power, masterpiece folkloric fatal crushing blow scene showing divine weapon's devastating effectiveness, 4k quality, legendary Qiankun Circle strike visualization, cosmic victory as Nezha哪吒丢起乾坤圈 throwing up Heaven-Earth Circle把杨森砸死 smashing Yang Sen to death, famous devastating strike killing third九龙岛道人 Nine Dragon Island Daoist leaving only李兴霸 Li Xingba surviving, magical ring demonstrating tremendous crushing power in divine youth warrior's hands, systematic elimination of Shang-allied immortals showing Zhou forces' overwhelming superiority through coordinated tactics superior divine weapons and Buddhist enlightened beings' support, escalating cosmic warfare determining China's dynastic future through devastating effectiveness of multiple divine implements wielded by increasingly powerful supernatural champions systematically destroying opposition in heaven-mandated campaign for righteous Zhou victory over tyrannical Shang dynasty",
+      "clip": [
+        "84",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Positive Prompt)"
+    }
+  },
+  "94": {
+    "inputs": {
+      "fps": 16,
+      "images": [
+        "87",
+        0
+      ]
+    },
+    "class_type": "CreateVideo",
+    "_meta": {
+      "title": "创建视频"
+    }
+  },
+  "95": {
+    "inputs": {
+      "unet_name": "wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "96": {
+    "inputs": {
+      "unet_name": "wan2.2_i2v_low_noise_14B_fp8_scaled.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "97": {
+    "inputs": {
+      "image": "68.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "98": {
+    "inputs": {
+      "width": 832,
+      "height": 640,
+      "length": 121,
+      "batch_size": 1,
+      "positive": [
+        "93",
+        0
+      ],
+      "negative": [
+        "89",
+        0
+      ],
+      "vae": [
+        "90",
+        0
+      ],
+      "start_image": [
+        "97",
+        0
+      ]
+    },
+    "class_type": "WanImageToVideo",
+    "_meta": {
+      "title": "Wan图像到视频"
+    }
+  },
+  "101": {
+    "inputs": {
+      "lora_name": "wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors",
+      "strength_model": 1.0000000000000002,
+      "model": [
+        "95",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "102": {
+    "inputs": {
+      "lora_name": "wan2.2_i2v_lightx2v_4steps_lora_v1_low_noise.safetensors",
+      "strength_model": 1.0000000000000002,
+      "model": [
+        "96",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "103": {
+    "inputs": {
+      "shift": 5.000000000000001,
+      "model": [
+        "102",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingSD3",
+    "_meta": {
+      "title": "采样算法（SD3）"
+    }
+  },
+  "104": {
+    "inputs": {
+      "shift": 5.000000000000001,
+      "model": [
+        "101",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingSD3",
+    "_meta": {
+      "title": "采样算法（SD3）"
+    }
+  },
+  "108": {
+    "inputs": {
+      "filename_prefix": "video/ComfyUI",
+      "format": "auto",
+      "codec": "auto",
+      "video": [
+        "94",
+        0
+      ]
+    },
+    "class_type": "SaveVideo",
+    "_meta": {
+      "title": "保存视频"
+    }
+  }
+}

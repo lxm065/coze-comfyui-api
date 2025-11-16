@@ -1,0 +1,269 @@
+{
+  "84": {
+    "inputs": {
+      "clip_name": "umt5_xxl_fp8_e4m3fn_scaled.safetensors",
+      "type": "wan",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "加载CLIP"
+    }
+  },
+  "85": {
+    "inputs": {
+      "add_noise": "disable",
+      "noise_seed": 0,
+      "steps": 4,
+      "cfg": 1,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "start_at_step": 2,
+      "end_at_step": 4,
+      "return_with_leftover_noise": "disable",
+      "model": [
+        "103",
+        0
+      ],
+      "positive": [
+        "98",
+        0
+      ],
+      "negative": [
+        "98",
+        1
+      ],
+      "latent_image": [
+        "86",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced",
+    "_meta": {
+      "title": "K采样器（高级）"
+    }
+  },
+  "86": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 436598171524569,
+      "steps": 4,
+      "cfg": 1,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "start_at_step": 0,
+      "end_at_step": 2,
+      "return_with_leftover_noise": "enable",
+      "model": [
+        "104",
+        0
+      ],
+      "positive": [
+        "98",
+        0
+      ],
+      "negative": [
+        "98",
+        1
+      ],
+      "latent_image": [
+        "98",
+        2
+      ]
+    },
+    "class_type": "KSamplerAdvanced",
+    "_meta": {
+      "title": "K采样器（高级）"
+    }
+  },
+  "87": {
+    "inputs": {
+      "samples": [
+        "85",
+        0
+      ],
+      "vae": [
+        "90",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "89": {
+    "inputs": {
+      "text": "色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走",
+      "clip": [
+        "84",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Negative Prompt)"
+    }
+  },
+  "90": {
+    "inputs": {
+      "vae_name": "wan_2.1_vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "加载VAE"
+    }
+  },
+  "93": {
+    "inputs": {
+      "text": "Traditional Chinese line drawing illustration style, black ink on aged paper texture, classical folklore narrative aesthetic, desperate defensive struggle scene depicting overwhelmed sage fighting for survival against coordinated supernatural assault, upper left featuring decorative云纹 cloud formation in solid black with swirling ruyi patterns suggesting heavenly witness to critical battle moment, cloud creating atmospheric supernatural presence, left side showing王魔 Wang Mo on fearsome monstrous beast in aggressive charging pose趁势直冲过来 taking advantage of momentum charging directly forward, Wang Mo wearing dark elaborate Daoist robes with intricate decorative patterns showing immortal cultivator status, cultivator's fierce determined expression showing intent to要擒子牙 capture Jiang Ziya, Wang Mo's monstrous mount rendered with terrifying features including sharp fangs wide bulging eyes and aggressive expression, beast's powerful muscular form lunging forward with extended claws or limbs showing violent attack, creature's supernatural nature visible in exaggerated fearsome anatomy designed to overwhelm opponents, Wang Mo wielding weapon in aggressive striking pose coordinating with Yang Sen for joint assault, sense of Nine Dragon Island Daoist pressing advantage after Nezha's defeat, center-left showing杨森 Yang Sen on equally terrifying Jiaoni狡猊 beast also趁势直冲过来 charging forward exploiting tactical advantage, Yang Sen in commanding attack posture wearing ornate Daoist robes, cultivator's coordinated assault with Wang Mo showing sophisticated supernatural warfare tactics, Yang Sen's Jiaoni mount rendered with distinctive leonine or chimeric features including elaborate mane flowing with rapid movement, beast's fierce predatory expression showing supernatural hunter nature, monstrous creature's powerful lunging pose creating sense of overwhelming force, both王魔杨森 Wang Mo and Yang Sen attacking simultaneously from different angles creating pincer movement, coordinated dual assault designed to要擒子牙 capture Jiang Ziya alive showing strategic objective beyond mere killing, sense of Nine Dragon Island Daoists recognizing sage as key to Zhou resistance requiring capture not just defeat, center-right showing姜子牙 Jiang Ziya in desperate defensive situation, sage wearing formal ministerial robes now disheveled from intense combat, Jiang Ziya's characteristic elderly rotund form showing strain of defensive fighting, sage presumably on四不相 Si Bu Xiang divine mount though mount may be partially visible or obscured by action, critically showing子牙忙用剑招架 Jiang Ziya hastily using sword to parry and defend, sage wielding sword in defensive blocking posture showing he has been forced into reactive fighting, Jiang Ziya's expression showing determination mixed with strain as he faces overwhelming coordinated assault, sword raised to intercept incoming attacks from multiple directions, sage's defensive posture showing he cannot counterattack only desperately block, sense of supernatural strategist's combat limitations exposed as two powerful immortals coordinate assault, cosmic crisis as Zhou's commander faces capture threatening entire campaign, Jiang Ziya忙 hastily frantically defending showing desperate urgency, sword招架 parrying blocking showing purely defensive action without offensive capability, ironic reversal as confident sage who recently returned with divine implements now fighting for survival, right side showing additional monstrous beast possibly third九龙岛道人 Nine Dragon Island Daoist joining assault, additional creature rendered with fierce supernatural features contributing to overwhelming force, sense of coordinated multi-opponent attack designed to overwhelm sage's defenses through sheer numbers and power, spatial arrangement showing Jiang Ziya surrounded or nearly surrounded by attacking immortals and monstrous beasts, pincer movement visible as Wang Mo attacks from one side while Yang Sen assaults from another, Jiang Ziya positioned defensively in center desperately trying to parry attacks from multiple directions, monstrous beasts' fearsome appearances creating psychological pressure in addition to physical threat, beasts rendered with various terrifying features including sharp teeth claws horns and unnatural anatomies, creatures' supernatural nature emphasized through impossible combinations of animal features, scattered云纹 cloud or energy elements suggesting supernatural power being released during intense combat, ground level suggested by minimal elements allowing focus on aerial or elevated supernatural combat, sense of critical battle moment as Zhou forces' leader faces potential capture, Nezha's earlier defeat leaving Jiang Ziya without divine champion protection, Wang Mo and Yang Sen's趁势 exploitation of tactical advantage showing professional military thinking, coordinated assault demonstrating Nine Dragon Island Daoists are experienced supernatural warriors not mere hermits, capture objective要擒 rather than kill showing strategic thinking to eliminate Zhou resistance by taking commander alive, Jiang Ziya's sword defense showing he lacks powerful offensive magical implements to counter immortals' coordinated assault, sage's desperate situation requiring intervention from other divine allies or deployment of more powerful magical treasures, cosmic stakes as sage's capture would likely mean Zhou defeat and Shang victory, famous crisis moment testing whether heaven's mandate will provide rescue or allow righteous cause to fail, animated explosive dynamic movements showing Wang Mo and Jiaoni mount charging from left with claws extended and weapons raised, Yang Sen and monstrous beast lunging from opposite direction creating pincer attack, both beasts' muscles rippling with supernatural power, immortals' robes flowing from rapid violent movement, monstrous creatures' manes and tails streaming showing speed of assault, Jiang Ziya's desperate sword movements parrying in rapid succession, sage's body twisting to face multiple threats simultaneously, sword blade catching attacks from different directions, defensive movements showing frantic urgency, Si Bu Xiang divine mount possibly rearing or moving defensively to help protect rider, beasts' claws swiping creating sense of overwhelming physical assault, supernatural energy crackling from intense combat, multiple simultaneous attacks creating visual chaos, sense of sage completely overwhelmed by coordinated professional assault, cosmic crisis unfolding as Zhou commander faces imminent capture, monochromatic sepia tones with dramatic contrasts between aggressive dark attackers and desperate defending sage creating visual tension, vintage aged paper with historical weathering lending authenticity to legendary desperate battle scene, classical Chinese supernatural warfare crisis illustration aesthetic emphasizing tactical coordination and overwhelming force, masterpiece folkloric critical moment scene showing supernatural warfare's tactical sophistication and coordinated assault, 4k quality, legendary capture attempt visualization, cosmic crisis escalating as Wang Mo and Yang Sen王魔杨森趁势直冲过来 taking advantage of momentum charge directly forward要擒子牙 attempting to capture Jiang Ziya, coordinated pincer assault by two powerful Nine Dragon Island Daoists exploiting Nezha's defeat to eliminate Zhou resistance by capturing commander, Jiang Ziya子牙忙用剑招架 hastily using sword to desperately parry multiple attacks showing sage's combat limitations against coordinated immortal assault, famous crisis requiring divine intervention or superior magical implement to prevent catastrophic capture that would doom righteous Zhou cause and ensure tyrannical Shang victory in cosmic battle for heaven's mandate and China's dynastic future",
+      "clip": [
+        "84",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Positive Prompt)"
+    }
+  },
+  "94": {
+    "inputs": {
+      "fps": 16,
+      "images": [
+        "87",
+        0
+      ]
+    },
+    "class_type": "CreateVideo",
+    "_meta": {
+      "title": "创建视频"
+    }
+  },
+  "95": {
+    "inputs": {
+      "unet_name": "wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "96": {
+    "inputs": {
+      "unet_name": "wan2.2_i2v_low_noise_14B_fp8_scaled.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "97": {
+    "inputs": {
+      "image": "58.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "98": {
+    "inputs": {
+      "width": 832,
+      "height": 640,
+      "length": 121,
+      "batch_size": 1,
+      "positive": [
+        "93",
+        0
+      ],
+      "negative": [
+        "89",
+        0
+      ],
+      "vae": [
+        "90",
+        0
+      ],
+      "start_image": [
+        "97",
+        0
+      ]
+    },
+    "class_type": "WanImageToVideo",
+    "_meta": {
+      "title": "Wan图像到视频"
+    }
+  },
+  "101": {
+    "inputs": {
+      "lora_name": "wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors",
+      "strength_model": 1.0000000000000002,
+      "model": [
+        "95",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "102": {
+    "inputs": {
+      "lora_name": "wan2.2_i2v_lightx2v_4steps_lora_v1_low_noise.safetensors",
+      "strength_model": 1.0000000000000002,
+      "model": [
+        "96",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "103": {
+    "inputs": {
+      "shift": 5.000000000000001,
+      "model": [
+        "102",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingSD3",
+    "_meta": {
+      "title": "采样算法（SD3）"
+    }
+  },
+  "104": {
+    "inputs": {
+      "shift": 5.000000000000001,
+      "model": [
+        "101",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingSD3",
+    "_meta": {
+      "title": "采样算法（SD3）"
+    }
+  },
+  "108": {
+    "inputs": {
+      "filename_prefix": "video/ComfyUI",
+      "format": "auto",
+      "codec": "auto",
+      "video": [
+        "94",
+        0
+      ]
+    },
+    "class_type": "SaveVideo",
+    "_meta": {
+      "title": "保存视频"
+    }
+  }
+}

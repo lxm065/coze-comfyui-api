@@ -1,0 +1,269 @@
+{
+  "84": {
+    "inputs": {
+      "clip_name": "umt5_xxl_fp8_e4m3fn_scaled.safetensors",
+      "type": "wan",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "加载CLIP"
+    }
+  },
+  "85": {
+    "inputs": {
+      "add_noise": "disable",
+      "noise_seed": 0,
+      "steps": 4,
+      "cfg": 1,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "start_at_step": 2,
+      "end_at_step": 4,
+      "return_with_leftover_noise": "disable",
+      "model": [
+        "103",
+        0
+      ],
+      "positive": [
+        "98",
+        0
+      ],
+      "negative": [
+        "98",
+        1
+      ],
+      "latent_image": [
+        "86",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced",
+    "_meta": {
+      "title": "K采样器（高级）"
+    }
+  },
+  "86": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 436598171524569,
+      "steps": 4,
+      "cfg": 1,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "start_at_step": 0,
+      "end_at_step": 2,
+      "return_with_leftover_noise": "enable",
+      "model": [
+        "104",
+        0
+      ],
+      "positive": [
+        "98",
+        0
+      ],
+      "negative": [
+        "98",
+        1
+      ],
+      "latent_image": [
+        "98",
+        2
+      ]
+    },
+    "class_type": "KSamplerAdvanced",
+    "_meta": {
+      "title": "K采样器（高级）"
+    }
+  },
+  "87": {
+    "inputs": {
+      "samples": [
+        "85",
+        0
+      ],
+      "vae": [
+        "90",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "89": {
+    "inputs": {
+      "text": "色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走",
+      "clip": [
+        "84",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Negative Prompt)"
+    }
+  },
+  "90": {
+    "inputs": {
+      "vae_name": "wan_2.1_vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "加载VAE"
+    }
+  },
+  "93": {
+    "inputs": {
+      "text": "Traditional Chinese line drawing illustration style, black ink on aged paper texture, classical folklore narrative aesthetic, contemplative counsel scene depicting royal advisor cautioning king about proper etiquette in seeking sage, upper left corner featuring decorative云纹 cloud formation in solid black with swirling ruyi patterns suggesting heavenly observation of mortal deliberations, upper right showing bold bird silhouette in flight rendered as dynamic dark shape with spread wings possibly crane or raven suggesting cosmic messenger witnessing important conversation, sky elements creating supernatural witness to momentous decision about how to properly approach hidden sage, center composition dominated by mounted figures in discussion, left side showing guard or soldier on foot holding long forked spear or trident weapon, soldier wearing distinctive armor with spotted or medallion pattern and military cap, guard's watchful stance showing protective role in royal procession, soldier positioned at respectful distance allowing nobles private counsel, center-left showing decorated horse in standing pose with ornate ceremonial harness featuring studded saddle blanket with circular medallions, horse's flowing mane and tail rendered with elegant curved lines, horse appearing alert and patient as riders converse, center showing上大夫散宜生 Grand Master Sanyisheng mounted on horse in prominent position, Sanyisheng wearing formal court official robes with contrasting dark and light sections, official's distinctive tall官帽 ceremonial cap indicating high ministerial rank, critically Sanyisheng's body turned toward King Wen in speaking posture对文王说 addressing the king directly, official's hand raised in gesturing motion emphasizing earnest counsel, Sanyisheng's facial expression showing respectful concern as he advises sovereign, official's entire bearing radiating loyal wisdom and proper protocol consciousness, sense of faithful minister offering frank advice about求贤聘杰 seeking worthy sages and exceptional talents, Sanyisheng explaining礼当虔诚 propriety requires sincerity, warning that今日匆匆而来 coming hastily today恐难寻到 may make it difficult to find sage, minister's counsel suggesting King Wen should return with proper ceremonial preparation showing respect for sage's wisdom, right side showing King Wen周文王 mounted on magnificent horse in commanding position, King Wen wearing elaborate imperial court dress with flowing robes featuring decorative patterns, king's distinctive tall官帽 royal ceremonial cap with architectural elements showing sovereign status, King Wen's characteristic long flowing beard and hair ribbons streaming backward creating sense of nobility and wisdom, king's posture upright and dignified showing he listens carefully to minister's advice, one hand raised near face in contemplative gesture considering Sanyisheng's words, king's expression thoughtful showing he weighs counsel about proper approach to seeking sage, sense of righteous ruler willing to receive frank advice from loyal ministers, King Wen's bearing mixing royal authority with humble willingness to observe proper etiquette, horses positioned side by side allowing riders to converse while mounted, both steeds decorated with matching ceremonial equipment showing coordinated royal procession, horses' legs in various walking poses suggesting they have paused for discussion, spatial arrangement showing minister and king in intimate counsel while guard maintains respectful distance, sense of important strategic discussion about how to properly recruit heaven-sent sage, cosmic significance as decision about礼 propriety will determine success in gaining Jiang Ziya's service, Sanyisheng's wisdom recognizing that匆匆而来 hasty approach shows insufficient respect for extraordinary worthy, minister's advice implicitly acknowledging Jiang Ziya must be approached with ceremony befitting his supernatural status, King Wen's receptive listening showing why he is righteous ruler worthy of heaven's mandate, contrast between earlier impulsive rush to find sage and minister's counsel for proper ceremonial approach, fateful conversation determining King Wen will need to return multiple times with increasing sincerity, famous testing period beginning as minister's advice extends timeline creating opportunity for King Wen to demonstrate true commitment, animated subtle movements showing Sanyisheng gesturing earnestly while speaking counsel, King Wen's thoughtful listening posture with hand near chin, horses standing relatively still during conversation with slight weight shifts, guard maintaining vigilant protective stance, flowing robes and hair ribbons moving gently with breeze, sense of pause in journey as important strategic discussion takes precedence, minister's raised hand emphasizing key points about礼 propriety and虔诚 sincerity, king's contemplative expression showing he absorbs wisdom, monochromatic sepia tones with elegant ink wash creating atmosphere of serious counsel and strategic deliberation, vintage aged paper with historical weathering lending authenticity to legendary advisory scene, classical Chinese loyal minister counsel illustration aesthetic emphasizing proper protocol and sincere approach to recruiting talent, masterpiece folkloric wisdom advice scene showing faithful minister guiding righteous king toward correct path, 4k quality, legendary strategic counsel moment visualization, cosmic lesson about礼 propriety as Sanyisheng散宜生 advises King Wen文王 that求贤聘杰 seeking worthy sages and exceptional talents requires礼当虔诚 sincere respectful propriety not今日匆匆而来 hasty casual approach, minister's wise counsel ensuring King Wen will return with proper ceremony demonstrating sincerity worthy of receiving heaven-sent Jiang Ziya's service, fateful advice setting stage for famous three visits story where king's persistent respectful approaches will prove his worthiness to receive supernatural strategist who will help overthrow tyrannical Shang and establish righteous Zhou dynasty",
+      "clip": [
+        "84",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Positive Prompt)"
+    }
+  },
+  "94": {
+    "inputs": {
+      "fps": 16,
+      "images": [
+        "87",
+        0
+      ]
+    },
+    "class_type": "CreateVideo",
+    "_meta": {
+      "title": "创建视频"
+    }
+  },
+  "95": {
+    "inputs": {
+      "unet_name": "wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "96": {
+    "inputs": {
+      "unet_name": "wan2.2_i2v_low_noise_14B_fp8_scaled.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "97": {
+    "inputs": {
+      "image": "43.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "98": {
+    "inputs": {
+      "width": 832,
+      "height": 640,
+      "length": 121,
+      "batch_size": 1,
+      "positive": [
+        "93",
+        0
+      ],
+      "negative": [
+        "89",
+        0
+      ],
+      "vae": [
+        "90",
+        0
+      ],
+      "start_image": [
+        "97",
+        0
+      ]
+    },
+    "class_type": "WanImageToVideo",
+    "_meta": {
+      "title": "Wan图像到视频"
+    }
+  },
+  "101": {
+    "inputs": {
+      "lora_name": "wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors",
+      "strength_model": 1.0000000000000002,
+      "model": [
+        "95",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "102": {
+    "inputs": {
+      "lora_name": "wan2.2_i2v_lightx2v_4steps_lora_v1_low_noise.safetensors",
+      "strength_model": 1.0000000000000002,
+      "model": [
+        "96",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "103": {
+    "inputs": {
+      "shift": 5.000000000000001,
+      "model": [
+        "102",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingSD3",
+    "_meta": {
+      "title": "采样算法（SD3）"
+    }
+  },
+  "104": {
+    "inputs": {
+      "shift": 5.000000000000001,
+      "model": [
+        "101",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingSD3",
+    "_meta": {
+      "title": "采样算法（SD3）"
+    }
+  },
+  "108": {
+    "inputs": {
+      "filename_prefix": "video/ComfyUI",
+      "format": "auto",
+      "codec": "auto",
+      "video": [
+        "94",
+        0
+      ]
+    },
+    "class_type": "SaveVideo",
+    "_meta": {
+      "title": "保存视频"
+    }
+  }
+}

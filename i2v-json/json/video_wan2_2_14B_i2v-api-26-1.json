@@ -1,0 +1,269 @@
+{
+  "84": {
+    "inputs": {
+      "clip_name": "umt5_xxl_fp8_e4m3fn_scaled.safetensors",
+      "type": "wan",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "加载CLIP"
+    }
+  },
+  "85": {
+    "inputs": {
+      "add_noise": "disable",
+      "noise_seed": 0,
+      "steps": 4,
+      "cfg": 1,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "start_at_step": 2,
+      "end_at_step": 4,
+      "return_with_leftover_noise": "disable",
+      "model": [
+        "103",
+        0
+      ],
+      "positive": [
+        "98",
+        0
+      ],
+      "negative": [
+        "98",
+        1
+      ],
+      "latent_image": [
+        "86",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced",
+    "_meta": {
+      "title": "K采样器（高级）"
+    }
+  },
+  "86": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 436598171524569,
+      "steps": 4,
+      "cfg": 1,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "start_at_step": 0,
+      "end_at_step": 2,
+      "return_with_leftover_noise": "enable",
+      "model": [
+        "104",
+        0
+      ],
+      "positive": [
+        "98",
+        0
+      ],
+      "negative": [
+        "98",
+        1
+      ],
+      "latent_image": [
+        "98",
+        2
+      ]
+    },
+    "class_type": "KSamplerAdvanced",
+    "_meta": {
+      "title": "K采样器（高级）"
+    }
+  },
+  "87": {
+    "inputs": {
+      "samples": [
+        "85",
+        0
+      ],
+      "vae": [
+        "90",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "89": {
+    "inputs": {
+      "text": "色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走",
+      "clip": [
+        "84",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Negative Prompt)"
+    }
+  },
+  "90": {
+    "inputs": {
+      "vae_name": "wan_2.1_vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "加载VAE"
+    }
+  },
+  "93": {
+    "inputs": {
+      "text": "Traditional Chinese line drawing illustration style, black ink on aged paper texture, classical folklore narrative aesthetic, ethereal nocturnal palace terrace scene revealing supernatural connection, left side night sky featuring prominent crescent moon and scattered star motifs creating celestial atmosphere, small decorative云纹 cloud formation floating in lower left suggesting supernatural presence, entire left portion establishing nighttime setting for mystical revelation, center-left elegant female figure in refined palace attire representing jade pipa琵琶 spirit manifested in human form, woman wearing elaborate traditional court dress with dark bodice featuring intricate decorative patterns and light flowing skirt with geometric border designs, figure's ornate hairstyle with distinctive high elaborate髻 bun adorned with decorative hairpins and ornamental flowers showing noble status, woman's graceful posture holding pipa lute instrument in traditional playing position with one hand on neck and other hand positioned to pluck strings, pipa rendered with detailed decoration showing precious jade instrument's ornate nature, long flowing silk ribbons and sashes streaming from woman's costume creating dynamic movement suggesting supernatural essence, ribbons floating and swirling in elaborate curves around figure emphasizing otherworldly nature, woman's serene yet knowing expression showing recognition of kindred spirit, figure positioned on palace terrace or balcony overlooking night scene, lower portion showing ornate decorative balustrade railing with traditional geometric回纹 patterns and stylized floral medallions, architectural railing creating formal palace setting, right side dominated by magnificent ornate curtain with elaborate decorative云纹 cloud patterns covering entire vertical space, curtain rendered in light outline style filled with swirling ruyi cloud motifs and scattered dots suggesting luxurious palace textile, curtain indicating proximity to inner palace chambers where King Zhou's favorite concubine Daji resides, sense of pipa spirit calling out to fellow demon through music, supernatural communication happening as jade instrument spirit recognizes fox demon Daji as sister妖精, dramatic revelation moment as one demon exposes another's true nature through supernatural recognition, pipa music floating through night air carrying coded message to Daji behind curtain, sense of demonic conspiracy as two ancient spirits acknowledge each other within corrupt palace, ironic situation where demon-catching sage Jiang Ziya has inadvertently angered another even more dangerous demon by burning the pipa spirit's physical form, pipa spirit's human manifestation appearing ethereal and ghostly in moonlight, figure seeming to float or dance while playing instrument, ribbons animated flowing and undulating with supernatural grace, woman's subtle swaying motion as she plays mystical melody, fingers delicately plucking pipa strings sending supernatural vibrations, curtain gently billowing suggesting response from hidden Daji within, night breeze carrying music and secrets between demons, stars twinkling with ominous supernatural awareness, moon casting pale light creating mysterious shadows, sense of palace sleeping while supernatural forces communicate, architectural details emphasizing luxurious imperial setting making demonic presence more sinister, contrast between refined elegant appearance and dangerous supernatural truth, pipa spirit's anger at being burned transforming into calculated revelation of fellow demon's presence, fateful moment setting stage for future conflict between sage and fox demon, monochromatic sepia tones with delicate ink wash creating ethereal nighttime atmosphere, vintage aged paper with historical weathering and subtle staining, classical Chinese supernatural nocturnal scene illustration aesthetic with emphasis on mystical beauty, masterpiece folkloric demon recognition scene showing hidden supernatural network within palace, 4k quality, legendary sister demons acknowledging each other visualization, cosmic web of deception tightening as multiple demons revealed lurking in corrupt Shang dynasty court",
+      "clip": [
+        "84",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Positive Prompt)"
+    }
+  },
+  "94": {
+    "inputs": {
+      "fps": 16,
+      "images": [
+        "87",
+        0
+      ]
+    },
+    "class_type": "CreateVideo",
+    "_meta": {
+      "title": "创建视频"
+    }
+  },
+  "95": {
+    "inputs": {
+      "unet_name": "wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "96": {
+    "inputs": {
+      "unet_name": "wan2.2_i2v_low_noise_14B_fp8_scaled.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "97": {
+    "inputs": {
+      "image": "26.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "98": {
+    "inputs": {
+      "width": 832,
+      "height": 640,
+      "length": 121,
+      "batch_size": 1,
+      "positive": [
+        "93",
+        0
+      ],
+      "negative": [
+        "89",
+        0
+      ],
+      "vae": [
+        "90",
+        0
+      ],
+      "start_image": [
+        "97",
+        0
+      ]
+    },
+    "class_type": "WanImageToVideo",
+    "_meta": {
+      "title": "Wan图像到视频"
+    }
+  },
+  "101": {
+    "inputs": {
+      "lora_name": "wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors",
+      "strength_model": 1.0000000000000002,
+      "model": [
+        "95",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "102": {
+    "inputs": {
+      "lora_name": "wan2.2_i2v_lightx2v_4steps_lora_v1_low_noise.safetensors",
+      "strength_model": 1.0000000000000002,
+      "model": [
+        "96",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "103": {
+    "inputs": {
+      "shift": 5.000000000000001,
+      "model": [
+        "102",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingSD3",
+    "_meta": {
+      "title": "采样算法（SD3）"
+    }
+  },
+  "104": {
+    "inputs": {
+      "shift": 5.000000000000001,
+      "model": [
+        "101",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingSD3",
+    "_meta": {
+      "title": "采样算法（SD3）"
+    }
+  },
+  "108": {
+    "inputs": {
+      "filename_prefix": "video/ComfyUI",
+      "format": "auto",
+      "codec": "auto",
+      "video": [
+        "94",
+        0
+      ]
+    },
+    "class_type": "SaveVideo",
+    "_meta": {
+      "title": "保存视频"
+    }
+  }
+}

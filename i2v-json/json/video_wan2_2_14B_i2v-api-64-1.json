@@ -1,0 +1,269 @@
+{
+  "84": {
+    "inputs": {
+      "clip_name": "umt5_xxl_fp8_e4m3fn_scaled.safetensors",
+      "type": "wan",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "加载CLIP"
+    }
+  },
+  "85": {
+    "inputs": {
+      "add_noise": "disable",
+      "noise_seed": 0,
+      "steps": 4,
+      "cfg": 1,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "start_at_step": 2,
+      "end_at_step": 4,
+      "return_with_leftover_noise": "disable",
+      "model": [
+        "103",
+        0
+      ],
+      "positive": [
+        "98",
+        0
+      ],
+      "negative": [
+        "98",
+        1
+      ],
+      "latent_image": [
+        "86",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced",
+    "_meta": {
+      "title": "K采样器（高级）"
+    }
+  },
+  "86": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 436598171524569,
+      "steps": 4,
+      "cfg": 1,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "start_at_step": 0,
+      "end_at_step": 2,
+      "return_with_leftover_noise": "enable",
+      "model": [
+        "104",
+        0
+      ],
+      "positive": [
+        "98",
+        0
+      ],
+      "negative": [
+        "98",
+        1
+      ],
+      "latent_image": [
+        "98",
+        2
+      ]
+    },
+    "class_type": "KSamplerAdvanced",
+    "_meta": {
+      "title": "K采样器（高级）"
+    }
+  },
+  "87": {
+    "inputs": {
+      "samples": [
+        "85",
+        0
+      ],
+      "vae": [
+        "90",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "89": {
+    "inputs": {
+      "text": "色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走",
+      "clip": [
+        "84",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Negative Prompt)"
+    }
+  },
+  "90": {
+    "inputs": {
+      "vae_name": "wan_2.1_vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "加载VAE"
+    }
+  },
+  "93": {
+    "inputs": {
+      "text": "Traditional Chinese line drawing illustration style, black ink on aged paper texture, classical folklore narrative aesthetic, compassionate divine healing scene depicting celestial master commanding disciple to rescue and heal wounded sage with supernatural medicine, upper left showing文殊广法天尊 Manjusri Guangfa Tianzun in serene commanding celestial position, Manjusri wearing magnificent divine robes with elaborate decorative patterns showing enlightened being's supreme status, deity seated in meditation posture with legs crossed showing Buddhist cultivation tradition, critically showing Manjusri's distinctive圆光 circular halo or nimbus behind head rendered as perfect ornate circle with decorative patterns indicating Buddha or Bodhisattva level enlightenment, halo radiating divine light emphasizing transcendent nature, Manjusri's serene compassionate expression showing enlightened concern for wounded ally, one hand raised in commanding gesture命 ordering Jinzha to救治 rescue and heal, other hand possibly holding ceremonial implement or positioned in mudra teaching gesture, deity's authoritative presence showing he directs救援行动 rescue operation, Manjusri mounted on magnificent dragon supernatural mount, dragon rendered as spectacular elongated serpentine creature dominating center-left composition with flowing S-curve body, dragon featuring detailed scaled hide depicted with intricate overlapping scale patterns showing reptilian supernatural nature, serpentine mount's fierce divine features including elaborate horns whiskers and flowing mane, dragon's intelligent fierce expression showing protective guardian nature, divine mount's powerful muscular form undulating through air with elegant grace, dragon's claws extended showing four or five-toed configuration indicating imperial or celestial status, scattered decorative云纹 cloud formations in solid black with swirling ruyi patterns creating supernatural atmospheric setting, clouds suggesting scene occurring in elevated mountain realm approaching celestial heaven, center-right showing金吒 Jinzha divine disciple门徒 in compassionate rescue mission, Jinzha wearing warrior armor or ceremonial robes appropriate for martial disciple, young divine warrior's expression showing concerned determination as he executes master's healing command, critically showing Jinzha把子牙背上山 carrying Jiang Ziya on his back up mountain, Jinzha's posture showing he supports wounded sage's weight, disciple's strong physique allowing him to背负 bear injured commander while ascending, Jinzha mounted on云 cloud formation rendered in bold swirling patterns showing supernatural flight capability, cloud mount carrying both disciple and rescued sage upward toward mountain healing sanctuary, sense of divine warrior's dual role as combat champion and compassionate healer, right side showing wounded姜子牙 Jiang Ziya being carried背上山 on Jinzha's back ascending mountain, sage's body rendered in weakened injured posture from earlier magical strikes by开天珠 Heaven-Opening Pearl and聚地珠 Earth-Gathering Pearl, Jiang Ziya's characteristic elderly rotund form appearing vulnerable and dependent on divine assistance, sage's expression showing pain but also hope as divine healing approaches, Jiang Ziya's formal ministerial robes disheveled from combat showing recent battle trauma, sense of supernatural strategist completely reliant on celestial allies for survival, critically depicting healing process将丹药用水研开灌入子牙嘴里 grinding elixir pill with water and pouring into Jiang Ziya's mouth, Jinzha possibly shown preparing丹药 divine elixir medicine, immortal pill rendered as small spherical object with supernatural properties, pill being ground研开 with water creating medicinal mixture, divine medicine representing celestial healing power beyond mortal capability, sense of Buddhist enlightened tradition's compassionate healing complementing martial prowess, Jinzha灌入 pouring elixir mixture into wounded sage's mouth administering life-saving treatment, Jiang Ziya's mouth possibly open receiving divine medicine, sense of immediate supernatural healing beginning as celestial elixir enters body, lower portion showing stylized mountain landscape or云 cloud formations suggesting elevated sacred location, ground elements rendered with flowing organic patterns indicating mountain terrain, scattered云纹 motifs creating sense of ascending toward peak healing sanctuary, spatial arrangement showing vertical composition with Manjusri commanding from upper celestial position, Jinzha and rescued Jiang Ziya in center ascending, dragon providing elegant flowing connection, cosmic significance as enlightened deity personally ensures wounded ally's survival and recovery, Manjusri's command showing Buddhist compassion valuing life and healing not just combat victory, famous scene demonstrating that divine warriors possess healing arts matching their martial skills, Jinzha's dual capability as deadly swordsman who decapitated Wang Mo and compassionate healer救治 treating wounded ally, divine elixir丹药 representing supernatural medicine beyond earthly physician capability, pill's immediate effectiveness showing celestial healing's miraculous nature, Jiang Ziya's rescue demonstrating heaven's continued protection of Zhou cause through direct intervention, wounded sage's survival ensuring righteous campaign can continue despite catastrophic injuries, ironic reversal as near-fatal defeat transforms into complete recovery through divine healing, cosmic lesson that Buddhist enlightened beings possess complete cultivation包括 including both destruction and restoration powers, Manjusri's intervention showing he commits fully to Zhou cause providing both martial champions and healing resources, dragon mount's presence emphasizing Manjusri's supreme celestial status as only highest deities ride dragons, serpentine creature serving as both war mount and ambulance carrying healing deity, sense of coordinated divine operation as Manjusri directs while Jinzha executes, master-disciple relationship demonstrating proper hierarchical structure in celestial intervention, animated compassionate movements showing Manjusri's commanding gesture with raised hand directing rescue, dragon's serpentine body undulating with graceful flight carrying deity to oversee healing, Jinzha carefully supporting wounded Jiang Ziya on back ascending mountain, disciple's gentle careful movement protecting injured sage from further harm, Jinzha's hands preparing divine elixir grinding pill with water creating medicinal mixture, disciple pouring elixir into Jiang Ziya's mouth administering life-saving treatment, sage's weak swallowing motion as divine medicine enters body, immediate subtle signs of recovery as supernatural healing begins working, clouds swirling suggesting ascent toward mountain peak sanctuary, dragon's flowing mane and tail streaming showing continued flight, Manjusri's serene observation ensuring healing proceeds correctly, sense of compassionate efficiency as divine forces transition from combat to救治 healing seamlessly, monochromatic sepia tones with elegant ink wash creating atmosphere of compassionate divine intervention and miraculous healing, vintage aged paper with historical weathering lending authenticity to legendary rescue and healing scene, classical Chinese Buddhist compassionate intervention illustration aesthetic emphasizing enlightened beings' complete cultivation, masterpiece folkloric divine healing scene showing celestial powers extend beyond mere combat to miraculous restoration, 4k quality, legendary divine elixir healing visualization, cosmic compassion manifesting as Manjusri广法天尊命金吒 Guangfa Tianzun commanding Jinzha把子牙背上山 to carry Jiang Ziya on back ascending mountain将丹药用水研开灌入子牙嘴里 grinding divine elixir pill with water pouring into sage's mouth, famous healing demonstrating Buddhist enlightened tradition's compassionate救治 healing arts matching martial prowess, celestial medicine ensuring wounded Zhou commander's complete recovery from catastrophic magical injuries, divine intervention transforming near-fatal defeat into miraculous restoration validating heaven's mandate protecting righteous cause through both combat champions and supernatural healing guaranteeing Zhou victory over Shang in cosmic battle for China's dynastic future through enlightened beings' complete cultivation transcending mere destruction to encompass compassionate restoration of heaven's chosen champions",
+      "clip": [
+        "84",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Positive Prompt)"
+    }
+  },
+  "94": {
+    "inputs": {
+      "fps": 16,
+      "images": [
+        "87",
+        0
+      ]
+    },
+    "class_type": "CreateVideo",
+    "_meta": {
+      "title": "创建视频"
+    }
+  },
+  "95": {
+    "inputs": {
+      "unet_name": "wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "96": {
+    "inputs": {
+      "unet_name": "wan2.2_i2v_low_noise_14B_fp8_scaled.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "97": {
+    "inputs": {
+      "image": "64.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "98": {
+    "inputs": {
+      "width": 832,
+      "height": 640,
+      "length": 121,
+      "batch_size": 1,
+      "positive": [
+        "93",
+        0
+      ],
+      "negative": [
+        "89",
+        0
+      ],
+      "vae": [
+        "90",
+        0
+      ],
+      "start_image": [
+        "97",
+        0
+      ]
+    },
+    "class_type": "WanImageToVideo",
+    "_meta": {
+      "title": "Wan图像到视频"
+    }
+  },
+  "101": {
+    "inputs": {
+      "lora_name": "wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors",
+      "strength_model": 1.0000000000000002,
+      "model": [
+        "95",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "102": {
+    "inputs": {
+      "lora_name": "wan2.2_i2v_lightx2v_4steps_lora_v1_low_noise.safetensors",
+      "strength_model": 1.0000000000000002,
+      "model": [
+        "96",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "103": {
+    "inputs": {
+      "shift": 5.000000000000001,
+      "model": [
+        "102",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingSD3",
+    "_meta": {
+      "title": "采样算法（SD3）"
+    }
+  },
+  "104": {
+    "inputs": {
+      "shift": 5.000000000000001,
+      "model": [
+        "101",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingSD3",
+    "_meta": {
+      "title": "采样算法（SD3）"
+    }
+  },
+  "108": {
+    "inputs": {
+      "filename_prefix": "video/ComfyUI",
+      "format": "auto",
+      "codec": "auto",
+      "video": [
+        "94",
+        0
+      ]
+    },
+    "class_type": "SaveVideo",
+    "_meta": {
+      "title": "保存视频"
+    }
+  }
+}

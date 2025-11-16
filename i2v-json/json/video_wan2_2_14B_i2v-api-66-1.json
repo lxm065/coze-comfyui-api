@@ -1,0 +1,269 @@
+{
+  "84": {
+    "inputs": {
+      "clip_name": "umt5_xxl_fp8_e4m3fn_scaled.safetensors",
+      "type": "wan",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "加载CLIP"
+    }
+  },
+  "85": {
+    "inputs": {
+      "add_noise": "disable",
+      "noise_seed": 0,
+      "steps": 4,
+      "cfg": 1,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "start_at_step": 2,
+      "end_at_step": 4,
+      "return_with_leftover_noise": "disable",
+      "model": [
+        "103",
+        0
+      ],
+      "positive": [
+        "98",
+        0
+      ],
+      "negative": [
+        "98",
+        1
+      ],
+      "latent_image": [
+        "86",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced",
+    "_meta": {
+      "title": "K采样器（高级）"
+    }
+  },
+  "86": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 436598171524569,
+      "steps": 4,
+      "cfg": 1,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "start_at_step": 0,
+      "end_at_step": 2,
+      "return_with_leftover_noise": "enable",
+      "model": [
+        "104",
+        0
+      ],
+      "positive": [
+        "98",
+        0
+      ],
+      "negative": [
+        "98",
+        1
+      ],
+      "latent_image": [
+        "98",
+        2
+      ]
+    },
+    "class_type": "KSamplerAdvanced",
+    "_meta": {
+      "title": "K采样器（高级）"
+    }
+  },
+  "87": {
+    "inputs": {
+      "samples": [
+        "85",
+        0
+      ],
+      "vae": [
+        "90",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "89": {
+    "inputs": {
+      "text": "色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走",
+      "clip": [
+        "84",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Negative Prompt)"
+    }
+  },
+  "90": {
+    "inputs": {
+      "vae_name": "wan_2.1_vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "加载VAE"
+    }
+  },
+  "93": {
+    "inputs": {
+      "text": "Traditional Chinese line drawing illustration style, black ink on aged paper texture, classical folklore narrative aesthetic, tense siege confrontation scene depicting remaining Nine Dragon Island Daoists returning to challenge Zhou forces after comrade's death, upper portion dominated by impressive西岐城 Xiqi city fortifications, massive defensive wall城墙 rendered with horizontal bands showing layered stone construction, wall featuring decorative crenellations along top edge creating protective battlements, battlements depicted as repeating rectangular pattern with merlons and embrasures for defense, upper wall showing multiple ceremonial banners or flags飘扬 flying, banners rendered with flowing fabric indicating wind creating dynamic atmosphere, flags displaying Zhou insignia or characters showing city's allegiance, center showing prominent城楼 city gate tower or watchtower, tower rendered as multi-tiered traditional Chinese architectural structure with distinctive upturned eaves, gate tower featuring elaborate roof with decorative tiles shown as horizontal striping patterns, architectural details including lattice windows and ornamental elements emphasizing fortified palace-like quality, tower positioned centrally above main gate creating imposing defensive focal point, gate entrance possibly visible as dark opening suggesting城门 city gate, upper architecture creating sense of substantial fortified city capable of withstanding siege, scattered decorative elements possibly including additional defensive structures or guard posts, sense of prepared defensive position as Zhou forces await renewed assault, middle register showing defensive ramparts or elevated walkway atop city wall, walkway rendered as horizontal platform where defenders can position, scattered云纹 cloud formations in solid black with swirling patterns positioned along wall level creating atmospheric separation between fortifications and attacking forces below, clouds suggesting supernatural dimension to siege warfare, lower third dominated by stylized water护城河 moat rendered in traditional wave pattern波浪纹, moat depicted as repeating curved overlapping lines creating flowing water surface, water barrier creating additional defensive obstacle between city and attackers, moat's presence emphasizing Xiqi's strong defensive position, foreground showing三个道人 three remaining Nine Dragon Island Daoist cultivators又来城下挑战 returning to below city challenging Zhou forces, left showing杨森 Yang Sen on fierce supernatural beast in aggressive challenging pose, Yang Sen wearing dark elaborate Daoist robes with intricate decorative patterns showing immortal cultivator status, cultivator's determined fierce expression showing intent to avenge Wang Mo's death and defeat Zhou forces, Yang Sen mounted on terrifying Jiaoni狡猊 or other monstrous beast rendered with fearsome features, beast's powerful form in aggressive stance showing readiness for combat, monstrous creature's supernatural nature emphasized through exaggerated anatomy, center showing高友乾 Gao Youqian second remaining Daoist on equally terrifying supernatural mount, Gao Youqian wearing ornate Daoist robes with rich decorative motifs, cultivator's aggressive posture showing participation in coordinated challenge, Gao Youqian's mount rendered with distinctive supernatural features creating fearsome appearance, beast's aggressive body language showing it has been urged toward城下 below city walls, right showing李兴霸 Li Xingba third remaining Daoist who successfully struck Jiang Ziya with聚地珠 Earth-Gathering Pearl, Li Xingba mounted on powerful monstrous beast, cultivator wearing dark Daoist robes showing his immortal status, Li Xingba wielding weapon or magical implement showing readiness to deploy supernatural treasures, all three Daoists positioned on云 cloud formations rendered in swirling patterns suggesting they float or fly above moat approaching city walls, clouds creating supernatural mobility allowing immortals to bypass water barrier, sense of coordinated三人 three-person assault as remaining Nine Dragon Island cultivators unite after losing Wang Mo, scattered云纹 cloud formations throughout lower portion creating atmospheric supernatural battlefield, additional small decorative elements possibly including scattered debris or energy effects from previous battles, spatial arrangement showing clear vertical composition with fortified Xiqi city walls above, protective moat in middle, attacking three Daoists below, defensive city creating imposing barrier while attackers appear small but supernaturally empowered, cosmic significance as战又起 battle resumes with remaining Shang-allied immortals seeking revenge for Wang Mo's death, three Daoists'又来 return showing persistence and determination despite losing powerful comrade, sense of escalating conflict as both sides continue deploying supernatural forces, Xiqi's strong defensive position creating tactical advantage, city walls providing protection for recovering Jiang Ziya and Zhou forces, ironic situation as previously dominant Nine Dragon Island Daoists now reduced from four to three challenging from outside fortifications, cosmic shift as Zhou forces backed by Buddhist enlightened beings now hold defensive advantage, three Daoists'挑战 challenge showing they retain confidence in superior magical implements despite losing leader Wang Mo, sense of unfinished supernatural warfare as Shang-allied forces refuse to accept defeat, city's imposing architecture creating psychological pressure on attackers, defensive preparations visible suggesting Zhou forces ready for renewed assault, famous scene marking transition from desperate retreat to fortified defense, Jiang Ziya presumably inside city walls recovering and preparing countermeasures, three Daoists seeking to exploit perceived weakness after earlier devastating magical attacks, cosmic conflict continuing as both sides maneuver for advantage, animated dynamic elements showing banners streaming on city walls indicating wind, flags creating sense of active defensive preparation, water in moat flowing showing natural barrier remains active, three Daoists on cloud mounts moving with aggressive forward momentum approaching walls, beasts' aggressive postures showing readiness to attack, cultivators' weapons or implements raised in challenging gestures, clouds swirling from supernatural energies as immortals approach, sense of tense standoff as attackers challenge while defenders prepare response, city gates remaining closed showing Zhou forces maintain defensive posture, monochromatic sepia tones with dramatic contrasts between solid black fortification elements and lighter attacking forces creating visual tension, vintage aged paper with historical weathering lending authenticity to legendary siege challenge scene, classical Chinese fortification siege illustration aesthetic emphasizing defensive architecture and supernatural assault, masterpiece folkloric renewed challenge scene showing persistent opposition despite casualties, 4k quality, legendary Xiqi siege visualization, cosmic conflict continuing as三个道人 three remaining Daoist cultivators又来城下挑战 returning to below city walls to challenge Zhou forces, famous renewed assault after Wang Mo's death showing Nine Dragon Island immortals' determination to完成使命 complete mission despite setbacks, persistent Shang-allied supernatural forces seeking revenge and victory against fortified Buddhist-backed Zhou defenders in escalating cosmic siege warfare determining China's dynastic future through repeated supernatural confrontations testing both magical implements and strategic defensive positions",
+      "clip": [
+        "84",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Positive Prompt)"
+    }
+  },
+  "94": {
+    "inputs": {
+      "fps": 16,
+      "images": [
+        "87",
+        0
+      ]
+    },
+    "class_type": "CreateVideo",
+    "_meta": {
+      "title": "创建视频"
+    }
+  },
+  "95": {
+    "inputs": {
+      "unet_name": "wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "96": {
+    "inputs": {
+      "unet_name": "wan2.2_i2v_low_noise_14B_fp8_scaled.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "97": {
+    "inputs": {
+      "image": "66.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "98": {
+    "inputs": {
+      "width": 832,
+      "height": 640,
+      "length": 121,
+      "batch_size": 1,
+      "positive": [
+        "93",
+        0
+      ],
+      "negative": [
+        "89",
+        0
+      ],
+      "vae": [
+        "90",
+        0
+      ],
+      "start_image": [
+        "97",
+        0
+      ]
+    },
+    "class_type": "WanImageToVideo",
+    "_meta": {
+      "title": "Wan图像到视频"
+    }
+  },
+  "101": {
+    "inputs": {
+      "lora_name": "wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors",
+      "strength_model": 1.0000000000000002,
+      "model": [
+        "95",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "102": {
+    "inputs": {
+      "lora_name": "wan2.2_i2v_lightx2v_4steps_lora_v1_low_noise.safetensors",
+      "strength_model": 1.0000000000000002,
+      "model": [
+        "96",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "103": {
+    "inputs": {
+      "shift": 5.000000000000001,
+      "model": [
+        "102",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingSD3",
+    "_meta": {
+      "title": "采样算法（SD3）"
+    }
+  },
+  "104": {
+    "inputs": {
+      "shift": 5.000000000000001,
+      "model": [
+        "101",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingSD3",
+    "_meta": {
+      "title": "采样算法（SD3）"
+    }
+  },
+  "108": {
+    "inputs": {
+      "filename_prefix": "video/ComfyUI",
+      "format": "auto",
+      "codec": "auto",
+      "video": [
+        "94",
+        0
+      ]
+    },
+    "class_type": "SaveVideo",
+    "_meta": {
+      "title": "保存视频"
+    }
+  }
+}

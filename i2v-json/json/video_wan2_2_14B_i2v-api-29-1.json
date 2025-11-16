@@ -1,0 +1,269 @@
+{
+  "84": {
+    "inputs": {
+      "clip_name": "umt5_xxl_fp8_e4m3fn_scaled.safetensors",
+      "type": "wan",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "加载CLIP"
+    }
+  },
+  "85": {
+    "inputs": {
+      "add_noise": "disable",
+      "noise_seed": 0,
+      "steps": 4,
+      "cfg": 1,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "start_at_step": 2,
+      "end_at_step": 4,
+      "return_with_leftover_noise": "disable",
+      "model": [
+        "103",
+        0
+      ],
+      "positive": [
+        "98",
+        0
+      ],
+      "negative": [
+        "98",
+        1
+      ],
+      "latent_image": [
+        "86",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced",
+    "_meta": {
+      "title": "K采样器（高级）"
+    }
+  },
+  "86": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 436598171524569,
+      "steps": 4,
+      "cfg": 1,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "start_at_step": 0,
+      "end_at_step": 2,
+      "return_with_leftover_noise": "enable",
+      "model": [
+        "104",
+        0
+      ],
+      "positive": [
+        "98",
+        0
+      ],
+      "negative": [
+        "98",
+        1
+      ],
+      "latent_image": [
+        "98",
+        2
+      ]
+    },
+    "class_type": "KSamplerAdvanced",
+    "_meta": {
+      "title": "K采样器（高级）"
+    }
+  },
+  "87": {
+    "inputs": {
+      "samples": [
+        "85",
+        0
+      ],
+      "vae": [
+        "90",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "89": {
+    "inputs": {
+      "text": "色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走",
+      "clip": [
+        "84",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Negative Prompt)"
+    }
+  },
+  "90": {
+    "inputs": {
+      "vae_name": "wan_2.1_vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "加载VAE"
+    }
+  },
+  "93": {
+    "inputs": {
+      "text": "Traditional Chinese line drawing illustration style, black ink on aged paper texture, classical folklore narrative aesthetic, spectacular supernatural escape scene depicting sage's miraculous flight from palace pursuers, upper left corner featuring dramatic decorative云纹 cloud formation in solid black ink with elaborate swirling ruyi patterns suggesting divine intervention and supernatural assistance in righteous sage's escape, clouds flowing horizontally creating sense of movement and celestial witness to miraculous event, upper center-left armored palace guard or warrior in elaborate scaled military armor with geometric lamellar patterns charging forward in aggressive pursuit, guard wearing distinctive官帽 military cap with fierce determined expression showing loyalty to tyrannical king's arrest order, warrior's muscular body leaning forward in dynamic running pose with one leg extended showing explosive forward motion, guard's armor billowing with movement emphasizing speed and urgency of chase, warrior positioned on upper level of palace structure attempting to intercept fleeing sage, right side showing elaborate palace architecture with multiple ornamental elements, prominent dark tower or column structure with decorative top featuring geometric Greek key回纹 border patterns and ceremonial finial or ornament, architectural details suggesting鹿台 Deer Platform construction site or palace building, smaller pavilion structure visible with lattice windows and upturned eaves showing traditional palace design, architectural elements creating vertical height emphasizing dangerous elevation of Jiang Ziya's desperate leap, sense of massive building project that sage criticized now becoming scene of his miraculous escape, center-lower portion dominated by spectacular image of Jiang Ziya in flowing scholarly robes making impossible supernatural leap downward from palace building, sage's body suspended in mid-air in dramatic diagonal falling pose showing moment of faith and divine protection, Jiang Ziya's robes and long sleeves streaming upward and outward from rapid descent creating dynamic flowing lines suggesting both falling and flying, sage's expression showing determined calm despite dangerous situation revealing faith in heavenly protection, sage's distinctive scholarly beard and hair flowing backward from wind of descent, sense of supernatural levitation or controlled descent rather than dangerous fall, lower portion showing magnificent mythical四不像 Si Bu Xiang creature positioned to receive falling sage, divine beast featuring elegant elongated body with decorative swirling patterns and flowing mane, creature's distinctive features combining elements of multiple animals showing supernatural origin, Si Bu Xiang's graceful pose with head raised upward and body positioned to catch or support descending sage, divine mount appearing at perfect moment showing heavenly intervention, creature's flowing tail and mane creating sense of movement and celestial energy, beast's ornate saddle or decorative elements visible showing it is prepared conveyance sent by immortals, background showing massive palace foundation wall constructed of large dark stone blocks creating imposing barrier, architectural wall emphasizing height and danger of leap while also showing earthly power that cannot contain heaven-blessed sage, ground level indicated by base of wall showing destination of miraculous descent, entire composition capturing peak dramatic moment of impossible escape frozen in time, sense of divine intervention as supernatural mount appears precisely when needed, cosmic justice protecting righteous sage from corrupt tyrant's murderous intent, guards above unable to follow supernatural leap showing limitation of earthly authority against heaven's will, Jiang Ziya's courageous leap of faith demonstrating trust in divine protection, ironic reversal as demon Daji's trap becomes catalyst for sage's miraculous escape revealing his true divine destiny, animated dynamic motion showing guard charging forward desperately, Jiang Ziya falling through air with robes billowing dramatically, Si Bu Xiang creature moving into position with graceful supernatural speed, clouds swirling suggesting celestial forces orchestrating rescue, architectural elements remaining solid while supernatural action unfolds, sense of multiple simultaneous actions creating climactic escape sequence, monochromatic sepia tones with dramatic ink wash contrasts emphasizing movement and supernatural energy, vintage aged paper with historical weathering lending authenticity to legendary miracle, classical Chinese supernatural escape illustration aesthetic with emphasis on divine intervention and cosmic justice, masterpiece folkloric miraculous rescue scene showing heaven protecting righteous sage from earthly persecution, 4k quality, legendary divine mount rescue moment visualization, cosmic destiny manifesting as Jiang Ziya's true immortal nature revealed through impossible escape marking transition from mortal official to heaven's chosen instrument of dynasty's destruction",
+      "clip": [
+        "84",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Positive Prompt)"
+    }
+  },
+  "94": {
+    "inputs": {
+      "fps": 16,
+      "images": [
+        "87",
+        0
+      ]
+    },
+    "class_type": "CreateVideo",
+    "_meta": {
+      "title": "创建视频"
+    }
+  },
+  "95": {
+    "inputs": {
+      "unet_name": "wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "96": {
+    "inputs": {
+      "unet_name": "wan2.2_i2v_low_noise_14B_fp8_scaled.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "97": {
+    "inputs": {
+      "image": "29.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "98": {
+    "inputs": {
+      "width": 832,
+      "height": 640,
+      "length": 121,
+      "batch_size": 1,
+      "positive": [
+        "93",
+        0
+      ],
+      "negative": [
+        "89",
+        0
+      ],
+      "vae": [
+        "90",
+        0
+      ],
+      "start_image": [
+        "97",
+        0
+      ]
+    },
+    "class_type": "WanImageToVideo",
+    "_meta": {
+      "title": "Wan图像到视频"
+    }
+  },
+  "101": {
+    "inputs": {
+      "lora_name": "wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors",
+      "strength_model": 1.0000000000000002,
+      "model": [
+        "95",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "102": {
+    "inputs": {
+      "lora_name": "wan2.2_i2v_lightx2v_4steps_lora_v1_low_noise.safetensors",
+      "strength_model": 1.0000000000000002,
+      "model": [
+        "96",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "103": {
+    "inputs": {
+      "shift": 5.000000000000001,
+      "model": [
+        "102",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingSD3",
+    "_meta": {
+      "title": "采样算法（SD3）"
+    }
+  },
+  "104": {
+    "inputs": {
+      "shift": 5.000000000000001,
+      "model": [
+        "101",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingSD3",
+    "_meta": {
+      "title": "采样算法（SD3）"
+    }
+  },
+  "108": {
+    "inputs": {
+      "filename_prefix": "video/ComfyUI",
+      "format": "auto",
+      "codec": "auto",
+      "video": [
+        "94",
+        0
+      ]
+    },
+    "class_type": "SaveVideo",
+    "_meta": {
+      "title": "保存视频"
+    }
+  }
+}

@@ -1,0 +1,269 @@
+{
+  "84": {
+    "inputs": {
+      "clip_name": "umt5_xxl_fp8_e4m3fn_scaled.safetensors",
+      "type": "wan",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "加载CLIP"
+    }
+  },
+  "85": {
+    "inputs": {
+      "add_noise": "disable",
+      "noise_seed": 0,
+      "steps": 4,
+      "cfg": 1,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "start_at_step": 2,
+      "end_at_step": 4,
+      "return_with_leftover_noise": "disable",
+      "model": [
+        "103",
+        0
+      ],
+      "positive": [
+        "98",
+        0
+      ],
+      "negative": [
+        "98",
+        1
+      ],
+      "latent_image": [
+        "86",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced",
+    "_meta": {
+      "title": "K采样器（高级）"
+    }
+  },
+  "86": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 436598171524569,
+      "steps": 4,
+      "cfg": 1,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "start_at_step": 0,
+      "end_at_step": 2,
+      "return_with_leftover_noise": "enable",
+      "model": [
+        "104",
+        0
+      ],
+      "positive": [
+        "98",
+        0
+      ],
+      "negative": [
+        "98",
+        1
+      ],
+      "latent_image": [
+        "98",
+        2
+      ]
+    },
+    "class_type": "KSamplerAdvanced",
+    "_meta": {
+      "title": "K采样器（高级）"
+    }
+  },
+  "87": {
+    "inputs": {
+      "samples": [
+        "85",
+        0
+      ],
+      "vae": [
+        "90",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "89": {
+    "inputs": {
+      "text": "色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走",
+      "clip": [
+        "84",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Negative Prompt)"
+    }
+  },
+  "90": {
+    "inputs": {
+      "vae_name": "wan_2.1_vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "加载VAE"
+    }
+  },
+  "93": {
+    "inputs": {
+      "text": "Traditional Chinese line drawing illustration style, black ink on aged paper texture, classical folklore narrative aesthetic, tense throne room confrontation scene depicting righteous sage's courageous protest, upper left corner featuring rectangular decorative panel or banner with dragon relief design showing traditional五爪龙 five-clawed imperial dragon in dynamic pose with flowing mane and tail writhing across surface, dragon motif emphasizing imperial authority and power that Jiang Ziya dares to challenge, panel framed with simple border creating formal heraldic element, left side dominated by two identical imposing military generals or palace guards in elaborate scaled armor with distinctive geometric patterns suggesting protective lamellar construction, generals wearing matching fierce官帽 ceremonial military caps with tall rectangular shapes and stern intimidating facial expressions with dramatic mustaches and fierce eyes, twin guards creating symmetrical threatening presence flanking throne, left general holding large architectural scroll or decree document showing鹿台 Deer Platform construction plans visible with text or diagrams, right general grasping miniature architectural model of multi-story building representing scale model of proposed Deer Platform tower, model featuring detailed windows doors and roof structure, both generals' powerful muscular builds and aggressive stances showing military authority ready to enforce king's will, generals positioned as if presenting evidence of Jiang Ziya's insubordination and blocking his escape, sense of sage being surrounded by hostile forces after speaking truth to power, right side showing King Zhou纣王 seated on magnificent ornate throne with elaborate decorative platform base featuring geometric floral medallion patterns in traditional回纹 style, throne elevated on stepped dais emphasizing royal superiority and distance from common subjects, king wearing spectacular imperial robes with contrasting dark and light sections covered in intricate dragon and cloud patterns symbolizing supreme authority, king's elaborate ceremonial crown with distinctive architectural elements and flowing majestic beard showing tyrannical majesty, king's fierce angry expression with wide eyes and open mouth showing rage at Jiang Ziya's audacious criticism of wasteful building project, king's hand raised in furious commanding gesture ordering sage's immediate arrest, king's body language radiating offended imperial dignity and murderous intent, sense of tyrant's fragile ego unable to tolerate righteous counsel, far right ornate ceremonial brazier on tall decorative stand with elaborate segmented column featuring traditional patterns, fierce flames burning intensely at top in dramatic leaping patterns suggesting king's burning rage and dangerous supernatural atmosphere, torch emphasizing dramatic tension and ominous threat to sage's life, entire composition capturing pivotal confrontation between corrupt power and righteous wisdom, Jiang Ziya presumably present though not directly shown having just delivered frank memorial criticizing鹿台 construction as too grand and bankrupting the people, sage's courageous willingness to speak truth despite personal danger, ironic situation where demon Daji's revenge trap succeeds as righteous advice triggers tyrant's murderous fury, fateful moment as sage's integrity places him in mortal peril, king's explosive anger showing how truth threatens corrupt authority, generals' ready enforcement showing palace machinery of oppression, architectural plans and model serving as evidence of Jiang Ziya's alleged sedition for opposing imperial vanity project, sense of innocent sage being criminalized for virtuous concern about people's welfare, contrast between sage's moral courage and tyrant's petty vindictive rage, cosmic injustice as righteous man faces death for opposing wasteful monument, animated gestures showing king's furious commanding motion ordering arrest, generals stepping forward menacingly to seize sage, flames leaping dramatically emphasizing explosive confrontation, fabric and robes billowing with violent emotional energy, dragon banner seeming to writhe with supernatural approval of tyrant's anger, monochromatic sepia tones with dramatic ink wash creating tense confrontational atmosphere, vintage aged paper with historical weathering lending gravitas to moral crisis, classical Chinese imperial confrontation illustration aesthetic emphasizing power dynamics and moral conflict, masterpiece folkloric persecution scene showing righteous sage facing tyrant's wrath for speaking truth, 4k quality, legendary courageous protest moment visualization, cosmic battle between virtue and corruption intensifying as sage's principled stand triggers lethal consequences setting stage for his miraculous escape and eventual destiny as dynasty's destroyer",
+      "clip": [
+        "84",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Positive Prompt)"
+    }
+  },
+  "94": {
+    "inputs": {
+      "fps": 16,
+      "images": [
+        "87",
+        0
+      ]
+    },
+    "class_type": "CreateVideo",
+    "_meta": {
+      "title": "创建视频"
+    }
+  },
+  "95": {
+    "inputs": {
+      "unet_name": "wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "96": {
+    "inputs": {
+      "unet_name": "wan2.2_i2v_low_noise_14B_fp8_scaled.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "97": {
+    "inputs": {
+      "image": "28.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "98": {
+    "inputs": {
+      "width": 832,
+      "height": 640,
+      "length": 121,
+      "batch_size": 1,
+      "positive": [
+        "93",
+        0
+      ],
+      "negative": [
+        "89",
+        0
+      ],
+      "vae": [
+        "90",
+        0
+      ],
+      "start_image": [
+        "97",
+        0
+      ]
+    },
+    "class_type": "WanImageToVideo",
+    "_meta": {
+      "title": "Wan图像到视频"
+    }
+  },
+  "101": {
+    "inputs": {
+      "lora_name": "wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors",
+      "strength_model": 1.0000000000000002,
+      "model": [
+        "95",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "102": {
+    "inputs": {
+      "lora_name": "wan2.2_i2v_lightx2v_4steps_lora_v1_low_noise.safetensors",
+      "strength_model": 1.0000000000000002,
+      "model": [
+        "96",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "103": {
+    "inputs": {
+      "shift": 5.000000000000001,
+      "model": [
+        "102",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingSD3",
+    "_meta": {
+      "title": "采样算法（SD3）"
+    }
+  },
+  "104": {
+    "inputs": {
+      "shift": 5.000000000000001,
+      "model": [
+        "101",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingSD3",
+    "_meta": {
+      "title": "采样算法（SD3）"
+    }
+  },
+  "108": {
+    "inputs": {
+      "filename_prefix": "video/ComfyUI",
+      "format": "auto",
+      "codec": "auto",
+      "video": [
+        "94",
+        0
+      ]
+    },
+    "class_type": "SaveVideo",
+    "_meta": {
+      "title": "保存视频"
+    }
+  }
+}

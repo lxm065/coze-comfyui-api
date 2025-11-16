@@ -1,0 +1,269 @@
+{
+  "84": {
+    "inputs": {
+      "clip_name": "umt5_xxl_fp8_e4m3fn_scaled.safetensors",
+      "type": "wan",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "加载CLIP"
+    }
+  },
+  "85": {
+    "inputs": {
+      "add_noise": "disable",
+      "noise_seed": 0,
+      "steps": 4,
+      "cfg": 1,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "start_at_step": 2,
+      "end_at_step": 4,
+      "return_with_leftover_noise": "disable",
+      "model": [
+        "103",
+        0
+      ],
+      "positive": [
+        "98",
+        0
+      ],
+      "negative": [
+        "98",
+        1
+      ],
+      "latent_image": [
+        "86",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced",
+    "_meta": {
+      "title": "K采样器（高级）"
+    }
+  },
+  "86": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 436598171524569,
+      "steps": 4,
+      "cfg": 1,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "start_at_step": 0,
+      "end_at_step": 2,
+      "return_with_leftover_noise": "enable",
+      "model": [
+        "104",
+        0
+      ],
+      "positive": [
+        "98",
+        0
+      ],
+      "negative": [
+        "98",
+        1
+      ],
+      "latent_image": [
+        "98",
+        2
+      ]
+    },
+    "class_type": "KSamplerAdvanced",
+    "_meta": {
+      "title": "K采样器（高级）"
+    }
+  },
+  "87": {
+    "inputs": {
+      "samples": [
+        "85",
+        0
+      ],
+      "vae": [
+        "90",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "89": {
+    "inputs": {
+      "text": "色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走",
+      "clip": [
+        "84",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Negative Prompt)"
+    }
+  },
+  "90": {
+    "inputs": {
+      "vae_name": "wan_2.1_vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "加载VAE"
+    }
+  },
+  "93": {
+    "inputs": {
+      "text": "Traditional Chinese line drawing illustration style, black ink on aged paper texture, classical folklore narrative aesthetic, tense domestic confrontation scene depicting marriage at crossroads of destiny, upper portion featuring same elaborate decorative grapevine or gourd vine canopy as previous scene stretching across composition creating continuity, thick twisting vine branches with flowing curved lines, dense clusters of stylized leaves in solid black ink with flower or fruit motifs hanging throughout maintaining lush domestic garden atmosphere, vines framing scene emphasizing private marital discussion about momentous life decision, left side showing Jiang Ziya in scholarly robes with contrasting dark vest decorated with small floral patterns over light flowing garments, sage's characteristic rotund cheerful appearance with round smiling face showing optimistic confidence despite dangerous situation, Jiang Ziya's wide flowing sleeves creating graceful curves as hands gesture in explanatory persuasive motion, sage's body language showing earnest appeal as he invites wife to flee with him to Xiqi西岐, one hand raised pointing or gesturing toward imagined future, other hand positioned in reasoning or pleading gesture, Jiang Ziya's expression mixing hope and urgency as he explains king wants to kill him so they cannot stay, sage's promise visible in his confident bearing that when fortunes turn she will become一品夫人 first-rank noble lady, sense of husband trying to convince practical wife to trust in supernatural destiny she doesn't yet understand, scattered small decorative birds or objects on ground between couple possibly symbolizing humble current circumstances versus promised future glory, right side showing Ma Shi in similar elegant dark robes with geometric Greek key回纹 border patterns, wife's posture dramatically different from previous welcoming scene now showing shock anger and rejection, Ma Shi's body turned partially away in refusing gesture, one arm raised dramatically pointing outward in dismissive or accusatory motion, wife's finger extended in sharp gesture possibly pointing toward door or expressing emphatic refusal, Ma Shi's facial expression showing scorn disbelief and practical contempt for husband's seemingly delusional promises, wife's other hand positioned at waist or chest showing indignant posture, sense of woman tired of impractical dreamer husband's grand claims, Ma Shi's body language radiating rejection of impossible scheme to flee to distant Xiqi with empty promises of noble rank, contrast between husband's supernatural confidence and wife's mundane practicality creating tragic disconnect, wife seeing only failure and delusion where husband sees divine destiny, dramatic tension as marriage reaches breaking point over fundamental difference in worldview, Jiang Ziya's optimistic gestures meeting wife's scornful rejection, sense of sage trying to share cosmic vision with someone bound to earthly material concerns, tragic irony as audience knows Jiang Ziya's promises will indeed come true but wife's skepticism prevents her sharing in glory, wife's rejection showing she values current security over uncertain future, domestic conflict representing larger theme of worldly wisdom versus divine faith, vines overhead seeming to witness marital crisis, ground between couple creating spatial and emotional distance, animated interaction showing Jiang Ziya gesturing earnestly with expansive hopeful movements, Ma Shi recoiling and pointing in sharp rejection, robes flowing with agitated movement, couple's body language showing complete disconnect in communication, husband's pleading versus wife's refusing creating visual and emotional contrast, monochromatic sepia tones with dramatic ink wash emphasizing confrontational tension, vintage aged paper with historical weathering lending gravitas to marriage crisis, classical Chinese domestic conflict illustration aesthetic with emphasis on human tragedy of incompatible perspectives, masterpiece folkloric marital separation scene showing gap between divine calling and earthly attachment, 4k quality, legendary wife's fateful rejection moment visualization, cosmic destiny creating insurmountable divide as immortal sage's mortal wife chooses material security over supernatural adventure setting stage for her ultimate regret when his impossible promises come true without her",
+      "clip": [
+        "84",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Positive Prompt)"
+    }
+  },
+  "94": {
+    "inputs": {
+      "fps": 16,
+      "images": [
+        "87",
+        0
+      ]
+    },
+    "class_type": "CreateVideo",
+    "_meta": {
+      "title": "创建视频"
+    }
+  },
+  "95": {
+    "inputs": {
+      "unet_name": "wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "96": {
+    "inputs": {
+      "unet_name": "wan2.2_i2v_low_noise_14B_fp8_scaled.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "97": {
+    "inputs": {
+      "image": "32.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "98": {
+    "inputs": {
+      "width": 832,
+      "height": 640,
+      "length": 121,
+      "batch_size": 1,
+      "positive": [
+        "93",
+        0
+      ],
+      "negative": [
+        "89",
+        0
+      ],
+      "vae": [
+        "90",
+        0
+      ],
+      "start_image": [
+        "97",
+        0
+      ]
+    },
+    "class_type": "WanImageToVideo",
+    "_meta": {
+      "title": "Wan图像到视频"
+    }
+  },
+  "101": {
+    "inputs": {
+      "lora_name": "wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors",
+      "strength_model": 1.0000000000000002,
+      "model": [
+        "95",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "102": {
+    "inputs": {
+      "lora_name": "wan2.2_i2v_lightx2v_4steps_lora_v1_low_noise.safetensors",
+      "strength_model": 1.0000000000000002,
+      "model": [
+        "96",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "103": {
+    "inputs": {
+      "shift": 5.000000000000001,
+      "model": [
+        "102",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingSD3",
+    "_meta": {
+      "title": "采样算法（SD3）"
+    }
+  },
+  "104": {
+    "inputs": {
+      "shift": 5.000000000000001,
+      "model": [
+        "101",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingSD3",
+    "_meta": {
+      "title": "采样算法（SD3）"
+    }
+  },
+  "108": {
+    "inputs": {
+      "filename_prefix": "video/ComfyUI",
+      "format": "auto",
+      "codec": "auto",
+      "video": [
+        "94",
+        0
+      ]
+    },
+    "class_type": "SaveVideo",
+    "_meta": {
+      "title": "保存视频"
+    }
+  }
+}

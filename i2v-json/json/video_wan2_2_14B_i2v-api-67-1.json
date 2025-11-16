@@ -1,0 +1,269 @@
+{
+  "84": {
+    "inputs": {
+      "clip_name": "umt5_xxl_fp8_e4m3fn_scaled.safetensors",
+      "type": "wan",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "加载CLIP"
+    }
+  },
+  "85": {
+    "inputs": {
+      "add_noise": "disable",
+      "noise_seed": 0,
+      "steps": 4,
+      "cfg": 1,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "start_at_step": 2,
+      "end_at_step": 4,
+      "return_with_leftover_noise": "disable",
+      "model": [
+        "103",
+        0
+      ],
+      "positive": [
+        "98",
+        0
+      ],
+      "negative": [
+        "98",
+        1
+      ],
+      "latent_image": [
+        "86",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced",
+    "_meta": {
+      "title": "K采样器（高级）"
+    }
+  },
+  "86": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 436598171524569,
+      "steps": 4,
+      "cfg": 1,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "start_at_step": 0,
+      "end_at_step": 2,
+      "return_with_leftover_noise": "enable",
+      "model": [
+        "104",
+        0
+      ],
+      "positive": [
+        "98",
+        0
+      ],
+      "negative": [
+        "98",
+        1
+      ],
+      "latent_image": [
+        "98",
+        2
+      ]
+    },
+    "class_type": "KSamplerAdvanced",
+    "_meta": {
+      "title": "K采样器（高级）"
+    }
+  },
+  "87": {
+    "inputs": {
+      "samples": [
+        "85",
+        0
+      ],
+      "vae": [
+        "90",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "89": {
+    "inputs": {
+      "text": "色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走",
+      "clip": [
+        "84",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Negative Prompt)"
+    }
+  },
+  "90": {
+    "inputs": {
+      "vae_name": "wan_2.1_vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "加载VAE"
+    }
+  },
+  "93": {
+    "inputs": {
+      "text": "Traditional Chinese line drawing illustration style, black ink on aged paper texture, classical folklore narrative aesthetic, spectacular multi-level chaotic supernatural battle scene depicting divine weapon's devastating effectiveness against immortal opponent, upper portion showing explosive aerial supernatural combat with multiple divine champions engaged in coordinated assault, upper left showing divine warrior possibly哪吒 Nezha or other celestial ally in aggressive aerial combat pose riding云 cloud formation, warrior wearing distinctive armor or ceremonial robes wielding weapon in dynamic striking motion, divine champion's fierce expression showing supernatural combat prowess, upper center-left showing second Zhou ally in mid-air combat engaged with enemy cultivator, warrior's dynamic pose showing rapid movement and martial skill, upper center showing intense aerial melee with weapons clashing and supernatural energies exploding, combat zone rendered with explosive effects suggesting violent supernatural forces colliding, upper center-right showing third divine warrior possibly金吒 Jinzha or another enlightened disciple in aggressive assault, warrior wielding sword or spear in powerful striking pose, divine ally's determined expression showing commitment to destroying remaining Nine Dragon Island Daoists, upper right showing additional combat participant possibly mounted on supernatural beast or云 cloud, scattered云纹 cloud formations in solid black with swirling patterns creating supernatural battlefield atmosphere, clouds suggesting entire battle occurring in elevated realm between heaven and earth, sense of coordinated Zhou forces子牙领兵 Jiang Ziya leading troops engaging in混战一场 chaotic intense battle与三个道人 with three remaining Daoist cultivators, multiple simultaneous duels creating complex chaotic battlefield with no clear front lines, middle register showing spectacular moment of姜子牙's divine weapon deployment, center-left showing devastating impact as打神鞭 God-Striking Whip strikes target, weapon rendered as ornate rod or staff with supernatural properties creating explosive effect on contact, critically depicting打神鞭's devastating power specifically designed for subduing gods demons and immortals, whip's strike creating massive explosive starburst pattern visualizing tremendous supernatural force release, impact zone showing violent energy burst suggesting crushing destructive power, center showing高友乾 Gao Youqian third Nine Dragon Island Daoist in moment of catastrophic fatal injury, Gao Youqian wearing elaborate dark Daoist robes now in complete disarray from devastating strike, critically depicting horrific fatal wound打得高友乾脑浆迸出 striking Gao Youqian causing brain matter to burst out, gruesome fatal injury visualized through explosive head trauma, Gao Youqian's expression frozen in shock and death as devastating blow instantly kills, cultivator's body rendered in倒撞下来 falling tumbling downward pose showing immediate death, immortal's limbs splayed showing complete loss of control and life, sense of powerful Daoist cultivator instantly killed by superior divine weapon despite supernatural cultivation, cosmic significance as打神鞭 God-Striking Whip proves devastating effectiveness against immortal opponents, weapon's name justified through graphic demonstration of power to strike down gods, Gao Youqian's instant death showing even accomplished Daoist immortal cannot withstand divine implement specifically designed for subduing supernatural beings, lower left possibly showing姜子牙 Jiang Ziya on四不相 Si Bu Xiang divine mount in commanding position, sage wearing formal ministerial robes now actively leading combat, Jiang Ziya's posture showing he has just丢起 thrown up打神鞭 God-Striking Whip in devastating attack, divine weapon possibly visible as elongated object flying through air toward target or having just struck, sage's expression showing determined satisfaction at successful strike, sense of supernatural strategist demonstrating combat capability matching tactical genius, Jiang Ziya领兵 leading troops showing he commands overall battle while personally engaging with divine weapon, Si Bu Xiang maintaining steady position allowing rider to deploy magical implement effectively, lower center showing Gao Youqian's monstrous beast possibly in shocked reaction to rider's sudden death, beast rendered with distinctive supernatural features now confused or panicked without immortal rider's control, creature's aggressive stance transformed to chaos as master killed, lower right possibly showing remaining two九龙岛道人 Nine Dragon Island Daoists杨森 Yang Sen and李兴霸 Li Xingba in shocked reaction to comrade's death, surviving cultivators' expressions showing horror at witnessing Gao Youqian's instant fatal demise, sense of three-person coordinated assault suddenly disrupted by devastating divine weapon strike, scattered云纹 cloud formations throughout suggesting chaotic multi-level battlefield, additional explosive effects or energy bursts indicating multiple simultaneous magical exchanges, cosmic significance as打神鞭 God-Striking Whip demonstrates superior divine authority over Daoist magical treasures like开天珠 Heaven-Opening Pearl and聚地珠 Earth-Gathering Pearl, Yuanshi Tianzun's gift proving decisive as weapon specifically designed for subduing supernatural opponents shows devastating effectiveness, Gao Youqian's instant death through catastrophic head trauma showing打神鞭 doesn't merely wound but utterly destroys opponents, famous victory marking second九龙岛道人 Nine Dragon Island Daoist killed reducing Shang-allied forces from three to two, strategic importance as Zhou forces demonstrate capability to match and exceed enemy despite earlier devastating defeats, Jiang Ziya's personal combat participation showing recovered sage actively leads troops not merely commands from rear, divine weapon deployment showing sage has mastered打神鞭's use after receiving from Yuanshi Tianzun, cosmic justice as Gao Youqian who participated in coordinated assault that nearly killed Jiang Ziya now himself killed by divine retribution, ironic reversal as confident immortal's magical treasures prove useless against superior divine implement, sense of battlefield momentum shifting dramatically as Zhou forces kill second opponent, remaining two Daoists now facing overwhelming opposition with two comrades dead, animated explosive chaotic movements showing multiple warriors engaged in simultaneous aerial combat, weapons clashing creating spark effects, divine champions executing coordinated assault tactics, Jiang Ziya's throwing motion丢起 tossing up打神鞭 with perfect technique, divine whip flying through air with supernatural guidance toward target, whip striking Gao Youqian's head with devastating explosive impact, horrific visualization of脑浆迸出 brain matter bursting out from catastrophic trauma, Gao Youqian's body violently thrown backward by tremendous force, cultivator tumbling倒撞下来 falling crashing downward in death, monstrous beast rearing in panic and confusion, surviving Daoists recoiling in shock, multiple云 clouds churning from supernatural energies, Zhou warriors pressing coordinated attacks, entire battlefield radiating explosive chaotic energy, sense of decisive moment as divine weapon's devastating power shifts battle completely, monochromatic sepia tones with dramatic contrasts creating visual chaos appropriate for intense multi-level supernatural warfare, vintage aged paper with historical weathering lending authenticity to legendary chaotic battle scene, classical Chinese divine warfare climactic combat illustration aesthetic emphasizing coordinated assault and devastating divine weapon effectiveness, masterpiece folkloric decisive strike scene showing superior divine implement's overwhelming power, 4k quality, legendary God-Striking Whip fatal blow visualization, cosmic victory as Jiang Ziya子牙领兵和三个道人混战一场 leading troops engaging in chaotic intense battle with three Daoist cultivators丢起打神鞭 throwing up God-Striking Whip打得高友乾脑浆迸出 striking Gao Youqian causing brain matter to burst out倒撞下来 falling crashing down in instant death, famous devastating strike demonstrating divine weapon's superior power designed specifically for subduing supernatural beings, second九龙岛道人 Nine Dragon Island Daoist killed marking dramatic shift in cosmic warfare as Zhou-aligned forces backed by Buddhist enlightened beings and armed with superior divine implements systematically destroy Shang-allied Daoist immortals in escalating battle for heaven's mandate and China's dynastic future through devastating effectiveness of celestial weapons transcending mere magical treasures to represent direct divine authority enforcing cosmic justice",
+      "clip": [
+        "84",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Positive Prompt)"
+    }
+  },
+  "94": {
+    "inputs": {
+      "fps": 16,
+      "images": [
+        "87",
+        0
+      ]
+    },
+    "class_type": "CreateVideo",
+    "_meta": {
+      "title": "创建视频"
+    }
+  },
+  "95": {
+    "inputs": {
+      "unet_name": "wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "96": {
+    "inputs": {
+      "unet_name": "wan2.2_i2v_low_noise_14B_fp8_scaled.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "97": {
+    "inputs": {
+      "image": "67.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "98": {
+    "inputs": {
+      "width": 832,
+      "height": 640,
+      "length": 121,
+      "batch_size": 1,
+      "positive": [
+        "93",
+        0
+      ],
+      "negative": [
+        "89",
+        0
+      ],
+      "vae": [
+        "90",
+        0
+      ],
+      "start_image": [
+        "97",
+        0
+      ]
+    },
+    "class_type": "WanImageToVideo",
+    "_meta": {
+      "title": "Wan图像到视频"
+    }
+  },
+  "101": {
+    "inputs": {
+      "lora_name": "wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors",
+      "strength_model": 1.0000000000000002,
+      "model": [
+        "95",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "102": {
+    "inputs": {
+      "lora_name": "wan2.2_i2v_lightx2v_4steps_lora_v1_low_noise.safetensors",
+      "strength_model": 1.0000000000000002,
+      "model": [
+        "96",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "103": {
+    "inputs": {
+      "shift": 5.000000000000001,
+      "model": [
+        "102",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingSD3",
+    "_meta": {
+      "title": "采样算法（SD3）"
+    }
+  },
+  "104": {
+    "inputs": {
+      "shift": 5.000000000000001,
+      "model": [
+        "101",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingSD3",
+    "_meta": {
+      "title": "采样算法（SD3）"
+    }
+  },
+  "108": {
+    "inputs": {
+      "filename_prefix": "video/ComfyUI",
+      "format": "auto",
+      "codec": "auto",
+      "video": [
+        "94",
+        0
+      ]
+    },
+    "class_type": "SaveVideo",
+    "_meta": {
+      "title": "保存视频"
+    }
+  }
+}

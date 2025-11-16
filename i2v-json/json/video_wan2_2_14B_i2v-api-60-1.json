@@ -1,0 +1,269 @@
+{
+  "84": {
+    "inputs": {
+      "clip_name": "umt5_xxl_fp8_e4m3fn_scaled.safetensors",
+      "type": "wan",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "加载CLIP"
+    }
+  },
+  "85": {
+    "inputs": {
+      "add_noise": "disable",
+      "noise_seed": 0,
+      "steps": 4,
+      "cfg": 1,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "start_at_step": 2,
+      "end_at_step": 4,
+      "return_with_leftover_noise": "disable",
+      "model": [
+        "103",
+        0
+      ],
+      "positive": [
+        "98",
+        0
+      ],
+      "negative": [
+        "98",
+        1
+      ],
+      "latent_image": [
+        "86",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced",
+    "_meta": {
+      "title": "K采样器（高级）"
+    }
+  },
+  "86": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 436598171524569,
+      "steps": 4,
+      "cfg": 1,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "start_at_step": 0,
+      "end_at_step": 2,
+      "return_with_leftover_noise": "enable",
+      "model": [
+        "104",
+        0
+      ],
+      "positive": [
+        "98",
+        0
+      ],
+      "negative": [
+        "98",
+        1
+      ],
+      "latent_image": [
+        "98",
+        2
+      ]
+    },
+    "class_type": "KSamplerAdvanced",
+    "_meta": {
+      "title": "K采样器（高级）"
+    }
+  },
+  "87": {
+    "inputs": {
+      "samples": [
+        "85",
+        0
+      ],
+      "vae": [
+        "90",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "89": {
+    "inputs": {
+      "text": "色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走",
+      "clip": [
+        "84",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Negative Prompt)"
+    }
+  },
+  "90": {
+    "inputs": {
+      "vae_name": "wan_2.1_vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "加载VAE"
+    }
+  },
+  "93": {
+    "inputs": {
+      "text": "Traditional Chinese line drawing illustration style, black ink on aged paper texture, classical folklore narrative aesthetic, complete catastrophic defeat scene depicting final devastating blow knocking wounded sage from divine mount to ground, upper portion featuring extensive云纹 cloud formations in mixed solid black and outlined styles stretching horizontally across composition, clouds rendered with elaborate swirling ruyi patterns suggesting heavenly witness to catastrophic defeat, cloud formations creating supernatural atmospheric canopy over tragic scene, scattered additional云纹 motifs throughout creating sense of cosmic significance to moment, left side showing王魔 Wang Mo in relentless pursuit赶来 chasing after fleeing Jiang Ziya, Wang Mo wearing dark elaborate Daoist robes with intricate decorative patterns showing immortal cultivator status, cultivator's fierce determined expression showing intent to完成击败 complete defeat of Zhou commander, Wang Mo mounted on terrifying monstrous beast in full charging gallop, beast rendered with fearsome supernatural features including sharp fangs bulging eyes and aggressive expression, creature's powerful muscular form lunging forward with extended limbs showing explosive pursuit speed, monstrous mount's supernatural nature emphasized through exaggerated anatomy and impossible features, critically showing Wang Mo也取一粒开天珠 also taking out Heaven-Opening Pearl magical implement, second deployment of devastating开天珠 treasure showing Nine Dragon Island Daoists possess multiple powerful magical weapons, Wang Mo's gesture showing he has just thrown or released Heaven-Opening Pearl toward fleeing target, sense of coordinated relentless assault as Wang Mo continues attack after Li Xingba's successful strike, cosmic significance as multiple powerful magical implements deployed in succession overwhelming sage's defenses completely, center showing explosive catastrophic impact moment把子牙打翻在地 Heaven-Opening Pearl striking Jiang Ziya knocking him tumbling to ground, impact visualization rendered as dramatic starburst explosion pattern showing tremendous magical force, explosive effect creating visible shockwave or energy burst at point of contact, sense of devastating magical strike adding to earlier injury creating overwhelming cumulative damage, right upper showing long graceful curved line representing Heaven-Opening Pearl's supernatural trajectory, curved line creating elegant arc from Wang Mo to impact point, magical implement's flight path showing supernatural guidance not mere physical projectile motion, trajectory line emphasizing precision of magical strike, center-right showing姜子牙 Jiang Ziya in moment of complete catastrophic defeat being violently knocked from divine mount, sage wearing formal ministerial robes now in total disarray from double magical assault, Jiang Ziya's characteristic elderly rotund form tumbling through air after being struck by second devastating magical treasure, critically showing sage's body被打翻 being knocked tumbling overturned falling, Jiang Ziya's limbs splayed showing complete loss of control from powerful magical impact, sage's expression showing shock pain and despair as second devastating strike completes his defeat, sense of supernatural strategist completely overwhelmed by superior magical arsenal, cosmic humiliation as heaven's chosen champion knocked from divine mount to earth, lower center-right showing Jiang Ziya's body falling toward ground在地 to the ground, sage's tumbling form creating dynamic diagonal composition, robes flowing wildly from violent fall, possible weapons or implements flying from grasp showing complete defeat, sense of proud Prime Minister reduced to helpless falling figure, ironic reversal from confident commander to defeated fugitive, lower left showing magnificent四不相 Si Bu Xiang divine mount continuing forward momentum even as rider is knocked off, Si Bu Xiang rendered with distinctive chimeric features showing mixed animal characteristics, divine beast's powerful form still in galloping escape pose with legs extended, Si Bu Xiang's head possibly turning showing awareness that rider has been struck from back, sense of divine mount powerless to prevent magical strike despite supernatural nature, beast's continued forward movement showing momentum carrying it past falling rider, cosmic tragedy as Yuanshi Tianzun's personal divine mount proves insufficient protection against Nine Dragon Island Daoists' superior magical implements, ground level showing stylized云纹 cloud or terrain elements suggesting earth where Jiang Ziya will land, scattered decorative elements possibly indicating impact zone where sage will crash, sense of inevitable catastrophic landing as tumbling body falls toward ground, Wang Mo's monstrous beast possibly visible in pursuit showing relentless pressure, cosmic significance as Zhou commander's complete defeat threatens entire righteous cause with collapse, famous scene demonstrating overwhelming power of coordinated magical implements, Wang Mo's pursuit赶来 chasing down showing professional military thinking eliminating wounded opponent before escape, second Heaven-Opening Pearl开天珠 deployment showing Nine Dragon Island Daoists possess abundant magical arsenal, cumulative effect of Li Xingba's聚地珠 Earth-Gathering Pearl followed by Wang Mo's开天珠 Heaven-Opening Pearl creating overwhelming damage, Jiang Ziya's double injury from two powerful magical treasures leaving him completely defenseless, sage being knocked翻 tumbling overturned from Si Bu Xiang showing total defeat, divine mount's protection overcome by superior magical implements, ironic failure as all Yuanshi Tianzun's gifts prove insufficient against Nine Dragon Island arsenal, cosmic crisis as Zhou forces' commander defeated and helpless requiring immediate divine intervention to prevent capture or death, sense of desperate situation as wounded sage falls to ground surrounded by pursuing powerful immortals, famous catastrophe marking lowest point requiring dramatic reversal or Zhou cause faces total collapse, animated explosive violent movements showing Wang Mo and monstrous beast charging in relentless pursuit, Wang Mo's throwing motion releasing Heaven-Opening Pearl with devastating force, magical pearl flying in precise supernatural arc toward target, pearl striking Jiang Ziya's back or side with explosive impact, sage's body violently thrown from Si Bu Xiang by powerful magical strike, Jiang Ziya tumbling through air in uncontrolled fall, robes and hair streaming wildly, possible impact effects showing supernatural energy release, Si Bu Xiang galloping forward unable to help falling rider, sage's helpless form plummeting toward ground, sense of multiple simultaneous catastrophes as injury defeat and fall combine, cosmic defeat unfolding as heaven's chosen champion reduced to helpless falling victim, monochromatic sepia tones with dramatic contrasts creating visual impact of complete catastrophic defeat, vintage aged paper with historical weathering lending authenticity to legendary total defeat scene, classical Chinese supernatural warfare catastrophe illustration aesthetic emphasizing overwhelming power of superior magical implements, masterpiece folkloric complete defeat scene showing coordinated magical assault's devastating effectiveness, 4k quality, legendary total defeat visualization, cosmic catastrophe as Wang Mo王魔赶来 chasing down fleeing Jiang Ziya也取一粒开天珠 also taking out Heaven-Opening Pearl magical treasure把子牙打翻在地 striking sage knocking him tumbling to ground, second devastating magical strike completing Zhou commander's utter defeat, famous catastrophe leaving wounded sage helpless on ground surrounded by powerful pursuing immortals requiring immediate miraculous intervention to prevent capture death and total collapse of righteous Zhou cause in cosmic battle for heaven's mandate and China's dynastic future",
+      "clip": [
+        "84",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Positive Prompt)"
+    }
+  },
+  "94": {
+    "inputs": {
+      "fps": 16,
+      "images": [
+        "87",
+        0
+      ]
+    },
+    "class_type": "CreateVideo",
+    "_meta": {
+      "title": "创建视频"
+    }
+  },
+  "95": {
+    "inputs": {
+      "unet_name": "wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "96": {
+    "inputs": {
+      "unet_name": "wan2.2_i2v_low_noise_14B_fp8_scaled.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "97": {
+    "inputs": {
+      "image": "60.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "98": {
+    "inputs": {
+      "width": 832,
+      "height": 640,
+      "length": 121,
+      "batch_size": 1,
+      "positive": [
+        "93",
+        0
+      ],
+      "negative": [
+        "89",
+        0
+      ],
+      "vae": [
+        "90",
+        0
+      ],
+      "start_image": [
+        "97",
+        0
+      ]
+    },
+    "class_type": "WanImageToVideo",
+    "_meta": {
+      "title": "Wan图像到视频"
+    }
+  },
+  "101": {
+    "inputs": {
+      "lora_name": "wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors",
+      "strength_model": 1.0000000000000002,
+      "model": [
+        "95",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "102": {
+    "inputs": {
+      "lora_name": "wan2.2_i2v_lightx2v_4steps_lora_v1_low_noise.safetensors",
+      "strength_model": 1.0000000000000002,
+      "model": [
+        "96",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "103": {
+    "inputs": {
+      "shift": 5.000000000000001,
+      "model": [
+        "102",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingSD3",
+    "_meta": {
+      "title": "采样算法（SD3）"
+    }
+  },
+  "104": {
+    "inputs": {
+      "shift": 5.000000000000001,
+      "model": [
+        "101",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingSD3",
+    "_meta": {
+      "title": "采样算法（SD3）"
+    }
+  },
+  "108": {
+    "inputs": {
+      "filename_prefix": "video/ComfyUI",
+      "format": "auto",
+      "codec": "auto",
+      "video": [
+        "94",
+        0
+      ]
+    },
+    "class_type": "SaveVideo",
+    "_meta": {
+      "title": "保存视频"
+    }
+  }
+}

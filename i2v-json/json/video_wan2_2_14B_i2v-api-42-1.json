@@ -1,0 +1,269 @@
+{
+  "84": {
+    "inputs": {
+      "clip_name": "umt5_xxl_fp8_e4m3fn_scaled.safetensors",
+      "type": "wan",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "加载CLIP"
+    }
+  },
+  "85": {
+    "inputs": {
+      "add_noise": "disable",
+      "noise_seed": 0,
+      "steps": 4,
+      "cfg": 1,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "start_at_step": 2,
+      "end_at_step": 4,
+      "return_with_leftover_noise": "disable",
+      "model": [
+        "103",
+        0
+      ],
+      "positive": [
+        "98",
+        0
+      ],
+      "negative": [
+        "98",
+        1
+      ],
+      "latent_image": [
+        "86",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced",
+    "_meta": {
+      "title": "K采样器（高级）"
+    }
+  },
+  "86": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 436598171524569,
+      "steps": 4,
+      "cfg": 1,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "start_at_step": 0,
+      "end_at_step": 2,
+      "return_with_leftover_noise": "enable",
+      "model": [
+        "104",
+        0
+      ],
+      "positive": [
+        "98",
+        0
+      ],
+      "negative": [
+        "98",
+        1
+      ],
+      "latent_image": [
+        "98",
+        2
+      ]
+    },
+    "class_type": "KSamplerAdvanced",
+    "_meta": {
+      "title": "K采样器（高级）"
+    }
+  },
+  "87": {
+    "inputs": {
+      "samples": [
+        "85",
+        0
+      ],
+      "vae": [
+        "90",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "89": {
+    "inputs": {
+      "text": "色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走",
+      "clip": [
+        "84",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Negative Prompt)"
+    }
+  },
+  "90": {
+    "inputs": {
+      "vae_name": "wan_2.1_vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "加载VAE"
+    }
+  },
+  "93": {
+    "inputs": {
+      "text": "Traditional Chinese line drawing illustration style, black ink on aged paper texture, classical folklore narrative aesthetic, momentous scene depicting King Wen's arrival at sage's humble dwelling discovering master absent, upper portion featuring extensive stylized water渭水 Wei River rendered in traditional repeating wave pattern波浪纹 covering top third of composition, waves depicted as countless overlapping curved lines creating rhythmic undulating surface, water emphasizing proximity to Pan Stream磻溪 where sage fishes, scattered lotus plants荷花 visible on water surface with outlined flower blooms and dark solid leaves showing radiating vein patterns, lotus elements creating peaceful riparian setting, left side dominated by magnificent fruit tree rendered with bold trunk and branches, tree canopy featuring dense cluster of numerous round fruits depicted as oval shapes with circular highlights creating abundant harvest appearance, fruits possibly gourds melons or other produce showing fertile natural environment, tree's lush foliage rendered with decorative leaf clusters framing fruits, left tree creating strong dark graphic element anchoring composition, center showing humble thatched dwelling茅草屋 representing Jiang Ziya's simple hermitage, cottage featuring basic architectural elements with lattice window rendered as grid pattern, thatched roof depicted with horizontal line patterns suggesting straw or reed construction, small decorative gourd or vegetable shapes hanging from eaves showing rustic agricultural lifestyle, simple fence or garden barrier visible with diamond lattice pattern suggesting enclosed yard, dwelling's modest scale emphasizing sage's voluntary poverty and detachment from worldly wealth, right side featuring second large tree rendered in solid black silhouette with full leafy canopy creating balanced composition, right tree's dark mass providing visual weight opposite left fruit tree, trees framing humble cottage creating natural protective environment, small decorative seal or cartouche visible in lower right corner adding artistic signature element, upper middle ground showing royal procession arriving led by樵夫 woodcutter guide, woodcutter in front wearing conical hat carrying shoulder pole with firewood bundles带路 leading the way, woodcutter's guiding gesture showing he has brought King Wen to sage's dwelling, following woodcutter showing small servant or attendant figure in simple clothes, behind them showing King Wen周文王 in formal court attire with distinctive tall官帽 ceremonial cap indicating royal status, King Wen's dignified bearing and elaborate robes showing he has come personally来寻子牙 to seek Jiang Ziya, additional court officials or guards visible in procession wearing formal military or civil dress showing substantial retinue, all figures positioned on path approaching cottage creating sense of arrival moment, figures rendered in decreasing size showing perspective and distance, foreground center-right showing小童 young boy disciple emerging from cottage entrance, boy wearing simple scholarly student robes appropriate for sage's attendant, boy's small stature emphasizing youth and apprentice status, critically boy's posture showing he has come out to greet visitors出来说, boy's hand raised in speaking gesture addressing royal party, boy's facial expression showing respectful address to nobles while delivering disappointing news, sense of innocent youth faithfully reporting master's absence, boy explaining老师外出访友 master has gone out to visit friends不知什么时候回来 doesn't know when he will return, cosmic irony as King Wen arrives at perfect destined moment only to find sage mysteriously absent, famous testing moment as heaven arranges for righteous king to experience frustration requiring persistence, sense of divine plan creating obstacles to test King Wen's sincerity in seeking wisdom, cottage's humble appearance contrasting dramatically with royal visitor's magnificence, simple thatched dwelling showing sage lives in voluntary poverty choosing spiritual wealth over material comfort, garden setting with fruit trees suggesting self-sufficient simple life close to nature, entire scene capturing pivotal moment of first contact between king and sage's household, King Wen's journey from hunting expedition to humble cottage showing his willingness to seek wisdom regardless of social station, woodcutter successfully completing mission of带路 guiding king to hidden sage's dwelling, boy disciple faithfully protecting master's privacy while delivering truth about absence, spatial arrangement showing procession approaching from upper background down to foreground cottage where boy emerges creating depth, trees and dwelling creating stable grounded elements while figures show dynamic arrival movement, sense of anticlimactic arrival as sought-after sage proves elusive, fateful moment requiring King Wen to decide whether to wait or return later testing his determination, animated subtle movements showing woodcutter gesturing toward cottage completing guiding duty, procession figures walking down path in stately approach, boy stepping forward from cottage threshold raising hand in greeting and explanation, boy's mouth open speaking words about master's absence访友, royal party stopping at cottage entrance showing respect for humble dwelling, sense of cosmic pause as heaven delays meeting to ensure both parties properly prepared, cottage appearing serene and welcoming despite master's absence, fruit trees heavy with produce suggesting sage's dwelling blessed by nature, monochromatic sepia tones with elegant ink wash creating atmosphere of humble rural setting and momentous arrival, vintage aged paper with historical weathering lending authenticity to legendary encounter scene, classical Chinese sage's hermitage illustration aesthetic emphasizing contrast between worldly power and spiritual simplicity, masterpiece folkloric first arrival scene showing righteous king's persistence in seeking wisdom meeting initial obstacle, 4k quality, legendary cottage encounter moment visualization, cosmic test beginning as King Wen文王 led by woodcutter arrives at Jiang Ziya's humble thatched dwelling only to hear from young disciple小童 that master has外出访友 gone to visit friends with uncertain return creating famous waiting period that will prove King Wen's sincerity and worthiness to receive heaven-sent strategist's guidance, destiny's timing requiring patience as both king and sage must perfectly align for world-changing partnership to commence",
+      "clip": [
+        "84",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Positive Prompt)"
+    }
+  },
+  "94": {
+    "inputs": {
+      "fps": 16,
+      "images": [
+        "87",
+        0
+      ]
+    },
+    "class_type": "CreateVideo",
+    "_meta": {
+      "title": "创建视频"
+    }
+  },
+  "95": {
+    "inputs": {
+      "unet_name": "wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "96": {
+    "inputs": {
+      "unet_name": "wan2.2_i2v_low_noise_14B_fp8_scaled.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "97": {
+    "inputs": {
+      "image": "42.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "98": {
+    "inputs": {
+      "width": 832,
+      "height": 640,
+      "length": 121,
+      "batch_size": 1,
+      "positive": [
+        "93",
+        0
+      ],
+      "negative": [
+        "89",
+        0
+      ],
+      "vae": [
+        "90",
+        0
+      ],
+      "start_image": [
+        "97",
+        0
+      ]
+    },
+    "class_type": "WanImageToVideo",
+    "_meta": {
+      "title": "Wan图像到视频"
+    }
+  },
+  "101": {
+    "inputs": {
+      "lora_name": "wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors",
+      "strength_model": 1.0000000000000002,
+      "model": [
+        "95",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "102": {
+    "inputs": {
+      "lora_name": "wan2.2_i2v_lightx2v_4steps_lora_v1_low_noise.safetensors",
+      "strength_model": 1.0000000000000002,
+      "model": [
+        "96",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "103": {
+    "inputs": {
+      "shift": 5.000000000000001,
+      "model": [
+        "102",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingSD3",
+    "_meta": {
+      "title": "采样算法（SD3）"
+    }
+  },
+  "104": {
+    "inputs": {
+      "shift": 5.000000000000001,
+      "model": [
+        "101",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingSD3",
+    "_meta": {
+      "title": "采样算法（SD3）"
+    }
+  },
+  "108": {
+    "inputs": {
+      "filename_prefix": "video/ComfyUI",
+      "format": "auto",
+      "codec": "auto",
+      "video": [
+        "94",
+        0
+      ]
+    },
+    "class_type": "SaveVideo",
+    "_meta": {
+      "title": "保存视频"
+    }
+  }
+}

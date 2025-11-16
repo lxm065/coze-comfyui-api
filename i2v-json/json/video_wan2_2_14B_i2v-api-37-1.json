@@ -1,0 +1,269 @@
+{
+  "84": {
+    "inputs": {
+      "clip_name": "umt5_xxl_fp8_e4m3fn_scaled.safetensors",
+      "type": "wan",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "加载CLIP"
+    }
+  },
+  "85": {
+    "inputs": {
+      "add_noise": "disable",
+      "noise_seed": 0,
+      "steps": 4,
+      "cfg": 1,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "start_at_step": 2,
+      "end_at_step": 4,
+      "return_with_leftover_noise": "disable",
+      "model": [
+        "103",
+        0
+      ],
+      "positive": [
+        "98",
+        0
+      ],
+      "negative": [
+        "98",
+        1
+      ],
+      "latent_image": [
+        "86",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced",
+    "_meta": {
+      "title": "K采样器（高级）"
+    }
+  },
+  "86": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 436598171524569,
+      "steps": 4,
+      "cfg": 1,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "start_at_step": 0,
+      "end_at_step": 2,
+      "return_with_leftover_noise": "enable",
+      "model": [
+        "104",
+        0
+      ],
+      "positive": [
+        "98",
+        0
+      ],
+      "negative": [
+        "98",
+        1
+      ],
+      "latent_image": [
+        "98",
+        2
+      ]
+    },
+    "class_type": "KSamplerAdvanced",
+    "_meta": {
+      "title": "K采样器（高级）"
+    }
+  },
+  "87": {
+    "inputs": {
+      "samples": [
+        "85",
+        0
+      ],
+      "vae": [
+        "90",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "89": {
+    "inputs": {
+      "text": "色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走",
+      "clip": [
+        "84",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Negative Prompt)"
+    }
+  },
+  "90": {
+    "inputs": {
+      "vae_name": "wan_2.1_vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "加载VAE"
+    }
+  },
+  "93": {
+    "inputs": {
+      "text": "Traditional Chinese line drawing illustration style, black ink on aged paper texture, classical folklore narrative aesthetic, dramatic revelation scene depicting woodcutter's discovery of sage's mysterious straight fishhook, entire composition dominated by extensive stylized water渭水 Wei River rendered in traditional repeating wave pattern波浪纹 covering most of background, waves depicted as countless overlapping curved lines creating rhythmic undulating surface filling upper two-thirds of image, water pattern creating sense of vast flowing river and passage of time, extensive wave detail emphasizing patient contemplation and meditative waiting, right side showing Jiang Ziya seated in relaxed contemplative pose on riverbank in simple scholar's robes with contrasting dark vest over light flowing garments, sage's characteristic rotund cheerful form appearing completely serene and undisturbed, Jiang Ziya holding long fishing rod in one hand maintaining patient fishing posture, other hand raised near head in gesture of calm explanation or gentle response to woodcutter's inquiry, sage's distinctive beard and scholarly appearance showing wisdom and tranquility, Jiang Ziya's expression peaceful and knowing showing he is fully aware his method is unconventional, sense of enlightened being comfortable explaining supernatural purpose to mundane observer, sage positioned on scattered stones of riverbank creating stable foundation, right foreground showing cluster of lotus plants荷花 emerging from water with large detailed leaves rendered in bold black ink showing distinctive radiating vein patterns, lotus leaves overlapping creating natural composition, lotus flower blooms visible among leaves with delicate outlined petals, lotus symbolizing purity and enlightenment paralleling sage's transcendent nature, aquatic plants creating lush peaceful environment, left side dominated by woodcutter樵夫 in dramatic moment of discovery拿起鱼竿一看 picking up fishing rod to examine closely, woodcutter shown from behind wearing simple work clothes with dark vest, distinctive peasant's conical hat or umbrella visible creating bold circular shape rendered with radiating line pattern suggesting straw or bamboo construction, woodcutter's body hunched forward in posture of intense examination leaning over to inspect fishing equipment, both hands grasping fishing rod holding it up to closely observe the hook end, sense of practical man's confusion turning to amazement, woodcutter's entire body language showing shock and disbelief at discovery原来鱼钩是直的 that fishhook is actually straight, back view creating sense of viewer sharing woodcutter's perspective of discovery, parasol or hat creating strong graphic element emphasizing peasant status, left side water showing scattered dark shapes suggesting stones or riverbed features, upper left corner showing small lotus flower bloom floating on water surface among scattered stones, additional lotus leaf visible creating natural riparian detail, entire left portion creating intimate examination space where mystery revealed, center composition showing fishing rod held aloft by woodcutter creating strong vertical element connecting two figures, rod rendered as long dark line extending upward, fishing line visible dropping down, critical detail of straight fishhook visible at line's end showing unbent metal creating impossibility of catching fish, straight hook姜太公钓鱼 Jiang Taigong's fishing representing famous philosophical concept愿者上钩 those willing will take bait, hook's straightness explaining entire day's lack of catches while revealing deeper supernatural purpose, revelation moment frozen as woodcutter processes impossible discovery, sense of mundane reality confronting transcendent wisdom, practical fisherman logic versus cosmic patience philosophy, ironic situation where apparent fishing failure is actual success demonstrating sage waits for destiny not fish, woodcutter's discovery marking turning point as word will spread about mysterious wise hermit with straight hook, famous encounter becoming legend that will eventually reach King Wen's ears, riverbank showing scattered dark oval stones creating textured shore environment, stones positioned at various points suggesting natural riverside setting, water extending broadly creating sense of vast river and infinite patient waiting, animated movements showing woodcutter leaning forward intensely examining rod with both hands, Jiang Ziya maintaining serene still pose with gentle explanatory gesture, fishing rod held high in woodcutter's grasp showing hook clearly, lotus leaves rustling with water movement, waves flowing endlessly suggesting timeless meditation, parasol or hat creating stable graphic anchor while body shows dynamic examination posture, contrast between woodcutter's agitated discovery and sage's peaceful acceptance, vertical composition emphasizing revelation with examining peasant and explaining sage connected by impossible fishing rod, monochromatic sepia tones with elegant ink wash creating moment of enlightenment atmosphere, vintage aged paper with historical weathering lending authenticity to legendary discovery, classical Chinese philosophical revelation illustration aesthetic emphasizing gap between worldly understanding and transcendent wisdom, masterpiece folkloric straight hook discovery scene showing ordinary person confronting extraordinary truth, 4k quality, legendary fishhook revelation moment visualization, cosmic mystery unveiled as practical woodcutter discovers sage's supernatural method creating famous anecdote that straight hook symbolizes waiting for worthy destiny rather than chasing unworthy gains, philosophical teaching moment where Jiang Ziya's patient faith in cosmic timing demonstrated through physical impossibility of straight unbent hook proving he seeks not fish but heaven-appointed role as military strategist for righteous Zhou dynasty's rise",
+      "clip": [
+        "84",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Positive Prompt)"
+    }
+  },
+  "94": {
+    "inputs": {
+      "fps": 16,
+      "images": [
+        "87",
+        0
+      ]
+    },
+    "class_type": "CreateVideo",
+    "_meta": {
+      "title": "创建视频"
+    }
+  },
+  "95": {
+    "inputs": {
+      "unet_name": "wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "96": {
+    "inputs": {
+      "unet_name": "wan2.2_i2v_low_noise_14B_fp8_scaled.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "97": {
+    "inputs": {
+      "image": "37.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "98": {
+    "inputs": {
+      "width": 832,
+      "height": 640,
+      "length": 121,
+      "batch_size": 1,
+      "positive": [
+        "93",
+        0
+      ],
+      "negative": [
+        "89",
+        0
+      ],
+      "vae": [
+        "90",
+        0
+      ],
+      "start_image": [
+        "97",
+        0
+      ]
+    },
+    "class_type": "WanImageToVideo",
+    "_meta": {
+      "title": "Wan图像到视频"
+    }
+  },
+  "101": {
+    "inputs": {
+      "lora_name": "wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors",
+      "strength_model": 1.0000000000000002,
+      "model": [
+        "95",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "102": {
+    "inputs": {
+      "lora_name": "wan2.2_i2v_lightx2v_4steps_lora_v1_low_noise.safetensors",
+      "strength_model": 1.0000000000000002,
+      "model": [
+        "96",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "103": {
+    "inputs": {
+      "shift": 5.000000000000001,
+      "model": [
+        "102",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingSD3",
+    "_meta": {
+      "title": "采样算法（SD3）"
+    }
+  },
+  "104": {
+    "inputs": {
+      "shift": 5.000000000000001,
+      "model": [
+        "101",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingSD3",
+    "_meta": {
+      "title": "采样算法（SD3）"
+    }
+  },
+  "108": {
+    "inputs": {
+      "filename_prefix": "video/ComfyUI",
+      "format": "auto",
+      "codec": "auto",
+      "video": [
+        "94",
+        0
+      ]
+    },
+    "class_type": "SaveVideo",
+    "_meta": {
+      "title": "保存视频"
+    }
+  }
+}

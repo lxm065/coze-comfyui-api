@@ -1,0 +1,269 @@
+{
+  "84": {
+    "inputs": {
+      "clip_name": "umt5_xxl_fp8_e4m3fn_scaled.safetensors",
+      "type": "wan",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "加载CLIP"
+    }
+  },
+  "85": {
+    "inputs": {
+      "add_noise": "disable",
+      "noise_seed": 0,
+      "steps": 4,
+      "cfg": 1,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "start_at_step": 2,
+      "end_at_step": 4,
+      "return_with_leftover_noise": "disable",
+      "model": [
+        "103",
+        0
+      ],
+      "positive": [
+        "98",
+        0
+      ],
+      "negative": [
+        "98",
+        1
+      ],
+      "latent_image": [
+        "86",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced",
+    "_meta": {
+      "title": "K采样器（高级）"
+    }
+  },
+  "86": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 436598171524569,
+      "steps": 4,
+      "cfg": 1,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "start_at_step": 0,
+      "end_at_step": 2,
+      "return_with_leftover_noise": "enable",
+      "model": [
+        "104",
+        0
+      ],
+      "positive": [
+        "98",
+        0
+      ],
+      "negative": [
+        "98",
+        1
+      ],
+      "latent_image": [
+        "98",
+        2
+      ]
+    },
+    "class_type": "KSamplerAdvanced",
+    "_meta": {
+      "title": "K采样器（高级）"
+    }
+  },
+  "87": {
+    "inputs": {
+      "samples": [
+        "85",
+        0
+      ],
+      "vae": [
+        "90",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "89": {
+    "inputs": {
+      "text": "色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走",
+      "clip": [
+        "84",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Negative Prompt)"
+    }
+  },
+  "90": {
+    "inputs": {
+      "vae_name": "wan_2.1_vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "加载VAE"
+    }
+  },
+  "93": {
+    "inputs": {
+      "text": "Traditional Chinese line drawing illustration style, black ink on aged paper texture, classical folklore narrative aesthetic, heartwarming domestic reunion scene with underlying ironic tension, upper portion featuring elaborate decorative grapevine or gourd vine canopy stretching across entire composition, thick twisting vine branches rendered with flowing curved lines creating natural archway, dense clusters of stylized leaves in solid black ink with decorative flower or fruit motifs hanging throughout creating lush garden atmosphere, vine creating sense of humble domestic dwelling and peaceful rural setting contrasting with previous palace drama, right side additional flowering vine or plant with cascading blooms adding natural beauty to scene, vines framing composition and emphasizing domestic tranquility of homecoming, left side showing Ma Shi马氏 Jiang Ziya's wife in elegant dark robes with geometric Greek key回纹 border patterns on bodice and sleeves, wife wearing simple yet refined clothing with flowing wide sleeves creating graceful silhouette, Ma Shi's hair styled in traditional married woman's髻 with decorative elements, wife's posture showing welcoming gesture with one arm extended toward husband in greeting motion, Ma Shi's facial expression appearing pleasant and smiling showing relief at husband's return, wife's body language suggesting she believes husband dismissed from office and returning home seeking family support, sense of wifely concern mixed with satisfaction at having husband back under domestic control, wife's robes billowing slightly with movement of greeting, scattered small dark spots near wife's feet possibly indicating humble earthen floor or scattered debris of simple home, center-right dominant figure of Jiang Ziya returned home in scholarly robes with contrasting dark vest or outer garment decorated with small floral patterns over light flowing inner robes, sage's characteristic jolly rotund appearance with round smiling face and prominent belly showing contentment despite recent persecution, Jiang Ziya's simple traditional scholar's髻 topknot hairstyle, sage's wide sleeves hanging in elaborate curves creating sense of relaxed informal posture, Jiang Ziya's broad welcoming smile and cheerful expression showing relief at safe return and perhaps amusement at wife's assumptions, sage's hands positioned in welcoming or explanatory gesture as if beginning to tell tale of miraculous escape, sense of husband's hidden knowledge as he doesn't immediately reveal supernatural nature of his escape, contrast between wife's mundane interpretation of dismissal versus husband's cosmic destiny, lower center showing small decorative bird with detailed feather patterns and cheerful appearance adding pastoral charm, bird positioned between couple perhaps symbolizing domestic harmony or natural witness to reunion, scattered small decorative cloud or flower motifs near ground level creating sense of garden setting, ground indicated by simple line suggesting courtyard or garden floor, entire composition radiating domestic warmth and rural simplicity after dramatic palace escape, ironic contrast between Ma Shi's assumption of failure and actual reality of Jiang Ziya's miraculous divine protection, sense of sage choosing not to immediately correct wife's misunderstanding showing humble character, reunion scene capturing moment before truth revealed creating narrative tension, wife's welcoming smile笑着迎了出来 showing she believes husband has returned defeated seeking family refuge, dramatic irony as audience knows supernatural truth while wife remains ignorant, sense of ordinary domestic life resuming after extraordinary supernatural events, humble home setting emphasizing sage's simple origins and wife's practical worldly concerns, animated subtle movements showing Ma Shi stepping forward with welcoming gesture, Jiang Ziya's hands moving in explanatory motion, vines gently swaying suggesting light breeze, bird hopping or chirping adding life to scene, robes flowing with natural movement, couple's interaction showing familiar marital dynamic, monochromatic sepia tones with gentle ink wash creating warm domestic atmosphere, vintage aged paper with historical weathering lending authenticity, classical Chinese domestic reunion illustration aesthetic with emphasis on human relationships and ironic misunderstandings, masterpiece folkloric homecoming scene showing gap between worldly and divine perspectives, 4k quality, legendary sage's humble return moment visualization, cosmic destiny temporarily hidden as immortal chosen one resumes mortal domestic role creating poignant contrast between his wife's mundane concerns and his actual supernatural status as heaven's instrument",
+      "clip": [
+        "84",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Positive Prompt)"
+    }
+  },
+  "94": {
+    "inputs": {
+      "fps": 16,
+      "images": [
+        "87",
+        0
+      ]
+    },
+    "class_type": "CreateVideo",
+    "_meta": {
+      "title": "创建视频"
+    }
+  },
+  "95": {
+    "inputs": {
+      "unet_name": "wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "96": {
+    "inputs": {
+      "unet_name": "wan2.2_i2v_low_noise_14B_fp8_scaled.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "97": {
+    "inputs": {
+      "image": "31.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "98": {
+    "inputs": {
+      "width": 832,
+      "height": 640,
+      "length": 121,
+      "batch_size": 1,
+      "positive": [
+        "93",
+        0
+      ],
+      "negative": [
+        "89",
+        0
+      ],
+      "vae": [
+        "90",
+        0
+      ],
+      "start_image": [
+        "97",
+        0
+      ]
+    },
+    "class_type": "WanImageToVideo",
+    "_meta": {
+      "title": "Wan图像到视频"
+    }
+  },
+  "101": {
+    "inputs": {
+      "lora_name": "wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors",
+      "strength_model": 1.0000000000000002,
+      "model": [
+        "95",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "102": {
+    "inputs": {
+      "lora_name": "wan2.2_i2v_lightx2v_4steps_lora_v1_low_noise.safetensors",
+      "strength_model": 1.0000000000000002,
+      "model": [
+        "96",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "103": {
+    "inputs": {
+      "shift": 5.000000000000001,
+      "model": [
+        "102",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingSD3",
+    "_meta": {
+      "title": "采样算法（SD3）"
+    }
+  },
+  "104": {
+    "inputs": {
+      "shift": 5.000000000000001,
+      "model": [
+        "101",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingSD3",
+    "_meta": {
+      "title": "采样算法（SD3）"
+    }
+  },
+  "108": {
+    "inputs": {
+      "filename_prefix": "video/ComfyUI",
+      "format": "auto",
+      "codec": "auto",
+      "video": [
+        "94",
+        0
+      ]
+    },
+    "class_type": "SaveVideo",
+    "_meta": {
+      "title": "保存视频"
+    }
+  }
+}

@@ -1,0 +1,269 @@
+{
+  "84": {
+    "inputs": {
+      "clip_name": "umt5_xxl_fp8_e4m3fn_scaled.safetensors",
+      "type": "wan",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "加载CLIP"
+    }
+  },
+  "85": {
+    "inputs": {
+      "add_noise": "disable",
+      "noise_seed": 0,
+      "steps": 4,
+      "cfg": 1,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "start_at_step": 2,
+      "end_at_step": 4,
+      "return_with_leftover_noise": "disable",
+      "model": [
+        "103",
+        0
+      ],
+      "positive": [
+        "98",
+        0
+      ],
+      "negative": [
+        "98",
+        1
+      ],
+      "latent_image": [
+        "86",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced",
+    "_meta": {
+      "title": "K采样器（高级）"
+    }
+  },
+  "86": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 436598171524569,
+      "steps": 4,
+      "cfg": 1,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "start_at_step": 0,
+      "end_at_step": 2,
+      "return_with_leftover_noise": "enable",
+      "model": [
+        "104",
+        0
+      ],
+      "positive": [
+        "98",
+        0
+      ],
+      "negative": [
+        "98",
+        1
+      ],
+      "latent_image": [
+        "98",
+        2
+      ]
+    },
+    "class_type": "KSamplerAdvanced",
+    "_meta": {
+      "title": "K采样器（高级）"
+    }
+  },
+  "87": {
+    "inputs": {
+      "samples": [
+        "85",
+        0
+      ],
+      "vae": [
+        "90",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "89": {
+    "inputs": {
+      "text": "色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走",
+      "clip": [
+        "84",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Negative Prompt)"
+    }
+  },
+  "90": {
+    "inputs": {
+      "vae_name": "wan_2.1_vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "加载VAE"
+    }
+  },
+  "93": {
+    "inputs": {
+      "text": "Traditional Chinese line drawing illustration style, black ink on aged paper texture, classical folklore narrative aesthetic, tranquil pastoral idyll scene depicting sage's humble hermitage and famous fishing contemplation, upper portion featuring serene sky composition with scattered decorative云纹 cloud formations, left side lighter outlined clouds with flowing ruyi spiral patterns suggesting peaceful heavens watching over righteous exile, center small solid black cloud formation, scattered small bird silhouettes in flight rendered as simple dark shapes suggesting黄莺 orioles singing adding natural vitality to scene, birds positioned at various heights creating sense of depth and atmospheric perspective, far right dramatic cloud or wind pattern motifs suggesting cosmic forces still present though scene appears peaceful, sky overall creating sense of celestial observation of sage's patient waiting period, middle register dominated by elegant sweeping willow tree绿柳成行 with graceful drooping branches extending from right side across composition, willow rendered with distinctive flowing curved lines suggesting long hanging branch tendrils, willow foliage depicted in alternating dark and light striped pattern creating sense of leaves hanging in natural cascades, tree positioned on elevated bank creating vertical element, branches extending horizontally over water creating natural canopy, sense of classical Chinese aesthetic with willow symbolizing flexibility resilience and contemplative solitude, small pavilion or shelter structure visible on right under willow with simple peaked roof rendered in dark ink suggesting sage's humble dwelling place, architectural element minimal showing simple rustic hermitage, center-left showing Jiang Ziya in simple scholar's robes seated in relaxed contemplative pose on riverbank, sage's characteristic rotund cheerful form now appearing peaceful and patient, Jiang Ziya holding long fishing rod extending over water with distinctive straight rod design, fishing line dropping into water below, sage's posture relaxed showing he fishes常常钓鱼解闷 often to relieve boredom and pass time, sense of meditation and waiting rather than urgent need to catch fish, Jiang Ziya's expression serene showing acceptance of humble circumstances and trust in cosmic timing, sage positioned on elevated bank suggesting stability despite reduced circumstances, fishing rod creating strong diagonal line composition connecting sage to water realm below, sense of bridge between heaven earthly realm and water element, lower third dominated by stylized water渭水 Wei River rendered in traditional repeating wave pattern波浪纹, waves depicted as overlapping curved lines creating rhythmic undulating surface, water pattern showing gentle flowing movement suggesting peaceful stream, foreground showing riverbank or shore with scattered dark spots suggesting stones or earth, prominent lotus plant荷花 emerging from water in lower right with large detailed leaves rendered in bold black ink showing distinctive radiating vein patterns, lotus leaves overlapping creating natural composition, lotus flower buds or blooms visible among leaves showing natural beauty, additional aquatic plants or reeds visible creating lush riparian environment, lotus symbolizing purity emerging from muddy water paralleling sage's virtue maintained despite humble circumstances, sense of fertile natural setting supporting contemplative life, entire composition creating peaceful hermitage scene showing sage一人隐居在这里 living alone in seclusion, willow-lined banks creating serene protective environment, birds singing suggesting natural harmony, flowing water suggesting passage of time and constancy, sage's patient fishing representing waiting for destiny to unfold, famous scene where Jiang Ziya fishes with straight hook姜太公钓鱼 showing he seeks not fish but cosmic appointment, sense of wise man in voluntary retreat preparing for eventual discovery by King Wen of Zhou, ironic reversal as expelled official finds peace and purpose in simple life by river, cosmic pause as heaven's instrument rests and waits for mortal king to seek his wisdom, landscape elements creating classical Chinese scholarly retreat composition, willow suggesting literary refinement, lotus suggesting Buddhist purity, flowing water suggesting Daoist acceptance, birds suggesting freedom and natural law, animated subtle movements showing willow branches swaying gently in breeze, water flowing with rhythmic wave motion, fishing line bobbing slightly, birds flying across sky in graceful arcs, sage's slight rocking motion as he maintains patient vigil, lotus leaves rustling with water movement, sense of timeless peaceful waiting as days and months pass, monochromatic sepia tones with elegant ink wash creating contemplative atmospheric depth, vintage aged paper with historical weathering lending authenticity to legendary scene, classical Chinese hermit scholar retreat illustration aesthetic emphasizing harmony with nature and patient wisdom, masterpiece folkloric waiting period scene showing hero's humble preparation phase, 4k quality, legendary Wei River fishing moment visualization, cosmic destiny's pause as immortal sage stripped of worldly attachments now lives simply by river in Xiqi waiting for heaven's timing when virtuous King Wen will discover him and recognize his supernatural wisdom beginning final phase of journey to become military strategist who will orchestrate tyrannical Shang dynasty's destruction and Zhou dynasty's righteous rise",
+      "clip": [
+        "84",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Positive Prompt)"
+    }
+  },
+  "94": {
+    "inputs": {
+      "fps": 16,
+      "images": [
+        "87",
+        0
+      ]
+    },
+    "class_type": "CreateVideo",
+    "_meta": {
+      "title": "创建视频"
+    }
+  },
+  "95": {
+    "inputs": {
+      "unet_name": "wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "96": {
+    "inputs": {
+      "unet_name": "wan2.2_i2v_low_noise_14B_fp8_scaled.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "97": {
+    "inputs": {
+      "image": "35.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "98": {
+    "inputs": {
+      "width": 832,
+      "height": 640,
+      "length": 121,
+      "batch_size": 1,
+      "positive": [
+        "93",
+        0
+      ],
+      "negative": [
+        "89",
+        0
+      ],
+      "vae": [
+        "90",
+        0
+      ],
+      "start_image": [
+        "97",
+        0
+      ]
+    },
+    "class_type": "WanImageToVideo",
+    "_meta": {
+      "title": "Wan图像到视频"
+    }
+  },
+  "101": {
+    "inputs": {
+      "lora_name": "wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors",
+      "strength_model": 1.0000000000000002,
+      "model": [
+        "95",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "102": {
+    "inputs": {
+      "lora_name": "wan2.2_i2v_lightx2v_4steps_lora_v1_low_noise.safetensors",
+      "strength_model": 1.0000000000000002,
+      "model": [
+        "96",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "103": {
+    "inputs": {
+      "shift": 5.000000000000001,
+      "model": [
+        "102",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingSD3",
+    "_meta": {
+      "title": "采样算法（SD3）"
+    }
+  },
+  "104": {
+    "inputs": {
+      "shift": 5.000000000000001,
+      "model": [
+        "101",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingSD3",
+    "_meta": {
+      "title": "采样算法（SD3）"
+    }
+  },
+  "108": {
+    "inputs": {
+      "filename_prefix": "video/ComfyUI",
+      "format": "auto",
+      "codec": "auto",
+      "video": [
+        "94",
+        0
+      ]
+    },
+    "class_type": "SaveVideo",
+    "_meta": {
+      "title": "保存视频"
+    }
+  }
+}

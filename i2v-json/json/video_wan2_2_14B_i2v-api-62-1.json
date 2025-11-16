@@ -1,0 +1,269 @@
+{
+  "84": {
+    "inputs": {
+      "clip_name": "umt5_xxl_fp8_e4m3fn_scaled.safetensors",
+      "type": "wan",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "加载CLIP"
+    }
+  },
+  "85": {
+    "inputs": {
+      "add_noise": "disable",
+      "noise_seed": 0,
+      "steps": 4,
+      "cfg": 1,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "start_at_step": 2,
+      "end_at_step": 4,
+      "return_with_leftover_noise": "disable",
+      "model": [
+        "103",
+        0
+      ],
+      "positive": [
+        "98",
+        0
+      ],
+      "negative": [
+        "98",
+        1
+      ],
+      "latent_image": [
+        "86",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced",
+    "_meta": {
+      "title": "K采样器（高级）"
+    }
+  },
+  "86": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 436598171524569,
+      "steps": 4,
+      "cfg": 1,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "start_at_step": 0,
+      "end_at_step": 2,
+      "return_with_leftover_noise": "enable",
+      "model": [
+        "104",
+        0
+      ],
+      "positive": [
+        "98",
+        0
+      ],
+      "negative": [
+        "98",
+        1
+      ],
+      "latent_image": [
+        "98",
+        2
+      ]
+    },
+    "class_type": "KSamplerAdvanced",
+    "_meta": {
+      "title": "K采样器（高级）"
+    }
+  },
+  "87": {
+    "inputs": {
+      "samples": [
+        "85",
+        0
+      ],
+      "vae": [
+        "90",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "89": {
+    "inputs": {
+      "text": "色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走",
+      "clip": [
+        "84",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Negative Prompt)"
+    }
+  },
+  "90": {
+    "inputs": {
+      "vae_name": "wan_2.1_vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "加载VAE"
+    }
+  },
+  "93": {
+    "inputs": {
+      "text": "Traditional Chinese line drawing illustration style, black ink on aged paper texture, classical folklore narrative aesthetic, dramatic celestial confrontation scene depicting divine deity's authoritative command redirecting opponent's attack from defeated sage to divine champion, upper right showing文殊广法天尊 Manjusri Guangfa Tianzun in commanding celestial position, Manjusri wearing magnificent divine robes with elaborate decorative patterns showing enlightened being's supreme status, deity's serene powerful expression radiating supernatural authority, critically showing Manjusri's distinctive圆光 circular halo or nimbus behind head rendered as perfect circle indicating Buddha or Bodhisattva level enlightenment, halo creating radiant divine light emphasizing celestial nature, Manjusri's posture upright and commanding as deity叫道 calls out loudly, one hand raised in authoritative commanding gesture proclaiming休伤子牙 stop harming Jiang Ziya, divine voice carrying supernatural compulsion forcing opponent to obey, Manjusri mounted on magnificent dragon supernatural mount, dragon rendered as spectacular elongated serpentine creature with detailed scaled body creating elegant flowing S-curve, dragon's fierce divine features including elaborate whiskers horns and flowing mane, serpentine body decorated with intricate scale patterns showing supernatural nature, dragon's powerful form undulating through air suggesting rapid celestial flight, divine mount's eyes and expression showing intelligence and fierce protective nature, scattered decorative云纹 cloud formations in solid black and outlined styles creating supernatural atmospheric battlefield, clouds suggesting combat occurring between heaven and earth realms, left side showing王魔 Wang Mo on spotted monstrous beast responding to divine command, Wang Mo wearing dark elaborate Daoist robes with intricate patterns showing immortal cultivator status, cultivator's expression showing mixture of frustration and recognition that superior authority has intervened, critically showing Wang Mo丢开子牙 releasing or abandoning Jiang Ziya, Wang Mo's posture shifting from attacking helpless sage to confronting divine opponent, sense of Nine Dragon Island Daoist forced to change targets by celestial authority's command, Wang Mo mounted on fearsome beast with distinctive spotted hide creating terrifying appearance, monstrous creature rendered with aggressive features including sharp fangs fierce eyes and powerful muscular form, beast's dynamic pose showing it has been催兽 urged or spurred into action, creature's body language showing explosive charge直取广法天尊 directly attacking Manjusri, monstrous mount lunging forward with extended claws and aggressive posture, sense of powerful supernatural beast responding to rider's command for immediate assault, Wang Mo wielding weapon in aggressive attacking stance showing intent to engage divine opponent in combat, cultivator's body leaning forward showing commitment to assault, cosmic significance as mortal conflict transforms into confrontation between Daoist immortal and Buddhist enlightened being, center composition showing dynamic confrontation between Wang Mo's monstrous beast and Manjusri's divine dragon, two supernatural mounts facing each other in mid-air combat creating dramatic tension, sense of escalating supernatural warfare as increasingly powerful beings enter battle, lower portion possibly showing defeated姜子牙 Jiang Ziya now丢开 released and abandoned, sage's helpless form on ground or attempting to recover showing he has been spared execution by divine intervention, Jiang Ziya possibly looking up at celestial rescuer with gratitude and awe, sense of supernatural strategist witnessing power beyond his own level as enlightened deity casually commands opponent, scattered flame or energy effects possibly visible suggesting supernatural powers being released, lower right showing additional monstrous beast form possibly continuation of Wang Mo's mount or separate creature, beast rendered with distinctive spotted pattern and flowing organic features, creature's powerful form showing supernatural nature, spatial arrangement showing vertical composition with Manjusri elevated on right confronting Wang Mo and beast charging from left, diagonal dynamic created by opposing forces meeting in aerial combat, sense of celestial realm directly confronting earthly supernatural forces, Manjusri's command休伤子牙 demonstrating authority that transcends mere combat power, divine words carrying supernatural compulsion that Wang Mo cannot ignore despite his desire to execute defeated opponent, famous scene showing Buddhist enlightened being's authority over Daoist immortal through superior cultivation and cosmic hierarchy, Wang Mo's immediate obedience丢开子牙 dropping Jiang Ziya showing he recognizes superior power and authority, cultivator's decision to催兽直取 urge beast to directly attack divine opponent showing courage and martial spirit despite recognizing superior status, cosmic confrontation as Wang Mo chooses to fight rather than flee despite power differential, Manjusri's intervention demonstrating heaven's direct protection of Zhou cause through enlightened beings, ironic situation as Nine Dragon Island Daoist's certain victory transformed into dangerous confrontation with superior opponent, sense of Wang Mo's frustration at being denied execution but also recognition that fighting Manjusri is necessary response, dragon and monstrous beast creating contrast between divine mount's elegant serpentine grace and mortal mount's aggressive bestial power, Manjusri's calm commanding presence contrasting with Wang Mo's aggressive assault, cosmic hierarchy visible through mounts' contrasting natures with dragon representing celestial purity versus spotted beast representing earthly ferocity, animated explosive dynamic movements showing Manjusri's commanding gesture with raised hand proclaiming divine order, deity's authoritative voice carrying across battlefield, Wang Mo's reluctant releasing motion丢开 dropping Jiang Ziya, cultivator's rapid pivot催兽 urging beast into immediate charge, monstrous creature's explosive lunge直取 directly attacking toward Manjusri, beast's claws extending and jaws opening showing aggressive assault, dragon's serpentine body coiling preparing for combat, divine mount's flowing movement showing supernatural grace, Manjusri maintaining serene composure despite incoming attack, clouds swirling from supernatural energies being released, sense of cosmic powers clashing as enlightened being faces accomplished Daoist immortal, Wang Mo's fierce assault showing he will not surrender despite power differential, monochromatic sepia tones with dramatic contrasts between serene divine figure and aggressive attacking warrior creating visual tension, vintage aged paper with historical weathering lending authenticity to legendary celestial confrontation scene, classical Chinese Buddhist-Daoist conflict illustration aesthetic emphasizing hierarchical power and divine intervention, masterpiece folkloric divine confrontation scene showing enlightened being's authority redirecting combat, 4k quality, legendary Manjusri versus Wang Mo battle visualization, cosmic escalation as Manjusri广法天尊叫道休伤子牙 Guangfa Tianzun calling out commanding to stop harming Jiang Ziya, divine authority forcing Wang Mo王魔丢开子牙 to release Jiang Ziya abandoning execution, cultivator instead催兽直取广法天尊 urging beast to directly attack Manjusri, famous confrontation demonstrating Buddhist enlightened being's superior authority over Daoist immortal while also showing Wang Mo's martial courage choosing to fight rather than flee despite recognizing power differential, celestial intervention transforming certain defeat into dramatic reversal as superior divine being enters battle protecting heaven-mandated Zhou cause against Shang-allied Nine Dragon Island immortals in escalating cosmic warfare determining China's dynastic future through increasingly powerful supernatural champions representing competing celestial hierarchies",
+      "clip": [
+        "84",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Positive Prompt)"
+    }
+  },
+  "94": {
+    "inputs": {
+      "fps": 16,
+      "images": [
+        "87",
+        0
+      ]
+    },
+    "class_type": "CreateVideo",
+    "_meta": {
+      "title": "创建视频"
+    }
+  },
+  "95": {
+    "inputs": {
+      "unet_name": "wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "96": {
+    "inputs": {
+      "unet_name": "wan2.2_i2v_low_noise_14B_fp8_scaled.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "97": {
+    "inputs": {
+      "image": "62.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "98": {
+    "inputs": {
+      "width": 832,
+      "height": 640,
+      "length": 121,
+      "batch_size": 1,
+      "positive": [
+        "93",
+        0
+      ],
+      "negative": [
+        "89",
+        0
+      ],
+      "vae": [
+        "90",
+        0
+      ],
+      "start_image": [
+        "97",
+        0
+      ]
+    },
+    "class_type": "WanImageToVideo",
+    "_meta": {
+      "title": "Wan图像到视频"
+    }
+  },
+  "101": {
+    "inputs": {
+      "lora_name": "wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors",
+      "strength_model": 1.0000000000000002,
+      "model": [
+        "95",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "102": {
+    "inputs": {
+      "lora_name": "wan2.2_i2v_lightx2v_4steps_lora_v1_low_noise.safetensors",
+      "strength_model": 1.0000000000000002,
+      "model": [
+        "96",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "103": {
+    "inputs": {
+      "shift": 5.000000000000001,
+      "model": [
+        "102",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingSD3",
+    "_meta": {
+      "title": "采样算法（SD3）"
+    }
+  },
+  "104": {
+    "inputs": {
+      "shift": 5.000000000000001,
+      "model": [
+        "101",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingSD3",
+    "_meta": {
+      "title": "采样算法（SD3）"
+    }
+  },
+  "108": {
+    "inputs": {
+      "filename_prefix": "video/ComfyUI",
+      "format": "auto",
+      "codec": "auto",
+      "video": [
+        "94",
+        0
+      ]
+    },
+    "class_type": "SaveVideo",
+    "_meta": {
+      "title": "保存视频"
+    }
+  }
+}

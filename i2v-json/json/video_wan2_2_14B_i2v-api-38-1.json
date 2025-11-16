@@ -1,0 +1,269 @@
+{
+  "84": {
+    "inputs": {
+      "clip_name": "umt5_xxl_fp8_e4m3fn_scaled.safetensors",
+      "type": "wan",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "加载CLIP"
+    }
+  },
+  "85": {
+    "inputs": {
+      "add_noise": "disable",
+      "noise_seed": 0,
+      "steps": 4,
+      "cfg": 1,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "start_at_step": 2,
+      "end_at_step": 4,
+      "return_with_leftover_noise": "disable",
+      "model": [
+        "103",
+        0
+      ],
+      "positive": [
+        "98",
+        0
+      ],
+      "negative": [
+        "98",
+        1
+      ],
+      "latent_image": [
+        "86",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced",
+    "_meta": {
+      "title": "K采样器（高级）"
+    }
+  },
+  "86": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 436598171524569,
+      "steps": 4,
+      "cfg": 1,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "start_at_step": 0,
+      "end_at_step": 2,
+      "return_with_leftover_noise": "enable",
+      "model": [
+        "104",
+        0
+      ],
+      "positive": [
+        "98",
+        0
+      ],
+      "negative": [
+        "98",
+        1
+      ],
+      "latent_image": [
+        "98",
+        2
+      ]
+    },
+    "class_type": "KSamplerAdvanced",
+    "_meta": {
+      "title": "K采样器（高级）"
+    }
+  },
+  "87": {
+    "inputs": {
+      "samples": [
+        "85",
+        0
+      ],
+      "vae": [
+        "90",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "89": {
+    "inputs": {
+      "text": "色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走",
+      "clip": [
+        "84",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Negative Prompt)"
+    }
+  },
+  "90": {
+    "inputs": {
+      "vae_name": "wan_2.1_vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "加载VAE"
+    }
+  },
+  "93": {
+    "inputs": {
+      "text": "Traditional Chinese line drawing illustration style, black ink on aged paper texture, classical folklore narrative aesthetic, profound philosophical dialogue scene depicting sage revealing cosmic purpose to curious woodcutter, upper portion featuring two bold bird silhouettes in flight rendered as dynamic black shapes with spread wings, birds flying horizontally across sky suggesting natural witnesses to important conversation, birds' movement creating sense of time passing and cosmic observation, sky otherwise minimal allowing focus on human interaction below, left side showing woodcutter樵夫 standing upright in animated questioning posture wearing simple peasant work clothes with contrasting dark vest over light garments, woodcutter's distinctive conical hat or head covering visible, peasant holding long pole or staff with gathered firewood bundle visible nearby on ground rendered as tied cylindrical shape showing his laborer status, woodcutter's body language showing engaged curiosity with one hand raised in questioning gesture asking直钩怎么能钓得上鱼来 how can straight hook possibly catch fish, woodcutter's facial expression showing genuine puzzlement and desire to understand, sense of practical working man seeking explanation for incomprehensible behavior, peasant's posture leaning slightly forward showing earnest engagement in conversation, left foreground showing fishing rod resting on ground with straight hook visible as evidence of discussion topic, lower left corner showing stylized water渭水 rendered in traditional wave pattern波浪纹 with overlapping curved lines, water continuing across lower portion of composition, scattered lotus plants荷花 visible with large detailed leaves in bold black ink showing radiating vein patterns and delicate flower blooms, lotus positioned between two figures creating natural barrier and contemplative space, aquatic plants symbolizing purity and enlightenment appropriate for philosophical discussion, right side dominated by Jiang Ziya seated in relaxed composed posture on elevated riverbank position in simple scholar's robes with contrasting dark and light garments, sage's characteristic rotund cheerful form radiating contentment and wisdom, Jiang Ziya's distinctive flowing beard and scholarly appearance showing age and experience, sage's facial expression showing gentle knowing smile笑答 as he reveals deeper truth, one hand raised in explanatory gesture demonstrating teaching moment, other hand resting calmly showing tranquil confidence, Jiang Ziya's entire bearing exuding patient wisdom and cosmic awareness, sense of enlightened being sharing profound truth with sincere seeker, right side featuring prominent willow tree绿柳 with graceful drooping branches extending across composition creating natural frame, willow rendered with flowing curved lines and alternating dark and light striped pattern showing cascading leaf tendrils, tree positioned behind sage creating backdrop of scholarly refinement and natural harmony, willow's presence emphasizing contemplative atmosphere and classical aesthetic, bundle of tied bamboo or wooden logs positioned on ground near sage possibly representing firewood or building materials suggesting humble practical life, lower right showing additional lotus leaves and scattered stones on riverbank creating detailed natural environment, ground showing scattered dark oval stones suggesting riverside setting, entire composition balanced with questioning peasant on left and explaining sage on right creating dialogue dynamic, lotus and water elements in center creating meditative space between speakers, spatial arrangement emphasizing philosophical exchange as woodcutter seeks mundane explanation while sage reveals transcendent purpose, famous dialogue frozen at moment of revelation我虽在垂钓可心不在鱼上 though I fish my heart is not on fish不过是等机会干一番大事业 merely waiting for opportunity to accomplish great enterprise, sage's response explaining supernatural fishing method as metaphor for cosmic patience, straight hook representing unwillingness to deceive or force destiny, waiting instead for willing destiny愿者上钩 to come voluntarily, philosophical teaching that true greatness cannot be caught through trickery but must be awaited through patient faith, Jiang Ziya revealing he waits not for fish but for heaven-appointed role as military strategist, cosmic mission slowly being disclosed through conversation with simple woodcutter, ironic situation where peasant laborer receives profound wisdom from seemingly failed fisherman, reversal of normal social hierarchy as lowly sage teaches greater truth than worldly success, animated movements showing woodcutter's questioning gesture with raised hand and forward lean, Jiang Ziya's gentle explanatory hand motion and peaceful smile, willow branches swaying softly creating contemplative atmosphere, birds gliding across sky suggesting passage of time, lotus leaves rustling with water movement, waves flowing creating meditative rhythm, sense of ordinary moment becoming extraordinary through philosophical revelation, woodcutter's practical confusion meeting sage's cosmic certainty creating transformative encounter, vertical elements of standing peasant and seated sage creating visual dialogue, horizontal elements of water lotus and willow creating peaceful contemplative setting, monochromatic sepia tones with elegant ink wash creating atmosphere of profound teaching moment, vintage aged paper with historical weathering lending authenticity to legendary philosophical exchange, classical Chinese wisdom teaching illustration aesthetic emphasizing gap between mundane concerns and transcendent purpose, masterpiece folkloric revelation dialogue scene showing ordinary person receiving extraordinary truth about destiny and cosmic timing, 4k quality, legendary philosophical teaching moment visualization, cosmic purpose revealed as sage explains his patient waiting represents faith in heaven's plan that great enterprise干一番大事业 will come when timing is right, famous Jiang Taigong fishing wisdom姜太公钓鱼愿者上钩 crystallized in dialogue teaching that forcing destiny through bent hooks and deception brings only small fish while straight honest patient waiting attracts great cosmic appointments, woodcutter becoming first to understand sage's true nature beginning spread of reputation that will eventually reach King Wen's ears and fulfill prophecy of great enterprise as destroyer of tyrannical Shang and architect of righteous Zhou dynasty's rise",
+      "clip": [
+        "84",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Positive Prompt)"
+    }
+  },
+  "94": {
+    "inputs": {
+      "fps": 16,
+      "images": [
+        "87",
+        0
+      ]
+    },
+    "class_type": "CreateVideo",
+    "_meta": {
+      "title": "创建视频"
+    }
+  },
+  "95": {
+    "inputs": {
+      "unet_name": "wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "96": {
+    "inputs": {
+      "unet_name": "wan2.2_i2v_low_noise_14B_fp8_scaled.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "97": {
+    "inputs": {
+      "image": "38.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "98": {
+    "inputs": {
+      "width": 832,
+      "height": 640,
+      "length": 121,
+      "batch_size": 1,
+      "positive": [
+        "93",
+        0
+      ],
+      "negative": [
+        "89",
+        0
+      ],
+      "vae": [
+        "90",
+        0
+      ],
+      "start_image": [
+        "97",
+        0
+      ]
+    },
+    "class_type": "WanImageToVideo",
+    "_meta": {
+      "title": "Wan图像到视频"
+    }
+  },
+  "101": {
+    "inputs": {
+      "lora_name": "wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors",
+      "strength_model": 1.0000000000000002,
+      "model": [
+        "95",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "102": {
+    "inputs": {
+      "lora_name": "wan2.2_i2v_lightx2v_4steps_lora_v1_low_noise.safetensors",
+      "strength_model": 1.0000000000000002,
+      "model": [
+        "96",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "103": {
+    "inputs": {
+      "shift": 5.000000000000001,
+      "model": [
+        "102",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingSD3",
+    "_meta": {
+      "title": "采样算法（SD3）"
+    }
+  },
+  "104": {
+    "inputs": {
+      "shift": 5.000000000000001,
+      "model": [
+        "101",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingSD3",
+    "_meta": {
+      "title": "采样算法（SD3）"
+    }
+  },
+  "108": {
+    "inputs": {
+      "filename_prefix": "video/ComfyUI",
+      "format": "auto",
+      "codec": "auto",
+      "video": [
+        "94",
+        0
+      ]
+    },
+    "class_type": "SaveVideo",
+    "_meta": {
+      "title": "保存视频"
+    }
+  }
+}

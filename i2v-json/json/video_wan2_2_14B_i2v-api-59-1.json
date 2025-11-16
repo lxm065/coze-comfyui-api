@@ -1,0 +1,269 @@
+{
+  "84": {
+    "inputs": {
+      "clip_name": "umt5_xxl_fp8_e4m3fn_scaled.safetensors",
+      "type": "wan",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "加载CLIP"
+    }
+  },
+  "85": {
+    "inputs": {
+      "add_noise": "disable",
+      "noise_seed": 0,
+      "steps": 4,
+      "cfg": 1,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "start_at_step": 2,
+      "end_at_step": 4,
+      "return_with_leftover_noise": "disable",
+      "model": [
+        "103",
+        0
+      ],
+      "positive": [
+        "98",
+        0
+      ],
+      "negative": [
+        "98",
+        1
+      ],
+      "latent_image": [
+        "86",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced",
+    "_meta": {
+      "title": "K采样器（高级）"
+    }
+  },
+  "86": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 436598171524569,
+      "steps": 4,
+      "cfg": 1,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "start_at_step": 0,
+      "end_at_step": 2,
+      "return_with_leftover_noise": "enable",
+      "model": [
+        "104",
+        0
+      ],
+      "positive": [
+        "98",
+        0
+      ],
+      "negative": [
+        "98",
+        1
+      ],
+      "latent_image": [
+        "98",
+        2
+      ]
+    },
+    "class_type": "KSamplerAdvanced",
+    "_meta": {
+      "title": "K采样器（高级）"
+    }
+  },
+  "87": {
+    "inputs": {
+      "samples": [
+        "85",
+        0
+      ],
+      "vae": [
+        "90",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "89": {
+    "inputs": {
+      "text": "色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走",
+      "clip": [
+        "84",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Negative Prompt)"
+    }
+  },
+  "90": {
+    "inputs": {
+      "vae_name": "wan_2.1_vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "加载VAE"
+    }
+  },
+  "93": {
+    "inputs": {
+      "text": "Traditional Chinese line drawing illustration style, black ink on aged paper texture, classical folklore narrative aesthetic, catastrophic magical strike scene depicting devastating attack forcing sage into desperate retreat, upper right featuring decorative云纹 cloud formation in solid black with swirling ruyi patterns suggesting cosmic witness to critical turning point, scattered additional云纹 cloud formations creating supernatural battlefield atmosphere, upper left showing李兴霸 Li Xingba fourth Nine Dragon Island Daoist cultivator in triumphant attacking pose, Li Xingba wearing elaborate dark Daoist robes with intricate decorative patterns showing immortal cultivator status, cultivator's fierce victorious expression showing successful magical assault, Li Xingba mounted on fearsome monstrous beast rendered with terrifying features including sharp fangs aggressive expression and supernatural anatomy, beast's powerful form in dynamic charging pose showing coordinated assault with rider, critically showing Li Xingba用聚地珠打中子牙前心 using Earth-Gathering Pearl magical implement striking Jiang Ziya's前心 front heart center chest, Earth-Gathering Pearl聚地珠 rendered as spherical projectile with supernatural properties, pearl's name suggesting power to gather and compress earth element creating devastating crushing impact, magical treasure visible either in Li Xingba's hand or as projectile in flight, sense of coordinated three-opponent assault as Li Xingba joins Wang Mo and Yang Sen in overwhelming attack, cosmic significance as third powerful magical implement deployed showing Nine Dragon Island Daoists' superior arsenal, upper center showing explosive impact moment打中 striking successfully, impact visualization rendered as dramatic starburst or energy explosion pattern at point of contact, explosive effect showing聚地珠 Earth-Gathering Pearl's devastating power releasing on impact with Jiang Ziya's chest, impact creating visible shockwave or energy burst suggesting tremendous force, sense of magical treasure's earth element crushing and compressing creating internal damage beyond mere physical strike, center showing姜子牙 Jiang Ziya in moment of catastrophic injury reeling from devastating magical strike, sage wearing formal ministerial robes now in complete disarray from violent impact, Jiang Ziya's characteristic elderly rotund form convulsing from pain of magical attack to vital center, critically showing Jiang Ziya's expression of shock and agony as Earth-Gathering Pearl strikes前心 front heart vital point, sage's mouth open in大叫一声 great cry loud shout of pain and alarm, facial features contorted showing intense suffering from magical strike to chest, one hand possibly clutching chest where pearl struck showing injury location, other hand desperately gripping reins or mane, sense of supernatural strategist's defenses completely overwhelmed by superior magical implement, Jiang Ziya's body language showing he has been critically wounded by devastating strike, cosmic crisis as Zhou commander suffers potentially fatal injury, lower center showing magnificent四不相 Si Bu Xiang divine mount in desperate flight, Si Bu Xiang rendered with distinctive chimeric features showing mixed animal characteristics creating unique supernatural appearance, divine beast's powerful muscular form in full galloping or leaping escape pose, Si Bu Xiang's legs fully extended showing maximum speed sprint, beast's flowing mane and tail streaming backward from rapid retreat, critically showing Jiang Ziya desperately拍四不相 striking or urging Si Bu Xiang to escape, sage's frantic gesture拍 slapping or hitting divine mount showing desperate urgency, sense of wounded commander frantically fleeing battlefield逃走 running away, Si Bu Xiang responding to rider's desperate command with supernatural speed, divine mount's calm dignified bearing replaced by urgent retreat showing even supernatural beast recognizes critical danger, ironic contrast between earlier confident engagement and current desperate flight, cosmic humiliation as supernatural strategist forced into complete retreat by coordinated assault and superior magical implements, long graceful curved line extending from impact zone possibly representing Jiang Ziya and Si Bu Xiang's flight trajectory, curved line showing escape path arcing away from battlefield, trajectory suggesting rapid supernatural flight transcending normal physical movement, sense of divine mount carrying wounded sage away from overwhelming opposition, lower left showing pursuing Nine Dragon Island Daoists possibly Wang Mo or Yang Sen on monstrous beasts attempting to intercept fleeing sage, pursuers' aggressive poses showing intent to完成擒获 complete capture before sage escapes, monstrous beasts lunging in pursuit showing coordinated effort to prevent Jiang Ziya's escape, sense of critical race as wounded sage flees while powerful immortals pursue, scattered云纹 cloud formations suggesting supernatural chase occurring across multiple dimensions, lower right possibly showing additional supernatural effects or battlefield debris from intense magical combat, ground level elements minimal allowing focus on aerial supernatural chase, cosmic significance as Earth-Gathering Pearl's successful strike neutralizes Zhou commander, Li Xingba's聚地珠 magical treasure proving devastatingly effective against Jiang Ziya despite divine mount and weapons, famous scene demonstrating Nine Dragon Island Daoists possess overwhelming magical arsenal, coordinated assault by Wang Mo Yang Sen and Li Xingba using开天珠 Heaven-Opening Pearl and聚地珠 Earth-Gathering Pearl showing sophisticated supernatural warfare, magical treasures' complementary powers overwhelming Jiang Ziya's defenses, sage's desperate flight showing he cannot withstand coordinated immortal assault despite Yuanshi Tianzun's gifts, Si Bu Xiang's supernatural speed proving only advantage allowing escape from capture, ironic situation as divine mount's primary value becomes flight not combat capability, cosmic lesson that superior magical implements trump divine champions and mounts, Jiang Ziya's critical injury and retreat threatening Zhou cause with catastrophic defeat, animated explosive dynamic movements showing Li Xingba and monstrous beast charging forward in victorious assault, Li Xingba's throwing or releasing motion as Earth-Gathering Pearl flies toward target, magical pearl striking Jiang Ziya's chest with devastating explosive impact, sage's body violently recoiling from powerful magical strike, Jiang Ziya's mouth opening wide in loud cry of pain大叫一声, sage's hand desperately striking Si Bu Xiang拍四不相 urging immediate retreat, divine mount immediately responding with explosive acceleration, Si Bu Xiang's powerful legs propelling in rapid escape gallop, wounded sage clinging desperately to fleeing mount, pursuers' beasts lunging attempting to intercept, multiple云 clouds churning from supernatural energies released, entire composition radiating explosive chaotic energy of devastating strike and desperate flight, sense of battle's tide completely turning as Zhou commander critically wounded and fleeing, monochromatic sepia tones with dramatic contrasts creating visual impact of catastrophic moment, vintage aged paper with historical weathering lending authenticity to legendary devastating strike scene, classical Chinese supernatural warfare crisis illustration aesthetic emphasizing coordinated assault's overwhelming power, masterpiece folkloric catastrophic defeat scene showing superior magical implements determining supernatural warfare outcome, 4k quality, legendary Earth-Gathering Pearl strike visualization, cosmic catastrophe as Li Xingba李兴霸用聚地珠打中子牙前心 using Earth-Gathering Pearl strikes Jiang Ziya's front heart vital center, devastating magical attack causing子牙大叫一声 sage to cry out loudly in pain拍四不相逃走 desperately striking Si Bu Xiang to flee battlefield, famous defeat forcing supernatural strategist into humiliating retreat after coordinated assault by three Nine Dragon Island Daoists deploying superior magical treasures, critical injury threatening Zhou campaign with catastrophic loss of commander requiring divine intervention or more powerful magical implements to reverse fortune in escalating cosmic warfare determining dynastic fate through quality of magical arsenals as much as cultivation levels of immortal champions fighting for heaven's mandate",
+      "clip": [
+        "84",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Positive Prompt)"
+    }
+  },
+  "94": {
+    "inputs": {
+      "fps": 16,
+      "images": [
+        "87",
+        0
+      ]
+    },
+    "class_type": "CreateVideo",
+    "_meta": {
+      "title": "创建视频"
+    }
+  },
+  "95": {
+    "inputs": {
+      "unet_name": "wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "96": {
+    "inputs": {
+      "unet_name": "wan2.2_i2v_low_noise_14B_fp8_scaled.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "97": {
+    "inputs": {
+      "image": "59.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "98": {
+    "inputs": {
+      "width": 832,
+      "height": 640,
+      "length": 121,
+      "batch_size": 1,
+      "positive": [
+        "93",
+        0
+      ],
+      "negative": [
+        "89",
+        0
+      ],
+      "vae": [
+        "90",
+        0
+      ],
+      "start_image": [
+        "97",
+        0
+      ]
+    },
+    "class_type": "WanImageToVideo",
+    "_meta": {
+      "title": "Wan图像到视频"
+    }
+  },
+  "101": {
+    "inputs": {
+      "lora_name": "wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors",
+      "strength_model": 1.0000000000000002,
+      "model": [
+        "95",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "102": {
+    "inputs": {
+      "lora_name": "wan2.2_i2v_lightx2v_4steps_lora_v1_low_noise.safetensors",
+      "strength_model": 1.0000000000000002,
+      "model": [
+        "96",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "103": {
+    "inputs": {
+      "shift": 5.000000000000001,
+      "model": [
+        "102",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingSD3",
+    "_meta": {
+      "title": "采样算法（SD3）"
+    }
+  },
+  "104": {
+    "inputs": {
+      "shift": 5.000000000000001,
+      "model": [
+        "101",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingSD3",
+    "_meta": {
+      "title": "采样算法（SD3）"
+    }
+  },
+  "108": {
+    "inputs": {
+      "filename_prefix": "video/ComfyUI",
+      "format": "auto",
+      "codec": "auto",
+      "video": [
+        "94",
+        0
+      ]
+    },
+    "class_type": "SaveVideo",
+    "_meta": {
+      "title": "保存视频"
+    }
+  }
+}

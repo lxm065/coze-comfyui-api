@@ -1,0 +1,269 @@
+{
+  "84": {
+    "inputs": {
+      "clip_name": "umt5_xxl_fp8_e4m3fn_scaled.safetensors",
+      "type": "wan",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "加载CLIP"
+    }
+  },
+  "85": {
+    "inputs": {
+      "add_noise": "disable",
+      "noise_seed": 0,
+      "steps": 4,
+      "cfg": 1,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "start_at_step": 2,
+      "end_at_step": 4,
+      "return_with_leftover_noise": "disable",
+      "model": [
+        "103",
+        0
+      ],
+      "positive": [
+        "98",
+        0
+      ],
+      "negative": [
+        "98",
+        1
+      ],
+      "latent_image": [
+        "86",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced",
+    "_meta": {
+      "title": "K采样器（高级）"
+    }
+  },
+  "86": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 436598171524569,
+      "steps": 4,
+      "cfg": 1,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "start_at_step": 0,
+      "end_at_step": 2,
+      "return_with_leftover_noise": "enable",
+      "model": [
+        "104",
+        0
+      ],
+      "positive": [
+        "98",
+        0
+      ],
+      "negative": [
+        "98",
+        1
+      ],
+      "latent_image": [
+        "98",
+        2
+      ]
+    },
+    "class_type": "KSamplerAdvanced",
+    "_meta": {
+      "title": "K采样器（高级）"
+    }
+  },
+  "87": {
+    "inputs": {
+      "samples": [
+        "85",
+        0
+      ],
+      "vae": [
+        "90",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "89": {
+    "inputs": {
+      "text": "色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走",
+      "clip": [
+        "84",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Negative Prompt)"
+    }
+  },
+  "90": {
+    "inputs": {
+      "vae_name": "wan_2.1_vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "加载VAE"
+    }
+  },
+  "93": {
+    "inputs": {
+      "text": "Traditional Chinese line drawing illustration style, black ink on aged paper texture, classical folklore narrative aesthetic, climactic decisive combat scene depicting divine disciple's devastating sword strike decapitating Nine Dragon Island Daoist in single blow, upper left showing decorative云纹 cloud formation in solid black with swirling patterns suggesting heavenly witness to decisive victory, scattered additional cloud motifs creating supernatural battlefield atmosphere, upper left showing金吒 Jinzha Manjusri's disciple门徒 in dynamic aerial combat pose, Jinzha wearing distinctive armor or ceremonial warrior robes with decorative patterns appropriate for enlightened deity's martial disciple, young divine warrior's fierce determined expression showing supernatural combat prowess, Jinzha's characteristic appearance as one of Nezha's elder brothers showing family martial tradition, critically showing Jinzha挥剑 wielding sword in powerful striking motion, sword rendered as elegant blade possibly with supernatural properties, weapon raised high or mid-swing showing devastating attack in progress, Jinzha mounted on divine mount possibly云 cloud formation or celestial beast, mount's supernatural nature allowing aerial combat capability, divine disciple's aggressive forward-leaning posture showing commitment to decisive strike, sense of enlightened warrior executing perfect fatal blow, upper center-right showing王魔 Wang Mo in moment of catastrophic defeat, Wang Mo's body rendered in dynamic pose showing impact of devastating sword strike, critically depicting decapitation moment一剑把王魔的头砍下 single sword blow cutting off Wang Mo's head, Wang Mo's severed head visible flying or separated from body showing complete fatal strike, head rendered with shocked or dying expression capturing final moment, severed head possibly still wearing道冠 Daoist cap or showing elaborate hairstyle, dramatic visualization of instant death through decapitation, Wang Mo's headless body possibly still in saddle or beginning to fall showing immediate aftermath, body's continued motion despite decapitation creating tragic dynamic, scattered blood effects or energy release possibly visible suggesting supernatural combat's visceral nature, center showing Wang Mo's spotted monstrous beast in chaotic reaction to rider's death, beast rendered with distinctive spotted hide and fearsome features now in panicked or confused state, creature's aggressive attack transformed to confusion as rider suddenly killed, monstrous mount's body language showing loss of direction without rider's control, beast possibly rearing or stumbling showing disruption, sense of supernatural creature's dependence on immortal rider for purpose, right side possibly showing Manjusri文殊广法天尊 observing disciple's victory, divine master's presence suggesting Jinzha fights under enlightened deity's authority and protection, Manjusri possibly mounted on dragon or云 cloud watching battle's conclusion, deity's serene expression showing confidence in disciple's abilities, lower left showing flames or energy effects possibly from supernatural combat, fire patterns rendered with dramatic pointed shapes suggesting divine or magical energy release, flames creating atmospheric battle environment, scattered云纹 cloud formations suggesting elevated aerial battlefield, ground level minimal allowing focus on aerial supernatural combat, spatial arrangement showing dynamic diagonal composition with Jinzha striking from upper left, Wang Mo's separated head flying in arc, headless body falling, beast in center confusion, cosmic significance as Nine Dragon Island Daoist defeated by Buddhist enlightened deity's disciple, famous victory demonstrating Buddhist cultivation's superiority over Daoist immortal in this cosmic conflict, Jinzha's decisive strike金吒一剑 single sword blow showing superior martial cultivation and divine empowerment, Wang Mo's instant death through decapitation eliminating one of four九龙岛道人 Nine Dragon Island cultivators, strategic importance as Wang Mo was leader who first deployed开天珠 Heaven-Opening Pearl against Zhou forces, ironic reversal as confident powerful immortal who nearly executed Jiang Ziya now himself executed by divine disciple's superior skill, cosmic justice as Wang Mo's aggression against righteous cause results in swift divine punishment, Jinzha representing younger generation of divine warriors trained by enlightened masters, disciple's victory validating Manjusri's cultivation methods and authority, sense of Buddhist martial tradition proving superior to Daoist magical implements through perfected swordsmanship, Wang Mo's magical treasures useless against perfectly executed sword technique, famous lesson that supernatural warfare requires both magical implements and supreme martial skill, Jinzha's single devastating strike showing economy of divine combat where true masters need no prolonged battle, decapitation creating immediate definitive victory unlike magical implement exchanges, Wang Mo's death marking turning point as Nine Dragon Island forces lose leader and morale, remaining three Daoists now facing superior opponents without their strongest member, cosmic shift as Buddhist-aligned forces demonstrate clear superiority over Shang-allied Daoist immortals, animated explosive dynamic movements showing Jinzha's powerful sword swing cutting through air with supernatural speed, blade moving in perfect arc toward target, sword edge striking Wang Mo's neck with devastating precision, head separating from body in clean decapitation, severed head飞 flying through air in parabolic arc, shocked expression frozen on dying face, headless body remaining briefly upright before beginning to fall, blood or supernatural energy erupting from severed neck, Wang Mo's hands possibly raised in futile defensive gesture too late to stop fatal blow, spotted beast rearing in confusion and panic, creature's eyes wide showing shock at rider's sudden death, Manjusri observing with serene satisfaction, Jinzha's follow-through motion completing perfect strike, divine disciple's robes flowing from explosive movement, mount maintaining perfect stability allowing clean strike, clouds swirling from supernatural energies released, flames crackling suggesting divine power manifesting, sense of single perfect moment决定 deciding battle's outcome, cosmic victory frozen in dramatic instant, monochromatic sepia tones with dramatic contrasts between striking warrior and dying opponent creating visual impact, vintage aged paper with historical weathering lending authenticity to legendary decisive combat scene, classical Chinese divine warfare victory illustration aesthetic emphasizing martial perfection and swift justice, masterpiece folkloric decapitation scene showing superior cultivation's devastating effectiveness, 4k quality, legendary Jinzha versus Wang Mo decisive strike visualization, cosmic justice manifesting as Manjusri's disciple Jinzha金吒挥剑与王魔战在一起 wielding sword fighting together with Wang Mo executing金吒一剑把王魔的头砍下 single sword blow cutting off Wang Mo's head, famous decisive victory eliminating Nine Dragon Island's leader through superior martial cultivation demonstrating Buddhist enlightened tradition's supremacy over Daoist immortal magical implements, swift divine justice punishing Wang Mo's aggression against heaven-mandated Zhou cause, decapitation marking dramatic reversal as Shang-allied forces lose powerful champion while Zhou-aligned Buddhist warriors demonstrate overwhelming superiority in escalating cosmic warfare determining China's dynastic future through direct divine intervention and perfected martial cultivation transcending mere magical treasures",
+      "clip": [
+        "84",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Positive Prompt)"
+    }
+  },
+  "94": {
+    "inputs": {
+      "fps": 16,
+      "images": [
+        "87",
+        0
+      ]
+    },
+    "class_type": "CreateVideo",
+    "_meta": {
+      "title": "创建视频"
+    }
+  },
+  "95": {
+    "inputs": {
+      "unet_name": "wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "96": {
+    "inputs": {
+      "unet_name": "wan2.2_i2v_low_noise_14B_fp8_scaled.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "97": {
+    "inputs": {
+      "image": "63.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "98": {
+    "inputs": {
+      "width": 832,
+      "height": 640,
+      "length": 121,
+      "batch_size": 1,
+      "positive": [
+        "93",
+        0
+      ],
+      "negative": [
+        "89",
+        0
+      ],
+      "vae": [
+        "90",
+        0
+      ],
+      "start_image": [
+        "97",
+        0
+      ]
+    },
+    "class_type": "WanImageToVideo",
+    "_meta": {
+      "title": "Wan图像到视频"
+    }
+  },
+  "101": {
+    "inputs": {
+      "lora_name": "wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors",
+      "strength_model": 1.0000000000000002,
+      "model": [
+        "95",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "102": {
+    "inputs": {
+      "lora_name": "wan2.2_i2v_lightx2v_4steps_lora_v1_low_noise.safetensors",
+      "strength_model": 1.0000000000000002,
+      "model": [
+        "96",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "103": {
+    "inputs": {
+      "shift": 5.000000000000001,
+      "model": [
+        "102",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingSD3",
+    "_meta": {
+      "title": "采样算法（SD3）"
+    }
+  },
+  "104": {
+    "inputs": {
+      "shift": 5.000000000000001,
+      "model": [
+        "101",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingSD3",
+    "_meta": {
+      "title": "采样算法（SD3）"
+    }
+  },
+  "108": {
+    "inputs": {
+      "filename_prefix": "video/ComfyUI",
+      "format": "auto",
+      "codec": "auto",
+      "video": [
+        "94",
+        0
+      ]
+    },
+    "class_type": "SaveVideo",
+    "_meta": {
+      "title": "保存视频"
+    }
+  }
+}

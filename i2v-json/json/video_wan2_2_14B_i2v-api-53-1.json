@@ -1,0 +1,269 @@
+{
+  "84": {
+    "inputs": {
+      "clip_name": "umt5_xxl_fp8_e4m3fn_scaled.safetensors",
+      "type": "wan",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "加载CLIP"
+    }
+  },
+  "85": {
+    "inputs": {
+      "add_noise": "disable",
+      "noise_seed": 0,
+      "steps": 4,
+      "cfg": 1,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "start_at_step": 2,
+      "end_at_step": 4,
+      "return_with_leftover_noise": "disable",
+      "model": [
+        "103",
+        0
+      ],
+      "positive": [
+        "98",
+        0
+      ],
+      "negative": [
+        "98",
+        1
+      ],
+      "latent_image": [
+        "86",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced",
+    "_meta": {
+      "title": "K采样器（高级）"
+    }
+  },
+  "86": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 436598171524569,
+      "steps": 4,
+      "cfg": 1,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "start_at_step": 0,
+      "end_at_step": 2,
+      "return_with_leftover_noise": "enable",
+      "model": [
+        "104",
+        0
+      ],
+      "positive": [
+        "98",
+        0
+      ],
+      "negative": [
+        "98",
+        1
+      ],
+      "latent_image": [
+        "98",
+        2
+      ]
+    },
+    "class_type": "KSamplerAdvanced",
+    "_meta": {
+      "title": "K采样器（高级）"
+    }
+  },
+  "87": {
+    "inputs": {
+      "samples": [
+        "85",
+        0
+      ],
+      "vae": [
+        "90",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "89": {
+    "inputs": {
+      "text": "色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走",
+      "clip": [
+        "84",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Negative Prompt)"
+    }
+  },
+  "90": {
+    "inputs": {
+      "vae_name": "wan_2.1_vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "加载VAE"
+    }
+  },
+  "93": {
+    "inputs": {
+      "text": "Traditional Chinese line drawing illustration style, black ink on aged paper texture, classical folklore narrative aesthetic, chaotic supernatural terror scene depicting overwhelming divine power paralyzing mortal army before battle even begins, upper left showing first九龙岛道人 Nine Dragon Island Daoist immortal riding terrifying怪兽 monstrous beast, cultivator wearing elaborate ceremonial robes with intricate patterns maintaining calm commanding pose, immortal's fierce expression showing supernatural warrior confidence, first Daoist mounted on grotesque mythical creature rendered with exaggerated fearsome features including bulging eyes sharp fangs and twisted horns, beast's monstrous appearance designed to terrify rather than merely transport, creature's aggressive posture and supernatural aura radiating menace, upper center-left showing second Daoist immortal in similar commanding position riding equally frightening怪兽 strange beast, second cultivator's robes flowing dramatically as mount moves, second beast rendered with bizarre supernatural features possibly multiple heads or unnatural proportions, creature's terrifying visage showing this is divine weapon not noble mount, upper center-right showing third Daoist master riding monstrous creature with elaborate spotted or scaled hide suggesting reptilian or chimeric nature, third beast's fierce features and aggressive stance showing supernatural predator characteristics, third immortal maintaining perfect control showing mastery over terrifying mount, upper right showing fourth九龙岛道人 Daoist cultivator on spectacular monstrous beast with elaborate decorative elements mixed with frightening natural features, fourth creature's supernatural power visible in exaggerated muscular form and fierce countenance, all four怪兽 monstrous beasts rendered with intentionally terrifying features emphasizing their role as psychological weapons, beasts' unnatural appearances including impossible anatomical combinations creating sense of wrongness and dread, supernatural creatures radiating tangible menacing aura affecting normal animals and mortals, scattered supernatural effects including云纹 cloud formations and energy emanations suggesting divine power being released, upper portion creating overwhelming wall of supernatural terror advancing toward mortal forces, lower left showing catastrophic effect on Zhou army还没交手 before even engaging in combat, lower center-left showing Jiang Ziya姜子牙 on terrified horse losing control of situation, sage wearing formal ministerial robes but appearing powerless against psychological assault, Jiang Ziya's mount rendered in panicked rearing or bucking pose showing马全吓瘫了 horses completely paralyzed with fear, Jiang Ziya's normally composed bearing disrupted as he struggles to control terrified animal, sense of supernatural strategist's earthly forces completely overwhelmed by divine terror, lower center showing身边战将 nearby generals on equally terrified mounts, generals wearing military armor and official dress but unable to maintain order, generals' horses rendered in various states of panic including rearing bolting and collapsing, some horses falling to ground瘫了 paralyzed with supernatural terror, riders losing seats or desperately clinging to panicked mounts, sense of complete military collapse without single blow being struck, lower right showing additional Zhou forces in chaotic retreat大败逃回城去 suffering great defeat fleeing back to city, soldiers and officers in disorganized flight abandoning formation, sense of supernatural psychological warfare completely defeating conventional military force, scattered fleeing figures showing army's cohesion shattered by terror, cosmic humiliation as Jiang Ziya's forces routed by mere appearance of enemy, ironic reversal as supernatural sage's mortal troops cannot withstand opposing immortals' monstrous mounts, famous scene demonstrating gap between earthly and divine warfare, Jiang Ziya learning harsh lesson that conventional forces are useless against supernatural opponents, four Daoist immortals不交手 not even engaging in combat yet achieving total victory through psychological terror alone, monstrous beasts' supernatural aura so overwhelming that normal horses cannot function, generals' military skill irrelevant when mounts refuse to advance, sense of complete tactical failure as carefully prepared army dissolves into panic, cosmic demonstration that divine conflicts require divine solutions not mortal armies, lower portion showing various云纹 cloud formations and dust clouds from panicked retreat, ground churned by fleeing hooves showing chaos of rout, scattered weapons or equipment possibly dropped in panic, entire lower composition radiating disorder and terror contrasting with upper immortals' controlled advance, animated explosive movements showing monstrous beasts advancing with terrifying supernatural presence, creatures' unnatural movements and impossible features creating visceral wrongness, supernatural aura visible as emanating waves or distortions, Zhou horses rearing bucking and collapsing in various stages of terror-induced paralysis, Jiang Ziya and generals struggling desperately to control panicked mounts, some riders thrown from saddles, others clinging desperately, entire formation disintegrating into individual panicked flight, soldiers running on foot abandoning mounts entirely, sense of complete military disaster unfolding in moments, contrast between calm advancing immortals and chaotic fleeing mortals, monstrous beasts seeming to grow more terrifying as they approach, supernatural creatures' mere presence functioning as devastating weapon, monochromatic sepia tones with dramatic contrasts creating atmosphere of supernatural overwhelming mortal realm, vintage aged paper with historical weathering lending authenticity to legendary supernatural terror scene, classical Chinese divine warfare illustration aesthetic emphasizing psychological power of supernatural forces, masterpiece folkloric overwhelming victory scene showing divine power needs no violence to defeat mortal opposition, 4k quality, legendary monstrous beast terror visualization, cosmic lesson demonstrated as四个道人骑的都是怪兽 four Daoist cultivators all riding monstrous beasts achieve complete victory还没交手 without even engaging in combat as子牙和身边战将的马全吓瘫了 Jiang Ziya and nearby generals' horses are all paralyzed with fear causing大败逃回城去 great defeat fleeing back to city, famous humiliation teaching supernatural strategist that conventional military forces are useless against divine opponents requiring him to seek equally supernatural allies and weapons to compete in cosmic battle determining dynastic fate, psychological warfare demonstrating that in conflicts between immortals mere appearance and supernatural aura can achieve what mortal armies cannot, setting stage for Jiang Ziya's recruitment of his own divine allies to counter Nine Dragon Island cultivators' overwhelming supernatural advantage",
+      "clip": [
+        "84",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Positive Prompt)"
+    }
+  },
+  "94": {
+    "inputs": {
+      "fps": 16,
+      "images": [
+        "87",
+        0
+      ]
+    },
+    "class_type": "CreateVideo",
+    "_meta": {
+      "title": "创建视频"
+    }
+  },
+  "95": {
+    "inputs": {
+      "unet_name": "wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "96": {
+    "inputs": {
+      "unet_name": "wan2.2_i2v_low_noise_14B_fp8_scaled.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "97": {
+    "inputs": {
+      "image": "53.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "98": {
+    "inputs": {
+      "width": 832,
+      "height": 640,
+      "length": 121,
+      "batch_size": 1,
+      "positive": [
+        "93",
+        0
+      ],
+      "negative": [
+        "89",
+        0
+      ],
+      "vae": [
+        "90",
+        0
+      ],
+      "start_image": [
+        "97",
+        0
+      ]
+    },
+    "class_type": "WanImageToVideo",
+    "_meta": {
+      "title": "Wan图像到视频"
+    }
+  },
+  "101": {
+    "inputs": {
+      "lora_name": "wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors",
+      "strength_model": 1.0000000000000002,
+      "model": [
+        "95",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "102": {
+    "inputs": {
+      "lora_name": "wan2.2_i2v_lightx2v_4steps_lora_v1_low_noise.safetensors",
+      "strength_model": 1.0000000000000002,
+      "model": [
+        "96",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "103": {
+    "inputs": {
+      "shift": 5.000000000000001,
+      "model": [
+        "102",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingSD3",
+    "_meta": {
+      "title": "采样算法（SD3）"
+    }
+  },
+  "104": {
+    "inputs": {
+      "shift": 5.000000000000001,
+      "model": [
+        "101",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingSD3",
+    "_meta": {
+      "title": "采样算法（SD3）"
+    }
+  },
+  "108": {
+    "inputs": {
+      "filename_prefix": "video/ComfyUI",
+      "format": "auto",
+      "codec": "auto",
+      "video": [
+        "94",
+        0
+      ]
+    },
+    "class_type": "SaveVideo",
+    "_meta": {
+      "title": "保存视频"
+    }
+  }
+}

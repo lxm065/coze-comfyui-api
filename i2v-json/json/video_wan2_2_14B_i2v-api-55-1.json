@@ -1,0 +1,269 @@
+{
+  "84": {
+    "inputs": {
+      "clip_name": "umt5_xxl_fp8_e4m3fn_scaled.safetensors",
+      "type": "wan",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "加载CLIP"
+    }
+  },
+  "85": {
+    "inputs": {
+      "add_noise": "disable",
+      "noise_seed": 0,
+      "steps": 4,
+      "cfg": 1,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "start_at_step": 2,
+      "end_at_step": 4,
+      "return_with_leftover_noise": "disable",
+      "model": [
+        "103",
+        0
+      ],
+      "positive": [
+        "98",
+        0
+      ],
+      "negative": [
+        "98",
+        1
+      ],
+      "latent_image": [
+        "86",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced",
+    "_meta": {
+      "title": "K采样器（高级）"
+    }
+  },
+  "86": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 436598171524569,
+      "steps": 4,
+      "cfg": 1,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "start_at_step": 0,
+      "end_at_step": 2,
+      "return_with_leftover_noise": "enable",
+      "model": [
+        "104",
+        0
+      ],
+      "positive": [
+        "98",
+        0
+      ],
+      "negative": [
+        "98",
+        1
+      ],
+      "latent_image": [
+        "98",
+        2
+      ]
+    },
+    "class_type": "KSamplerAdvanced",
+    "_meta": {
+      "title": "K采样器（高级）"
+    }
+  },
+  "87": {
+    "inputs": {
+      "samples": [
+        "85",
+        0
+      ],
+      "vae": [
+        "90",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "89": {
+    "inputs": {
+      "text": "色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走",
+      "clip": [
+        "84",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Negative Prompt)"
+    }
+  },
+  "90": {
+    "inputs": {
+      "vae_name": "wan_2.1_vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "加载VAE"
+    }
+  },
+  "93": {
+    "inputs": {
+      "text": "Traditional Chinese line drawing illustration style, black ink on aged paper texture, classical folklore narrative aesthetic, momentous divine bestowal scene depicting supreme deity granting sacred mount and magical weapon to chosen disciple, upper portion dominated by extensive flowing云纹 cloud formations in outlined style stretching horizontally across entire composition, clouds rendered with elaborate organic swirling patterns suggesting celestial realm and heavenly atmosphere, cloud formations creating supernatural canopy over sacred gift-giving ceremony, upper center showing immortal crane仙鹤 in graceful flight rendered with outstretched wings and flowing tail feathers, crane's presence emphasizing divine auspicious nature of occasion, bird serving as celestial witness to historic transfer of divine implements, scattered additional云纹 cloud motifs throughout creating sense of active heavenly realm, left side dominated by童子 boy attendant or acolyte in formal ceremonial robes leading magnificent四不相 Si Bu Xiang divine mount, boy wearing distinctive Daoist disciple attire with decorative patterns appropriate for celestial servant, attendant's posture showing respectful careful handling of supreme deity's personal mount, boy童子 leading creature by reins牵来 bringing forward as commanded by Yuanshi Tianzun, sense of sacred duty as young disciple participates in momentous transfer, center-left showing spectacular四不相 Si Bu Xiang mythical creature Yuanshi Tianzun's own坐骑 personal mount, divine beast rendered with distinctive chimeric features combining elements of multiple animals creating unique supernatural appearance, Si Bu Xiang featuring deer-like antlers rendered with elegant branching points, creature's head showing mixed features possibly combining dragon horse and other mythical elements, beast's body powerful and muscular suggesting supernatural strength, elaborate decorative saddle blanket visible with geometric patterns and ornamental details showing this is deity's personal mount not common beast, Si Bu Xiang's distinctive四不相 four-unlike name referring to its unique combination of features resembling four animals yet matching none perfectly, creature's supernatural nature visible in impossible anatomical synthesis, divine mount's calm dignified bearing showing it recognizes sacred transfer to worthy recipient, beast decorated with ceremonial trappings including ornate bridle and saddle equipment, Si Bu Xiang's presence recalling Jiang Ziya's earlier miraculous escape when this very creature appeared to rescue him from palace persecution, cosmic circle closing as sage who once rode divine mount in desperate flight now receives it as permanent gift, lower left showing stylized ground rendered as flowing云纹 cloud formations suggesting celestial realm or elevated sacred space, ground clouds creating sense of scene occurring in heavenly palace not earthly location, scattered decorative vegetation elements possibly celestial plants rendered as small organic shapes, right side showing Yuanshi Tianzun元始天尊 or senior celestial figure in magnificent Daoist immortal robes performing sacred bestowal, supreme deity wearing elaborate ceremonial dress with rich contrasting dark and light sections featuring intricate decorative patterns, celestial figure's distinctive tall道冠 Daoist crown with ornamental elements showing supreme divine status, deity's characteristic long flowing beard indicating ancient wisdom, critically showing Yuanshi Tianzun赠给子牙 gifting to Jiang Ziya both divine mount and sacred weapon, celestial figure's right hand extended presenting打神鞭 God-Striking Whip magical implement to disciple, God-Striking Whip rendered as ornate rod or staff with decorative elements possibly featuring supernatural patterns or inscriptions, whip's appearance suggesting divine weapon specifically designed for subduing supernatural opponents, implement's name打神鞭 indicating its power to strike down gods demons and immortals, Yuanshi Tianzun又给他一根 also giving him this powerful magical weapon in addition to divine mount, sense of supreme deity providing complete supernatural arsenal to favored disciple, celestial figure's left hand positioned in formal blessing or presenting gesture, deity's expression showing serene satisfaction at equipping chosen champion, sense of cosmic investment as highest divine authority commits personal resources to earthly conflict, Yuanshi Tianzun's posture upright and commanding showing supreme authority making deliberate strategic decision, spatial arrangement showing boy attendant presenting mount from left while deity bestows weapon from right creating balanced composition, Jiang Ziya presumably positioned to receive both gifts though not prominently featured allowing focus on divine implements being transferred, sense of sacred ceremony as heaven's highest authority personally equips earthly champion, cosmic significance as Yuanshi Tianzun's own坐骑 personal mount being gifted showing extraordinary favor and strategic importance, Si Bu Xiang representing solution to earlier problem where monstrous beasts terrified normal horses, divine mount immune to supernatural terror and capable of matching enemy creatures, God-Striking Whip providing offensive capability against immortal opponents who previously seemed invulnerable, famous dual gift establishing Jiang Ziya as fully equipped divine champion, weapons and mount transforming humble fisherman-turned-minister into supernatural warrior, ironic elevation as sage receives implements befitting his true cosmic role, setting stage for successful counter-offensive against Nine Dragon Island Daoists, celestial bestowal representing heaven's direct intervention in dynastic struggle, Yuanshi Tianzun's personal involvement demonstrating stakes of cosmic conflict, divine gifts ensuring Zhou forces can compete in supernatural warfare, animated subtle ceremonial movements showing boy attendant carefully leading Si Bu Xiang forward presenting reins, divine mount walking with dignified supernatural grace, Yuanshi Tianzun's formal gesture presenting God-Striking Whip with appropriate solemnity, celestial figure's robes flowing with movement, crane flying overhead observing ceremony, clouds drifting creating active heavenly atmosphere, sense of momentous transfer as personal divine implements change hands, Si Bu Xiang's decorated harness jingling with movement, God-Striking Whip possibly glowing with supernatural power, boy attendant's respectful posture showing sacred nature of duty, monochromatic sepia tones with elegant ink wash creating atmosphere of celestial realm and sacred bestowal, vintage aged paper with historical weathering lending authenticity to legendary divine gift scene, classical Chinese heavenly palace ceremony illustration aesthetic emphasizing hierarchical gift-giving and strategic divine intervention, masterpiece folkloric divine armament scene showing supreme deity personally equipping chosen champion, 4k quality, legendary sacred implements bestowal visualization, cosmic escalation as Yuanshi Tianzun天尊让童子把自己的坐骑四不相牵来 commanding boy attendant to bring his own personal mount Si Bu Xiang赠给子牙 gifting it to Jiang Ziya又给他一根打神鞭 also giving him God-Striking Whip, supreme deity's personal investment transforming conflict by providing disciple with divine mount capable of countering enemy's monstrous beasts and magical weapon specifically designed to subdue supernatural opponents, famous dual bestowal establishing Jiang Ziya as heaven's fully equipped champion in cosmic warfare, sacred implements enabling Zhou forces to compete in divine battlefield where normal weapons and horses prove useless, Yuanshi Tianzun's direct intervention through personal mount and custom weapon demonstrating heaven's commitment to Zhou victory and Shang defeat in dynastic struggle fulfilling cosmic mandate through supernatural armament of righteous cause",
+      "clip": [
+        "84",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Positive Prompt)"
+    }
+  },
+  "94": {
+    "inputs": {
+      "fps": 16,
+      "images": [
+        "87",
+        0
+      ]
+    },
+    "class_type": "CreateVideo",
+    "_meta": {
+      "title": "创建视频"
+    }
+  },
+  "95": {
+    "inputs": {
+      "unet_name": "wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "96": {
+    "inputs": {
+      "unet_name": "wan2.2_i2v_low_noise_14B_fp8_scaled.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "97": {
+    "inputs": {
+      "image": "55.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "98": {
+    "inputs": {
+      "width": 832,
+      "height": 640,
+      "length": 121,
+      "batch_size": 1,
+      "positive": [
+        "93",
+        0
+      ],
+      "negative": [
+        "89",
+        0
+      ],
+      "vae": [
+        "90",
+        0
+      ],
+      "start_image": [
+        "97",
+        0
+      ]
+    },
+    "class_type": "WanImageToVideo",
+    "_meta": {
+      "title": "Wan图像到视频"
+    }
+  },
+  "101": {
+    "inputs": {
+      "lora_name": "wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors",
+      "strength_model": 1.0000000000000002,
+      "model": [
+        "95",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "102": {
+    "inputs": {
+      "lora_name": "wan2.2_i2v_lightx2v_4steps_lora_v1_low_noise.safetensors",
+      "strength_model": 1.0000000000000002,
+      "model": [
+        "96",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "103": {
+    "inputs": {
+      "shift": 5.000000000000001,
+      "model": [
+        "102",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingSD3",
+    "_meta": {
+      "title": "采样算法（SD3）"
+    }
+  },
+  "104": {
+    "inputs": {
+      "shift": 5.000000000000001,
+      "model": [
+        "101",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingSD3",
+    "_meta": {
+      "title": "采样算法（SD3）"
+    }
+  },
+  "108": {
+    "inputs": {
+      "filename_prefix": "video/ComfyUI",
+      "format": "auto",
+      "codec": "auto",
+      "video": [
+        "94",
+        0
+      ]
+    },
+    "class_type": "SaveVideo",
+    "_meta": {
+      "title": "保存视频"
+    }
+  }
+}

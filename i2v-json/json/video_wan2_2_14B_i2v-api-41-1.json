@@ -1,0 +1,269 @@
+{
+  "84": {
+    "inputs": {
+      "clip_name": "umt5_xxl_fp8_e4m3fn_scaled.safetensors",
+      "type": "wan",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "加载CLIP"
+    }
+  },
+  "85": {
+    "inputs": {
+      "add_noise": "disable",
+      "noise_seed": 0,
+      "steps": 4,
+      "cfg": 1,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "start_at_step": 2,
+      "end_at_step": 4,
+      "return_with_leftover_noise": "disable",
+      "model": [
+        "103",
+        0
+      ],
+      "positive": [
+        "98",
+        0
+      ],
+      "negative": [
+        "98",
+        1
+      ],
+      "latent_image": [
+        "86",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced",
+    "_meta": {
+      "title": "K采样器（高级）"
+    }
+  },
+  "86": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 436598171524569,
+      "steps": 4,
+      "cfg": 1,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "start_at_step": 0,
+      "end_at_step": 2,
+      "return_with_leftover_noise": "enable",
+      "model": [
+        "104",
+        0
+      ],
+      "positive": [
+        "98",
+        0
+      ],
+      "negative": [
+        "98",
+        1
+      ],
+      "latent_image": [
+        "98",
+        2
+      ]
+    },
+    "class_type": "KSamplerAdvanced",
+    "_meta": {
+      "title": "K采样器（高级）"
+    }
+  },
+  "87": {
+    "inputs": {
+      "samples": [
+        "85",
+        0
+      ],
+      "vae": [
+        "90",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "89": {
+    "inputs": {
+      "text": "色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走",
+      "clip": [
+        "84",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Negative Prompt)"
+    }
+  },
+  "90": {
+    "inputs": {
+      "vae_name": "wan_2.1_vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "加载VAE"
+    }
+  },
+  "93": {
+    "inputs": {
+      "text": "Traditional Chinese line drawing illustration style, black ink on aged paper texture, classical folklore narrative aesthetic, pivotal revelation scene depicting woodcutter disclosing sage's fishing activities to eager king, upper portion featuring decorative云纹 cloud formation in solid black with swirling ruyi patterns suggesting heavenly approval of information exchange about to connect righteous king with heaven-sent strategist, sky element creating cosmic witness to fateful conversation, center-left showing樵夫 woodcutter in animated speaking pose wearing simple peasant work clothes with contrasting dark vest over light garments, woodcutter's distinctive conical hat or cap indicating laborer status, critically woodcutter's entire body language showing enthusiastic explanation说出 revealing information, woodcutter's left arm extended with finger pointing outward in directional gesture indicating location where Jiang Ziya fishes, woodcutter's right hand also raised in explanatory motion emphasizing details of story, woodcutter's mouth open in active speaking showing he tells about姜子牙钓鱼之事 Jiang Ziya's fishing activities, woodcutter's facial expression animated and engaged showing he willingly shares knowledge about mysterious fishing sage, sense of humble peasant becoming instrument of destiny by connecting king to hidden worthy, woodcutter's posture leaning forward showing eagerness to help royal inquiry, background showing樵夫's firewood bundles visible suggesting he has been called to stop忙叫住 hastily during his laboring journey, left foreground showing decorative grassy vegetation or reeds rendered in bold black suggesting riverside or natural setting near where sage fishes, vegetation creating environmental context for discussion about fishing hermit, center showing King Wen周文王 in commanding position wearing elaborate imperial court robes with flowing sleeves and contrasting dark and light sections featuring decorative patterns, King Wen's distinctive tall官帽 royal ceremonial cap with architectural elements showing sovereign status, king's characteristic long flowing beard indicating wisdom and maturity, King Wen's posture upright and attentive showing intense interest in woodcutter's information, king's body leaning slightly forward showing eagerness to hear about问这里有没有贤士隐居 whether worthy sages live in seclusion here, king's hands positioned in listening receptive gesture showing he values peasant's knowledge, King Wen's facial expression showing focused attention and growing excitement at learning about hidden sage, sense of righteous ruler who humbles himself to seek wisdom from common people, king's bearing mixing royal dignity with sincere desire for talented advisors, center-right showing上大夫散宜生 Grand Master Sanyisheng standing in formal court official attire with elaborate robes featuring geometric patterns and decorative elements, Sanyisheng's tall官帽 ministerial cap showing high rank, minister's posture attentive as he listens to woodcutter's revelation alongside his sovereign, official's hands clasped or positioned formally showing proper court protocol, Sanyisheng's expression showing interest mixed with assessment as he evaluates information about potential sage, sense of loyal minister witnessing important intelligence gathering, far right showing additional court official or guard in formal military dress with distinctive headgear, second official's presence showing substantial royal entourage accompanies King Wen's inquiry, all figures standing creating sense of formal yet urgent interrogation, ground showing simple horizontal lines suggesting path or outdoor setting where encounter occurs, scattered small details possibly indicating natural outdoor environment, spatial arrangement showing woodcutter at center of attention as king and ministers lean in to hear precious information, sense of social hierarchy temporarily reversed as humble peasant possesses crucial knowledge royal party desperately seeks, cosmic irony as lowest status person holds key to finding highest wisdom, woodcutter's willing cooperation showing common people support righteous King Wen, fateful conversation as woodcutter's disclosure about姜子牙钓鱼之事 Jiang Ziya's fishing activities provides exact information King Wen needs, woodcutter explaining about mysterious old man fishing with straight hook at Pan Stream catching nothing but seeming content, peasant's account creating intrigue and confirming earlier prophetic song's hints, King Wen's excitement growing as description matches prophecy about hidden sage金鱼未遇隐磻溪, sense of destiny's mechanism working as casual roadside interrogation yields cosmic intelligence, animated dynamic movements showing woodcutter gesturing vigorously with both arms pointing and explaining, King Wen leaning forward intently absorbing every detail, Sanyisheng maintaining formal observing posture while processing information, woodcutter's mouth actively speaking telling详细 details, woodcutter's pointing arm creating strong directional line toward fishing location, king's focused listening showing he mentally maps route to sage, minister's subtle assessment showing he evaluates credibility of report, sense of urgent excited energy as royal party realizes they have found lead to mysterious worthy, contrast between woodcutter's animated peasant gestures and nobles' more contained but equally engaged responses, vertical composition with standing figures creating formal interview dynamic, monochromatic sepia tones with elegant ink wash creating atmosphere of crucial information exchange, vintage aged paper with historical weathering lending authenticity to legendary intelligence gathering scene, classical Chinese roadside inquiry illustration aesthetic emphasizing how heaven arranges seemingly chance encounters to fulfill cosmic plans, masterpiece folkloric revelation moment scene showing humble messenger delivering crucial intelligence, 4k quality, legendary woodcutter disclosure visualization, cosmic mechanism revealed as King Wen文王忙叫住樵夫 hastily calls out to stop woodcutter asking问这里有没有贤士隐居 whether any worthy sages live in seclusion here, woodcutter responding by说出姜子牙钓鱼之事 telling about Jiang Ziya's fishing activities, peasant's detailed account about strange old hermit fishing with straight hook catching nothing providing exact confirmation of prophetic song and directing king to Pan Stream磻溪 where heaven-sent strategist patiently waits with straight hook for this exact moment when righteous king will seek his counsel beginning partnership destined to overthrow tyrannical Shang dynasty and establish virtuous Zhou rule",
+      "clip": [
+        "84",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Positive Prompt)"
+    }
+  },
+  "94": {
+    "inputs": {
+      "fps": 16,
+      "images": [
+        "87",
+        0
+      ]
+    },
+    "class_type": "CreateVideo",
+    "_meta": {
+      "title": "创建视频"
+    }
+  },
+  "95": {
+    "inputs": {
+      "unet_name": "wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "96": {
+    "inputs": {
+      "unet_name": "wan2.2_i2v_low_noise_14B_fp8_scaled.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "97": {
+    "inputs": {
+      "image": "41.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "98": {
+    "inputs": {
+      "width": 832,
+      "height": 640,
+      "length": 121,
+      "batch_size": 1,
+      "positive": [
+        "93",
+        0
+      ],
+      "negative": [
+        "89",
+        0
+      ],
+      "vae": [
+        "90",
+        0
+      ],
+      "start_image": [
+        "97",
+        0
+      ]
+    },
+    "class_type": "WanImageToVideo",
+    "_meta": {
+      "title": "Wan图像到视频"
+    }
+  },
+  "101": {
+    "inputs": {
+      "lora_name": "wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors",
+      "strength_model": 1.0000000000000002,
+      "model": [
+        "95",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "102": {
+    "inputs": {
+      "lora_name": "wan2.2_i2v_lightx2v_4steps_lora_v1_low_noise.safetensors",
+      "strength_model": 1.0000000000000002,
+      "model": [
+        "96",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "103": {
+    "inputs": {
+      "shift": 5.000000000000001,
+      "model": [
+        "102",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingSD3",
+    "_meta": {
+      "title": "采样算法（SD3）"
+    }
+  },
+  "104": {
+    "inputs": {
+      "shift": 5.000000000000001,
+      "model": [
+        "101",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingSD3",
+    "_meta": {
+      "title": "采样算法（SD3）"
+    }
+  },
+  "108": {
+    "inputs": {
+      "filename_prefix": "video/ComfyUI",
+      "format": "auto",
+      "codec": "auto",
+      "video": [
+        "94",
+        0
+      ]
+    },
+    "class_type": "SaveVideo",
+    "_meta": {
+      "title": "保存视频"
+    }
+  }
+}

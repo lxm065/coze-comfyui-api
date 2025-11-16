@@ -1,0 +1,269 @@
+{
+  "84": {
+    "inputs": {
+      "clip_name": "umt5_xxl_fp8_e4m3fn_scaled.safetensors",
+      "type": "wan",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "加载CLIP"
+    }
+  },
+  "85": {
+    "inputs": {
+      "add_noise": "disable",
+      "noise_seed": 0,
+      "steps": 4,
+      "cfg": 1,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "start_at_step": 2,
+      "end_at_step": 4,
+      "return_with_leftover_noise": "disable",
+      "model": [
+        "103",
+        0
+      ],
+      "positive": [
+        "98",
+        0
+      ],
+      "negative": [
+        "98",
+        1
+      ],
+      "latent_image": [
+        "86",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced",
+    "_meta": {
+      "title": "K采样器（高级）"
+    }
+  },
+  "86": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 436598171524569,
+      "steps": 4,
+      "cfg": 1,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "start_at_step": 0,
+      "end_at_step": 2,
+      "return_with_leftover_noise": "enable",
+      "model": [
+        "104",
+        0
+      ],
+      "positive": [
+        "98",
+        0
+      ],
+      "negative": [
+        "98",
+        1
+      ],
+      "latent_image": [
+        "98",
+        2
+      ]
+    },
+    "class_type": "KSamplerAdvanced",
+    "_meta": {
+      "title": "K采样器（高级）"
+    }
+  },
+  "87": {
+    "inputs": {
+      "samples": [
+        "85",
+        0
+      ],
+      "vae": [
+        "90",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "89": {
+    "inputs": {
+      "text": "色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走",
+      "clip": [
+        "84",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Negative Prompt)"
+    }
+  },
+  "90": {
+    "inputs": {
+      "vae_name": "wan_2.1_vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "加载VAE"
+    }
+  },
+  "93": {
+    "inputs": {
+      "text": "Traditional Chinese line drawing illustration style, black ink on aged paper texture, classical folklore narrative aesthetic, profound celestial supplication scene depicting humbled sage seeking divine master's aid after earthly defeat, upper left showing pair of immortal cranes仙鹤 in flight rendered with elegant outstretched wings and long flowing tail feathers, cranes depicted in graceful flying poses suggesting divine messengers or auspicious omens, birds' presence emphasizing supernatural celestial realm, upper center showing additional bird in flight creating sense of active heavenly atmosphere, upper left featuring small decorative云纹 cloud formation in solid black with swirling patterns suggesting supernatural witness to disciple's plea, right side dominated by magnificent celestial tree representing divine Kunlun Mountain昆仑山 landscape, tree rendered with bold twisted trunk showing ancient supernatural nature, tree's canopy featuring elaborate cluster of stylized flower blossoms depicted as circular geometric patterns creating ornamental divine vegetation, flowers suggesting this is no earthly plant but celestial flora of immortal realm, tree's presence establishing setting as玉虚宫 Jade Void Palace sacred grounds, ground showing scattered stones and natural elements rendered as dark shapes suggesting mountain terrain, lower portion showing stylized landscape elements including flowing water or terrain features creating sense of elevated celestial location, center-left showing Jiang Ziya姜子牙一人 alone having来到 arrived at master's palace, sage wearing simple scholarly robes appropriate for humble disciple, Jiang Ziya's characteristic elderly rotund form and long flowing beard showing his earthly incarnation despite celestial origins, critically sage's posture showing deep humble supplication向元始天尊求救 seeking rescue from Yuanshi Tianzun, Jiang Ziya's body bent forward in respectful bow showing he returns to master as defeated student, one hand raised in pleading gesture or clasped in formal supplication, other hand positioned showing deference, sage's facial expression showing mixture of distress at defeat and hope for divine assistance, sense of proud Prime Minister stripped of earthly authority returning as humble disciple, Jiang Ziya's bearing showing he acknowledges earthly forces insufficient against supernatural opponents, cosmic humility as supernatural strategist recognizes limits and seeks higher power, center-right showing元始天尊 Yuanshi Tianzun Primordial Celestial Worthy in magnificent Daoist immortal robes, supreme deity wearing elaborate ceremonial dress with rich contrasting dark and light sections featuring intricate decorative patterns, Yuanshi Tianzun's distinctive tall道冠 Daoist crown with ornamental elements showing supreme divine status, deity's characteristic appearance including long flowing beard suggesting ancient wisdom and celestial authority, Yuanshi Tianzun's serene composed expression showing divine master's transcendent calm despite disciple's distress, one hand raised in teaching or blessing gesture, other hand holding ceremonial implement possibly拂尘 horsetail whisk or positioned formally, deity's posture upright and commanding showing supreme authority over Daoist immortal hierarchy, sense of compassionate master listening to troubled disciple's plea, Yuanshi Tianzun's presence radiating divine power and wisdom that dwarfs earthly conflicts, cosmic significance as Jiang Ziya returns to source seeking weapons and allies to compete in divine warfare, spatial arrangement showing disciple approaching master in humble supplication, Jiang Ziya positioned lower and forward in submissive posture, Yuanshi Tianzun elevated and centered showing superior divine status, both figures positioned in formal teacher-student dynamic, sense of sacred audience as earthly conflicts brought to heavenly court for resolution, famous scene where Jiang Ziya一人 alone without retinue makes pilgrimage to昆仑山玉虚宫 Kunlun Mountain Jade Void Palace, sage's solitary journey emphasizing personal spiritual quest not political mission, Jiang Ziya求救 seeking rescue acknowledging Nine Dragon Island Daoists' monstrous beasts have defeated his earthly forces, sage implicitly requesting divine weapons magical implements or immortal allies to counter supernatural opposition, Yuanshi Tianzun as supreme Daoist deity possessing authority to grant such aid, cosmic hierarchy visible as even powerful Prime Minister must bow before celestial master, ironic reversal as worldly Chancellor becomes heavenly student, setting establishing玉虚宫 Jade Void Palace as source of divine power in cosmic conflict, Kunlun Mountain昆仑山 representing axis mundi connecting earthly and heavenly realms, celestial tree and immortal cranes creating atmosphere of transcendent purity, flowing robes on both figures suggesting gentle breeze in divine realm, scattered stones and landscape elements grounding scene in specific celestial location, animated subtle movements showing Jiang Ziya's humble bowing gesture deepening as he pleads case, sage's hands moving in supplicatory motion, Yuanshi Tianzun's serene listening posture showing divine patience, cranes flying overhead creating living witnesses to sacred audience, tree's flowers possibly swaying with celestial breeze, flowing robes moving gently emphasizing figures' refined nature, sense of momentous consultation as earthly crisis brought before highest divine authority, contrast between Jiang Ziya's agitated supplication and Yuanshi Tianzun's transcendent calm, sage's earthly defeat meeting master's heavenly wisdom, monochromatic sepia tones with elegant ink wash creating atmosphere of celestial realm and sacred audience, vintage aged paper with historical weathering lending authenticity to legendary divine supplication scene, classical Chinese celestial palace illustration aesthetic emphasizing hierarchy and sacred consultation, masterpiece folkloric divine aid seeking scene showing humbled sage returning to source, 4k quality, legendary Jade Void Palace audience visualization, cosmic petition as Jiang Ziya子牙一人来到昆仑山玉虚宫 alone arrives at Kunlun Mountain Jade Void Palace向元始天尊求救 seeking rescue from Yuanshi Tianzun, humbled Prime Minister acknowledging earthly forces cannot compete with Nine Dragon Island immortals' monstrous beasts requiring divine master to grant magical weapons spiritual allies or supernatural implements, famous supplication setting stage for Yuanshi Tianzun's provision of divine resources transforming conflict from earthly military struggle to full supernatural warfare between competing Daoist factions, sage's pilgrimage to celestial palace marking escalation as both Shang and Zhou sides recruit increasingly powerful immortal forces in cosmic battle determining China's dynastic fate through heaven's mandate",
+      "clip": [
+        "84",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Positive Prompt)"
+    }
+  },
+  "94": {
+    "inputs": {
+      "fps": 16,
+      "images": [
+        "87",
+        0
+      ]
+    },
+    "class_type": "CreateVideo",
+    "_meta": {
+      "title": "创建视频"
+    }
+  },
+  "95": {
+    "inputs": {
+      "unet_name": "wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "96": {
+    "inputs": {
+      "unet_name": "wan2.2_i2v_low_noise_14B_fp8_scaled.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "97": {
+    "inputs": {
+      "image": "54.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "98": {
+    "inputs": {
+      "width": 832,
+      "height": 640,
+      "length": 121,
+      "batch_size": 1,
+      "positive": [
+        "93",
+        0
+      ],
+      "negative": [
+        "89",
+        0
+      ],
+      "vae": [
+        "90",
+        0
+      ],
+      "start_image": [
+        "97",
+        0
+      ]
+    },
+    "class_type": "WanImageToVideo",
+    "_meta": {
+      "title": "Wan图像到视频"
+    }
+  },
+  "101": {
+    "inputs": {
+      "lora_name": "wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors",
+      "strength_model": 1.0000000000000002,
+      "model": [
+        "95",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "102": {
+    "inputs": {
+      "lora_name": "wan2.2_i2v_lightx2v_4steps_lora_v1_low_noise.safetensors",
+      "strength_model": 1.0000000000000002,
+      "model": [
+        "96",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "103": {
+    "inputs": {
+      "shift": 5.000000000000001,
+      "model": [
+        "102",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingSD3",
+    "_meta": {
+      "title": "采样算法（SD3）"
+    }
+  },
+  "104": {
+    "inputs": {
+      "shift": 5.000000000000001,
+      "model": [
+        "101",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingSD3",
+    "_meta": {
+      "title": "采样算法（SD3）"
+    }
+  },
+  "108": {
+    "inputs": {
+      "filename_prefix": "video/ComfyUI",
+      "format": "auto",
+      "codec": "auto",
+      "video": [
+        "94",
+        0
+      ]
+    },
+    "class_type": "SaveVideo",
+    "_meta": {
+      "title": "保存视频"
+    }
+  }
+}

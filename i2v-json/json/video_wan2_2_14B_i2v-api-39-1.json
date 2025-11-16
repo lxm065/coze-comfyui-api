@@ -1,0 +1,269 @@
+{
+  "84": {
+    "inputs": {
+      "clip_name": "umt5_xxl_fp8_e4m3fn_scaled.safetensors",
+      "type": "wan",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "加载CLIP"
+    }
+  },
+  "85": {
+    "inputs": {
+      "add_noise": "disable",
+      "noise_seed": 0,
+      "steps": 4,
+      "cfg": 1,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "start_at_step": 2,
+      "end_at_step": 4,
+      "return_with_leftover_noise": "disable",
+      "model": [
+        "103",
+        0
+      ],
+      "positive": [
+        "98",
+        0
+      ],
+      "negative": [
+        "98",
+        1
+      ],
+      "latent_image": [
+        "86",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced",
+    "_meta": {
+      "title": "K采样器（高级）"
+    }
+  },
+  "86": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 436598171524569,
+      "steps": 4,
+      "cfg": 1,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "start_at_step": 0,
+      "end_at_step": 2,
+      "return_with_leftover_noise": "enable",
+      "model": [
+        "104",
+        0
+      ],
+      "positive": [
+        "98",
+        0
+      ],
+      "negative": [
+        "98",
+        1
+      ],
+      "latent_image": [
+        "98",
+        2
+      ]
+    },
+    "class_type": "KSamplerAdvanced",
+    "_meta": {
+      "title": "K采样器（高级）"
+    }
+  },
+  "87": {
+    "inputs": {
+      "samples": [
+        "85",
+        0
+      ],
+      "vae": [
+        "90",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "89": {
+    "inputs": {
+      "text": "色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走",
+      "clip": [
+        "84",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Negative Prompt)"
+    }
+  },
+  "90": {
+    "inputs": {
+      "vae_name": "wan_2.1_vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "加载VAE"
+    }
+  },
+  "93": {
+    "inputs": {
+      "text": "Traditional Chinese line drawing illustration style, black ink on aged paper texture, classical folklore narrative aesthetic, dynamic springtime hunting expedition scene depicting King Wen of Zhou's royal party, upper left corner featuring decorative云纹 cloud formation in solid black with swirling ruyi patterns suggesting auspicious heavens blessing righteous ruler's leisurely outing, scattered small bird silhouettes in flight rendered as simple dark shapes suggesting spring vitality春暖花开 with flowers blooming and pleasant scenery景色宜人, multiple birds positioned at various heights creating sense of animated natural environment, center-left featuring elegant willow tree绿柳 with graceful drooping branches extending across composition, willow rendered with flowing curved lines and striped pattern showing cascading leaf tendrils, willow branches sweeping horizontally creating natural canopy over hunting scene, scattered decorative flower blossoms rendered as small geometric floral motifs floating throughout composition emphasizing spring season, flowers positioned at various points creating sense of blooming meadow and pleasant weather, upper center-right showing mounted warrior archer on horseback in dynamic action pose, rider wearing elaborate armor with decorative patterns and distinctive official helmet or cap, archer drawing bow with arrow nocked in shooting position showing hunting activity打猎, horse beneath rider decorated with ornate ceremonial harness and saddle showing royal status, horse in galloping pose with legs extended creating sense of rapid movement, rider's posture leaning forward showing focus and martial skill, upper right showing second mounted official on horseback in similar dynamic riding pose, second rider also in formal military attire with armor and official headgear, horse similarly decorated with ceremonial equipment, both mounted figures representing文武官员 civil and military officials accompanying King Wen, sense of royal hunting party in coordinated expedition, horses positioned at different heights creating depth and perspective, lower center showing additional birds in flight with detailed wing patterns suggesting game birds being pursued, birds rendered with spread wings in various flying positions creating sense of hunt in progress, central composition dominated by sweeping willow branches creating flowing horizontal movement, willow's graceful curves contrasting with dynamic diagonal movements of mounted riders, lower portion showing stylized ground suggested by scattered flowers and minimal landscape elements, sense of spring meadow or countryside setting near西岐城郊 Xiqi city outskirts, entire composition creating sense of pleasant spring day with righteous King Wen周文王 enjoying leisure hunting expedition with loyal retinue, cosmic blessing visualized through auspicious clouds and abundant natural beauty, ironic timing as King Wen's hunting expedition will lead to fateful encounter with fishing sage Jiang Ziya, famous setup for legendary meeting where king hunting for animals will instead discover wise hermit and future military strategist, sense of destiny approaching as royal party ventures near Wei River where patient sage waits, animated dynamic movements showing mounted archers riding at full gallop with flowing hair and garments, horses' legs in various stages of galloping creating rhythmic movement, riders drawing bows and releasing arrows in hunting motion, willow branches swaying gently creating peaceful contrast to active hunt, birds scattering and flying in various directions fleeing hunters, flowers drifting on spring breeze, clouds slowly moving suggesting passage of time toward fateful encounter, monochromatic sepia tones with elegant ink wash creating atmosphere of pleasant spring day and royal leisure activity, vintage aged paper with historical weathering lending authenticity to legendary hunting expedition, classical Chinese royal hunting scene illustration aesthetic with emphasis on dynamic action and auspicious natural setting, masterpiece folkloric destiny approach scene showing righteous king's pleasant outing that will transform into cosmic appointment, 4k quality, legendary hunting expedition moment visualization, cosmic wheels turning as King Wen's春暖花开 spring hunting trip brings him unknowingly closer to Wei River and patient sage Jiang Ziya whose straight hook waits not for fish but for this exact moment when heaven-blessed king will discover heaven-sent strategist beginning partnership that will overthrow tyrannical Shang dynasty and establish righteous Zhou dynasty",
+      "clip": [
+        "84",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Positive Prompt)"
+    }
+  },
+  "94": {
+    "inputs": {
+      "fps": 16,
+      "images": [
+        "87",
+        0
+      ]
+    },
+    "class_type": "CreateVideo",
+    "_meta": {
+      "title": "创建视频"
+    }
+  },
+  "95": {
+    "inputs": {
+      "unet_name": "wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "96": {
+    "inputs": {
+      "unet_name": "wan2.2_i2v_low_noise_14B_fp8_scaled.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "97": {
+    "inputs": {
+      "image": "39.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "98": {
+    "inputs": {
+      "width": 832,
+      "height": 640,
+      "length": 121,
+      "batch_size": 1,
+      "positive": [
+        "93",
+        0
+      ],
+      "negative": [
+        "89",
+        0
+      ],
+      "vae": [
+        "90",
+        0
+      ],
+      "start_image": [
+        "97",
+        0
+      ]
+    },
+    "class_type": "WanImageToVideo",
+    "_meta": {
+      "title": "Wan图像到视频"
+    }
+  },
+  "101": {
+    "inputs": {
+      "lora_name": "wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors",
+      "strength_model": 1.0000000000000002,
+      "model": [
+        "95",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "102": {
+    "inputs": {
+      "lora_name": "wan2.2_i2v_lightx2v_4steps_lora_v1_low_noise.safetensors",
+      "strength_model": 1.0000000000000002,
+      "model": [
+        "96",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "103": {
+    "inputs": {
+      "shift": 5.000000000000001,
+      "model": [
+        "102",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingSD3",
+    "_meta": {
+      "title": "采样算法（SD3）"
+    }
+  },
+  "104": {
+    "inputs": {
+      "shift": 5.000000000000001,
+      "model": [
+        "101",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingSD3",
+    "_meta": {
+      "title": "采样算法（SD3）"
+    }
+  },
+  "108": {
+    "inputs": {
+      "filename_prefix": "video/ComfyUI",
+      "format": "auto",
+      "codec": "auto",
+      "video": [
+        "94",
+        0
+      ]
+    },
+    "class_type": "SaveVideo",
+    "_meta": {
+      "title": "保存视频"
+    }
+  }
+}

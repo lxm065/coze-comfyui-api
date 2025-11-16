@@ -1,0 +1,269 @@
+{
+  "84": {
+    "inputs": {
+      "clip_name": "umt5_xxl_fp8_e4m3fn_scaled.safetensors",
+      "type": "wan",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "加载CLIP"
+    }
+  },
+  "85": {
+    "inputs": {
+      "add_noise": "disable",
+      "noise_seed": 0,
+      "steps": 4,
+      "cfg": 1,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "start_at_step": 2,
+      "end_at_step": 4,
+      "return_with_leftover_noise": "disable",
+      "model": [
+        "103",
+        0
+      ],
+      "positive": [
+        "98",
+        0
+      ],
+      "negative": [
+        "98",
+        1
+      ],
+      "latent_image": [
+        "86",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced",
+    "_meta": {
+      "title": "K采样器（高级）"
+    }
+  },
+  "86": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 436598171524569,
+      "steps": 4,
+      "cfg": 1,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "start_at_step": 0,
+      "end_at_step": 2,
+      "return_with_leftover_noise": "enable",
+      "model": [
+        "104",
+        0
+      ],
+      "positive": [
+        "98",
+        0
+      ],
+      "negative": [
+        "98",
+        1
+      ],
+      "latent_image": [
+        "98",
+        2
+      ]
+    },
+    "class_type": "KSamplerAdvanced",
+    "_meta": {
+      "title": "K采样器（高级）"
+    }
+  },
+  "87": {
+    "inputs": {
+      "samples": [
+        "85",
+        0
+      ],
+      "vae": [
+        "90",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "89": {
+    "inputs": {
+      "text": "色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走",
+      "clip": [
+        "84",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Negative Prompt)"
+    }
+  },
+  "90": {
+    "inputs": {
+      "vae_name": "wan_2.1_vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "加载VAE"
+    }
+  },
+  "93": {
+    "inputs": {
+      "text": "Traditional Chinese line drawing illustration style, black ink on aged paper texture, classical folklore narrative aesthetic, dramatic bridge escape scene depicting sage's desperate flight continuing over water, upper portion dominated by magnificent九龙桥 Nine Dragon Bridge architecture shown in dramatic angular perspective, ornate bridge structure featuring elaborate decorative balustrade railings extending diagonally across composition creating dynamic perspective lines, bridge railings adorned with intricate carved panels showing traditional floral and geometric回纹 patterns within rectangular frames, multiple ornamental pillars or posts topped with decorative finials featuring circular medallion designs punctuating railing at regular intervals, architectural details showing sophisticated traditional Chinese bridge construction with emphasis on ceremonial grandeur, bridge rendered in precise linear perspective creating sense of height and span over dangerous waters below, left side of bridge showing palace guard or official in elaborate armor with distinctive官帽 military cap leaning over railing desperately searching for escaped sage, guard's posture bent forward with arms extended showing frustration at losing quarry, right side showing second armored warrior similarly positioned leaning over opposite railing scanning waters below, both guards' fierce expressions and aggressive body language showing determination to capture fugitive despite his miraculous disappearance, sense of pursuers' confusion and anger as supernatural escape confounds earthly authority, guards positioned symmetrically on bridge creating framing composition emphasizing central dramatic action, center composition showing Jiang Ziya in flowing scholarly robes grasping bridge pillar or railing in moment of transitional movement, sage's body positioned between bridge above and water below showing instant of desperate grasp before plunging into river, Jiang Ziya's distinctive beard and scholarly appearance visible as he prepares for water escape, sage's robes billowing dramatically around body creating dynamic flowing lines suggesting both hanging and falling motion, sense of split-second decision as righteous fugitive chooses dangerous water escape over capture, upper left and right corners featuring small decorative云纹 cloud formations in solid black ink with swirling patterns suggesting supernatural witness to ongoing miraculous escape, clouds positioned symmetrically framing scene and emphasizing celestial protection, scattered additional small cloud motifs throughout composition creating atmospheric supernatural presence, lower third dominated by stylized water waves rendered in traditional Chinese波浪纹 wave pattern, waves depicted as repeating curved overlapping forms creating rhythmic undulating surface, wave patterns showing both surface texture and implied depth and current below, sense of dangerous rushing water that sage must plunge into for escape, water rendered in bold graphic style emphasizing elemental force and peril, entire lower portion creating solid dark band of water contrasting with lighter sky and architecture above, compositional structure dividing scene into three horizontal registers with bridge architecture above, transitional space of sage's desperate grasp in middle, and water sanctuary below, sense of vertical movement as narrative flows from pursuing guards down through sage's grasp to water refuge, bridge pillars extending downward connecting upper architecture to lower water realm, architectural perspective lines creating dynamic diagonal movement drawing eye toward central action, guards above representing earthly persecution and corrupt authority unable to follow into water, Jiang Ziya's position between realms showing transition from mortal official to divinely protected sage, water below representing both danger and salvation as natural element beyond tyrant's control, sense of splash moment frozen as text describes扑通一声 the sound of sage entering water, animated motion showing guards frantically leaning and searching, Jiang Ziya releasing grip and falling with robes streaming, water surface tension before impact creating anticipation, bridge structure remaining geometrically stable while organic human forms show dynamic movement, clouds drifting suggesting passage of time and divine observation, ironic reversal as ornate九龙桥 Nine Dragon Bridge meant to display imperial power becomes scene of sage's escape showing limitation of earthly authority, dragons in bridge name suggesting cosmic forces actually protecting righteous sage rather than tyrant, fateful moment as water escape represents sage's complete break from corrupt Shang court beginning journey to eventual destiny as destroyer of dynasty, monochromatic sepia tones with elegant ink wash creating atmospheric chase scene, vintage aged paper with historical weathering lending authenticity to legendary escape, classical Chinese architectural illustration aesthetic with precise geometric perspective combined with dynamic figure work, masterpiece folkloric miraculous escape continuation scene showing heaven's ongoing protection of righteous sage, 4k quality, legendary bridge escape moment visualization, cosmic justice manifesting as natural elements become refuge for persecuted virtue while corrupt authority remains helpless on solid ground unable to pursue through water realm",
+      "clip": [
+        "84",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Positive Prompt)"
+    }
+  },
+  "94": {
+    "inputs": {
+      "fps": 16,
+      "images": [
+        "87",
+        0
+      ]
+    },
+    "class_type": "CreateVideo",
+    "_meta": {
+      "title": "创建视频"
+    }
+  },
+  "95": {
+    "inputs": {
+      "unet_name": "wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "96": {
+    "inputs": {
+      "unet_name": "wan2.2_i2v_low_noise_14B_fp8_scaled.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "97": {
+    "inputs": {
+      "image": "30.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "98": {
+    "inputs": {
+      "width": 832,
+      "height": 640,
+      "length": 121,
+      "batch_size": 1,
+      "positive": [
+        "93",
+        0
+      ],
+      "negative": [
+        "89",
+        0
+      ],
+      "vae": [
+        "90",
+        0
+      ],
+      "start_image": [
+        "97",
+        0
+      ]
+    },
+    "class_type": "WanImageToVideo",
+    "_meta": {
+      "title": "Wan图像到视频"
+    }
+  },
+  "101": {
+    "inputs": {
+      "lora_name": "wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors",
+      "strength_model": 1.0000000000000002,
+      "model": [
+        "95",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "102": {
+    "inputs": {
+      "lora_name": "wan2.2_i2v_lightx2v_4steps_lora_v1_low_noise.safetensors",
+      "strength_model": 1.0000000000000002,
+      "model": [
+        "96",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "103": {
+    "inputs": {
+      "shift": 5.000000000000001,
+      "model": [
+        "102",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingSD3",
+    "_meta": {
+      "title": "采样算法（SD3）"
+    }
+  },
+  "104": {
+    "inputs": {
+      "shift": 5.000000000000001,
+      "model": [
+        "101",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingSD3",
+    "_meta": {
+      "title": "采样算法（SD3）"
+    }
+  },
+  "108": {
+    "inputs": {
+      "filename_prefix": "video/ComfyUI",
+      "format": "auto",
+      "codec": "auto",
+      "video": [
+        "94",
+        0
+      ]
+    },
+    "class_type": "SaveVideo",
+    "_meta": {
+      "title": "保存视频"
+    }
+  }
+}

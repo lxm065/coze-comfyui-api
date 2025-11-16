@@ -1,0 +1,269 @@
+{
+  "84": {
+    "inputs": {
+      "clip_name": "umt5_xxl_fp8_e4m3fn_scaled.safetensors",
+      "type": "wan",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "加载CLIP"
+    }
+  },
+  "85": {
+    "inputs": {
+      "add_noise": "disable",
+      "noise_seed": 0,
+      "steps": 4,
+      "cfg": 1,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "start_at_step": 2,
+      "end_at_step": 4,
+      "return_with_leftover_noise": "disable",
+      "model": [
+        "103",
+        0
+      ],
+      "positive": [
+        "98",
+        0
+      ],
+      "negative": [
+        "98",
+        1
+      ],
+      "latent_image": [
+        "86",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced",
+    "_meta": {
+      "title": "K采样器（高级）"
+    }
+  },
+  "86": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 436598171524569,
+      "steps": 4,
+      "cfg": 1,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "start_at_step": 0,
+      "end_at_step": 2,
+      "return_with_leftover_noise": "enable",
+      "model": [
+        "104",
+        0
+      ],
+      "positive": [
+        "98",
+        0
+      ],
+      "negative": [
+        "98",
+        1
+      ],
+      "latent_image": [
+        "98",
+        2
+      ]
+    },
+    "class_type": "KSamplerAdvanced",
+    "_meta": {
+      "title": "K采样器（高级）"
+    }
+  },
+  "87": {
+    "inputs": {
+      "samples": [
+        "85",
+        0
+      ],
+      "vae": [
+        "90",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "89": {
+    "inputs": {
+      "text": "色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走",
+      "clip": [
+        "84",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Negative Prompt)"
+    }
+  },
+  "90": {
+    "inputs": {
+      "vae_name": "wan_2.1_vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "加载VAE"
+    }
+  },
+  "93": {
+    "inputs": {
+      "text": "Traditional Chinese line drawing illustration style, black ink on aged paper texture, classical folklore narrative aesthetic, formal royal appointment ceremony scene, upper register featuring elaborate decorative云纹 cloud formations in dual-tone pattern with dark solid clouds intertwined with lighter outlined clouds creating auspicious celestial atmosphere, swirling ruyi motifs suggesting divine approval of righteous appointment, clouds stretching horizontally across top of composition framing imperial scene below, main composition showing formal court ceremony inside palace hall, left side court official or minister in elaborate dark ornate robes with flowing sleeves and decorative patterns presenting recommendation or decree, official wearing distinctive tall官帽 ceremonial cap indicating high rank, official's respectful gesturing pose toward king showing formal protocol, center-left ornate ceremonial table or altar with geometric carved patterns displaying the jade琵琶 pipa instrument as evidence of demon capture, pipa positioned prominently as proof of Jiang Ziya's supernatural abilities and righteousness, center King Zhou纣王 in magnificent imperial robes with elaborate dragon and cloud patterns showing royal authority, king wearing ornate ceremonial crown with distinctive architectural-style headpiece and flowing beard, king's robust commanding presence dominating center composition, king's expression showing mixture of impressed admiration and calculated political thinking, king gesturing with hand in official appointment motion conferring title of下大夫 Lower Grand Master upon Jiang Ziya, right side elegant court lady or consort in refined flowing robes with elaborate double-loop髻 hairstyle adorned with ornamental pins, lady's serene observing presence adding feminine grace to masculine court scene, far right stern-faced court official or military commander in formal robes with distinctive headgear witnessing appointment, additional official's presence validating formal nature of ceremony, architectural elements including decorative railings or platforms suggesting palace interior setting, formal geometric floor patterns indicating imperial hall, sense of official state ceremony as king publicly rewards Jiang Ziya for demon-catching prowess, ironic moment as corrupt tyrant unknowingly appoints future nemesis to court position, Jiang Ziya presumably present though not prominently featured accepting humble position despite superior wisdom, jade pipa serving as physical evidence transforming sage from accused criminal to honored official in single dramatic reversal, contrast between previous persecution and current elevation showing fickleness of tyrannical favor, sense of fate's wheels turning as sage enters corrupt court to eventually fulfill destiny of dynasty's downfall, formal ceremonial atmosphere with all figures maintaining court protocol and hierarchy, king's gesture frozen in moment of official conferral, officials maintaining respectful observing positions, lady's graceful pose adding aesthetic balance, subtle animation showing king's hand moving in formal appointment gesture, officials bowing or gesturing respect, robes and sleeves flowing gently with ceremonial movements, clouds slowly drifting suggesting passage of time and changing fortunes, pipa gleaming with residual supernatural essence reminding all of miraculous transformation, monochromatic sepia tones with elegant ink wash creating refined court atmosphere, vintage aged paper with historical weathering lending authenticity, classical Chinese imperial appointment ceremony illustration aesthetic with formal symmetry and hierarchy, masterpiece folkloric destiny scene showing sage's fateful entry into corrupt court, 4k quality, legendary appointment moment visualization, cosmic irony as tyrant king unwittingly brings instrument of his own downfall into palace by rewarding righteous sage who will eventually help overthrow dynasty",
+      "clip": [
+        "84",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Positive Prompt)"
+    }
+  },
+  "94": {
+    "inputs": {
+      "fps": 16,
+      "images": [
+        "87",
+        0
+      ]
+    },
+    "class_type": "CreateVideo",
+    "_meta": {
+      "title": "创建视频"
+    }
+  },
+  "95": {
+    "inputs": {
+      "unet_name": "wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "96": {
+    "inputs": {
+      "unet_name": "wan2.2_i2v_low_noise_14B_fp8_scaled.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "97": {
+    "inputs": {
+      "image": "25.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "98": {
+    "inputs": {
+      "width": 832,
+      "height": 640,
+      "length": 121,
+      "batch_size": 1,
+      "positive": [
+        "93",
+        0
+      ],
+      "negative": [
+        "89",
+        0
+      ],
+      "vae": [
+        "90",
+        0
+      ],
+      "start_image": [
+        "97",
+        0
+      ]
+    },
+    "class_type": "WanImageToVideo",
+    "_meta": {
+      "title": "Wan图像到视频"
+    }
+  },
+  "101": {
+    "inputs": {
+      "lora_name": "wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors",
+      "strength_model": 1.0000000000000002,
+      "model": [
+        "95",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "102": {
+    "inputs": {
+      "lora_name": "wan2.2_i2v_lightx2v_4steps_lora_v1_low_noise.safetensors",
+      "strength_model": 1.0000000000000002,
+      "model": [
+        "96",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "103": {
+    "inputs": {
+      "shift": 5.000000000000001,
+      "model": [
+        "102",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingSD3",
+    "_meta": {
+      "title": "采样算法（SD3）"
+    }
+  },
+  "104": {
+    "inputs": {
+      "shift": 5.000000000000001,
+      "model": [
+        "101",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingSD3",
+    "_meta": {
+      "title": "采样算法（SD3）"
+    }
+  },
+  "108": {
+    "inputs": {
+      "filename_prefix": "video/ComfyUI",
+      "format": "auto",
+      "codec": "auto",
+      "video": [
+        "94",
+        0
+      ]
+    },
+    "class_type": "SaveVideo",
+    "_meta": {
+      "title": "保存视频"
+    }
+  }
+}

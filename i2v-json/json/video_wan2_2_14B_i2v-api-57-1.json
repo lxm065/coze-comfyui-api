@@ -1,0 +1,269 @@
+{
+  "84": {
+    "inputs": {
+      "clip_name": "umt5_xxl_fp8_e4m3fn_scaled.safetensors",
+      "type": "wan",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "加载CLIP"
+    }
+  },
+  "85": {
+    "inputs": {
+      "add_noise": "disable",
+      "noise_seed": 0,
+      "steps": 4,
+      "cfg": 1,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "start_at_step": 2,
+      "end_at_step": 4,
+      "return_with_leftover_noise": "disable",
+      "model": [
+        "103",
+        0
+      ],
+      "positive": [
+        "98",
+        0
+      ],
+      "negative": [
+        "98",
+        1
+      ],
+      "latent_image": [
+        "86",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced",
+    "_meta": {
+      "title": "K采样器（高级）"
+    }
+  },
+  "86": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 436598171524569,
+      "steps": 4,
+      "cfg": 1,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "start_at_step": 0,
+      "end_at_step": 2,
+      "return_with_leftover_noise": "enable",
+      "model": [
+        "104",
+        0
+      ],
+      "positive": [
+        "98",
+        0
+      ],
+      "negative": [
+        "98",
+        1
+      ],
+      "latent_image": [
+        "98",
+        2
+      ]
+    },
+    "class_type": "KSamplerAdvanced",
+    "_meta": {
+      "title": "K采样器（高级）"
+    }
+  },
+  "87": {
+    "inputs": {
+      "samples": [
+        "85",
+        0
+      ],
+      "vae": [
+        "90",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "89": {
+    "inputs": {
+      "text": "色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走",
+      "clip": [
+        "84",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Negative Prompt)"
+    }
+  },
+  "90": {
+    "inputs": {
+      "vae_name": "wan_2.1_vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "加载VAE"
+    }
+  },
+  "93": {
+    "inputs": {
+      "text": "Traditional Chinese line drawing illustration style, black ink on aged paper texture, classical folklore narrative aesthetic, dramatic supernatural reversal scene depicting Nine Dragon Island Daoist's devastating magical attack knocking divine youth from celestial wheels, upper left showing杨森 Yang Sen second Nine Dragon Island Daoist cultivator in aggressive assault posture, Yang Sen wearing dark elaborate Daoist robes with intricate decorative patterns showing immortal cultivator status, cultivator's fierce determined expression showing supernatural warrior nature, Yang Sen's distinctive features including elaborate hairstyle or道冠 Daoist cap with ornamental elements, critically showing Yang Sen骑狡猊扑上来 riding Jiaoni monstrous beast pouncing forward in violent charge, Jiaoni rendered as fearsome supernatural creature with elaborate mane depicted in flowing curved lines suggesting leonine or chimeric nature, beast's fierce features including sharp fangs wide eyes and aggressive expression, Jiaoni's muscular powerful form showing supernatural predator characteristics, monstrous mount's dynamic lunging pose with extended limbs showing explosive forward movement, beast and rider creating unified attacking force, Yang Sen's posture leaning forward showing aggressive intent, one hand raised取一粒开天珠 taking out Heaven-Opening Pearl magical implement, Heaven-Opening Pearl rendered as spherical object possibly glowing or emanating supernatural energy, pearl representing powerful Daoist magical treasure specifically designed for devastating attacks, upper right showing long graceful curved line possibly representing开天珠 Heaven-Opening Pearl's trajectory after being thrown or magical energy trail, curved line creating elegant arc across composition suggesting projectile's flight path toward target, line's flowing organic curve showing supernatural rather than physical trajectory, sense of magical implement guided by divine will not mere ballistics, center-lower portion showing catastrophic impact as把哪吒打下风火轮 Heaven-Opening Pearl strikes Nezha knocking him off Wind Fire Wheels, center showing哪吒 Nezha in violent tumbling falling pose after being struck by magical attack, divine youth warrior wearing distinctive armor with decorative patterns now in complete disarray, Nezha's characteristic youthful features visible even in moment of defeat, young deity's body rendered in twisted falling posture showing devastating impact of magical strike, Nezha's limbs splayed showing loss of control and balance, sense of powerful divine champion suddenly overwhelmed by superior magical implement, Nezha's weapons possibly flying from grasp showing complete disruption of combat capability, critically showing哪吒被打下风火轮 Nezha being knocked off Wind Fire Wheels his signature supernatural propulsion device, Wind Fire Wheels风火轮 visible as separate elements possibly tumbling away or dispersing, wheels rendered as circular formations with flame-like or云纹 cloud-like patterns showing their supernatural fire and wind nature, wheels' separation from Nezha's feet showing devastating effectiveness of Yang Sen's attack, sense of divine youth's primary mobility advantage completely neutralized, ironic reversal as confident young warrior who was winning against Wang Mo suddenly struck from unexpected direction, cosmic significance as Yang Sen's intervention救援 rescuing fellow Nine Dragon Island Daoist demonstrates coordinated supernatural warfare, lower right showing explosive impact effects rendered as bold flame or energy patterns, impact visualization showing开天珠 Heaven-Opening Pearl's devastating power releasing on contact, flames or energy bursts depicted in dramatic pointed shapes suggesting explosive supernatural force, scattered impact effects creating sense of violent energy release, right side flames possibly representing disrupted风火轮 Wind Fire Wheels' fire element being scattered by impact, sense of Nezha's supernatural implements being overwhelmed and dispersed by superior magical treasure, cosmic hierarchy visible as开天珠 Heaven-Opening Pearl demonstrates greater power than Nezha's divine abilities, famous scene marking turning point as Zhou forces' newfound confidence shattered by Nine Dragon Island Daoists' superior magical implements, Yang Sen's取一粒 taking out single pearl showing casual ease suggesting he possesses multiple such devastating weapons, Heaven-Opening Pearl's name开天珠 suggesting cosmic-level power capable of splitting heaven itself, magical treasure's effectiveness against divine youth warrior Nezha demonstrating that supernatural conflict requires not just divine champions but also superior magical implements, ironic parallel as both sides discover victory depends on quality of magical treasures not just cultivation level, Nezha's defeat demonstrating九龙岛道人 Nine Dragon Island Daoists possess formidable supernatural arsenal beyond mere personal cultivation, sense of escalating arms race as each side deploys increasingly powerful implements, Yang Sen's timely intervention扑上来 pouncing forward showing coordinated team tactics among Nine Dragon Island cultivators, tactical brilliance of striking Nezha while he was engaged with Wang Mo demonstrating sophisticated supernatural warfare strategy, cosmic battle complexity increasing as individual duels transform into coordinated multi-opponent engagements, spatial arrangement showing Yang Sen attacking from upper position while Nezha falls downward creating diagonal dynamic, Jiaoni's pouncing trajectory creating powerful diagonal line, Nezha's falling body creating opposing diagonal, Heaven-Opening Pearl's arc creating graceful curve connecting attacker and victim, impact zone creating explosive center point, animated explosive dynamic movements showing Yang Sen and Jiaoni's powerful pouncing charge, Yang Sen's throwing motion releasing Heaven-Opening Pearl, magical pearl flying in graceful supernatural arc, pearl striking Nezha with devastating impact, Nezha's body violently thrown backward and downward by magical strike, divine youth tumbling helplessly showing complete loss of control, Wind Fire Wheels scattering or dissolving from impact, flames and energy exploding from collision point, Nezha's weapons and implements flying in various directions, beast Jiaoni's muscles rippling with power, Yang Sen's robes flowing from rapid movement, entire composition radiating explosive kinetic energy of devastating surprise attack, sense of sudden catastrophic reversal as confident warrior reduced to helpless falling figure, monochromatic sepia tones with dramatic contrasts creating visual impact of explosive magical strike, vintage aged paper with historical weathering lending authenticity to legendary supernatural combat scene, classical Chinese divine warfare reversal illustration aesthetic emphasizing sudden dramatic turns of fortune through superior magical implements, masterpiece folkloric devastating strike scene showing supernatural warfare's dependence on magical treasures not just personal power, 4k quality, legendary Heaven-Opening Pearl attack visualization, cosmic escalation as Yang Sen杨森骑狡猊扑上来 riding Jiaoni pounces forward取一粒开天珠 taking out Heaven-Opening Pearl magical treasure把哪吒打下风火轮 striking Nezha knocking divine youth off Wind Fire Wheels, devastating magical attack demonstrating Nine Dragon Island Daoists' superior arsenal and coordinated tactics, famous reversal teaching Zhou forces that divine champions alone insufficient without equally powerful magical implements, Yang Sen's intervention rescuing Wang Mo while simultaneously neutralizing Zhou's most powerful warrior, battle momentum shifting as Nezha's defeat exposes Zhou forces' vulnerability requiring Jiang Ziya to deploy even more powerful supernatural resources in escalating cosmic arms race determining dynastic fate through quality of magical treasures as much as cultivation level of champions fighting for heaven's mandate",
+      "clip": [
+        "84",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Positive Prompt)"
+    }
+  },
+  "94": {
+    "inputs": {
+      "fps": 16,
+      "images": [
+        "87",
+        0
+      ]
+    },
+    "class_type": "CreateVideo",
+    "_meta": {
+      "title": "创建视频"
+    }
+  },
+  "95": {
+    "inputs": {
+      "unet_name": "wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "96": {
+    "inputs": {
+      "unet_name": "wan2.2_i2v_low_noise_14B_fp8_scaled.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "97": {
+    "inputs": {
+      "image": "57.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "98": {
+    "inputs": {
+      "width": 832,
+      "height": 640,
+      "length": 121,
+      "batch_size": 1,
+      "positive": [
+        "93",
+        0
+      ],
+      "negative": [
+        "89",
+        0
+      ],
+      "vae": [
+        "90",
+        0
+      ],
+      "start_image": [
+        "97",
+        0
+      ]
+    },
+    "class_type": "WanImageToVideo",
+    "_meta": {
+      "title": "Wan图像到视频"
+    }
+  },
+  "101": {
+    "inputs": {
+      "lora_name": "wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors",
+      "strength_model": 1.0000000000000002,
+      "model": [
+        "95",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "102": {
+    "inputs": {
+      "lora_name": "wan2.2_i2v_lightx2v_4steps_lora_v1_low_noise.safetensors",
+      "strength_model": 1.0000000000000002,
+      "model": [
+        "96",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "103": {
+    "inputs": {
+      "shift": 5.000000000000001,
+      "model": [
+        "102",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingSD3",
+    "_meta": {
+      "title": "采样算法（SD3）"
+    }
+  },
+  "104": {
+    "inputs": {
+      "shift": 5.000000000000001,
+      "model": [
+        "101",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingSD3",
+    "_meta": {
+      "title": "采样算法（SD3）"
+    }
+  },
+  "108": {
+    "inputs": {
+      "filename_prefix": "video/ComfyUI",
+      "format": "auto",
+      "codec": "auto",
+      "video": [
+        "94",
+        0
+      ]
+    },
+    "class_type": "SaveVideo",
+    "_meta": {
+      "title": "保存视频"
+    }
+  }
+}

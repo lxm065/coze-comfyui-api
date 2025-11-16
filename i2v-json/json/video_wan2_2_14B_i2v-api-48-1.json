@@ -1,0 +1,269 @@
+{
+  "84": {
+    "inputs": {
+      "clip_name": "umt5_xxl_fp8_e4m3fn_scaled.safetensors",
+      "type": "wan",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "加载CLIP"
+    }
+  },
+  "85": {
+    "inputs": {
+      "add_noise": "disable",
+      "noise_seed": 0,
+      "steps": 4,
+      "cfg": 1,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "start_at_step": 2,
+      "end_at_step": 4,
+      "return_with_leftover_noise": "disable",
+      "model": [
+        "103",
+        0
+      ],
+      "positive": [
+        "98",
+        0
+      ],
+      "negative": [
+        "98",
+        1
+      ],
+      "latent_image": [
+        "86",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced",
+    "_meta": {
+      "title": "K采样器（高级）"
+    }
+  },
+  "86": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 436598171524569,
+      "steps": 4,
+      "cfg": 1,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "start_at_step": 0,
+      "end_at_step": 2,
+      "return_with_leftover_noise": "enable",
+      "model": [
+        "104",
+        0
+      ],
+      "positive": [
+        "98",
+        0
+      ],
+      "negative": [
+        "98",
+        1
+      ],
+      "latent_image": [
+        "98",
+        2
+      ]
+    },
+    "class_type": "KSamplerAdvanced",
+    "_meta": {
+      "title": "K采样器（高级）"
+    }
+  },
+  "87": {
+    "inputs": {
+      "samples": [
+        "85",
+        0
+      ],
+      "vae": [
+        "90",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "89": {
+    "inputs": {
+      "text": "色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走",
+      "clip": [
+        "84",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Negative Prompt)"
+    }
+  },
+  "90": {
+    "inputs": {
+      "vae_name": "wan_2.1_vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "加载VAE"
+    }
+  },
+  "93": {
+    "inputs": {
+      "text": "Traditional Chinese line drawing illustration style, black ink on aged paper texture, classical folklore narrative aesthetic, profound mutual recognition moment depicting sage and sovereign's first formal exchange of respect, upper right corner featuring decorative云纹 cloud formation in solid black with swirling ruyi patterns suggesting heavenly blessing upon historic meeting, upper portion showing line of birds in flight rendered as simple silhouettes flying in formation from left to right creating diagonal line across sky, birds symbolizing五凤鸣兮 five phoenixes prophesied in song announcing真主现 true lord's appearance, migrating birds creating sense of cosmic witness to destined encounter, left side dominated by magnificent willow tree绿柳 with bold twisted trunk and flowing branches, willow rendered with distinctive striped foliage pattern showing cascading leaf tendrils, tree positioned on elevated bank creating natural frame for human interaction, willow's presence emphasizing continuity with sage's meditation space, ground showing scattered dark oval stones creating natural riverbank terrain, center composition showing pivotal moment of mutual respect exchange见是文王 recognizing this is King Wen, center-left showing Jiang Ziya姜子牙 in humble bowing posture having忙弃竿 hastily abandoned fishing rod to俯首即拜 bow head in immediate reverence, sage wearing simple scholarly robes with contrasting dark vest over light flowing garments, Jiang Ziya's body bent forward in deep respectful bow showing he recognizes King Wen's righteous sovereignty, sage's head lowered showing proper礼 etiquette toward legitimate ruler, one hand extended downward or clasped in formal salutation gesture, other hand visible showing sage has released fishing rod, sense of enlightened hermit acknowledging heaven-appointed sovereign despite earlier remaining seated, cosmic significance as sage's bowing confirms King Wen is indeed prophesied真主 true lord, Jiang Ziya's characteristic rotund form visible even in bowing posture, sage's long flowing beard extending downward emphasizing deep bow, fishing rod visible on ground弃竿 abandoned showing sage has interrupted his patient fishing practice for first time, discarded rod creating diagonal element on ground symbolizing transition from waiting to active engagement, sense of cosmic appointment officially commencing as both parties recognize each other, center-right showing King Wen周文王 in elaborate imperial court robes responding with equal respect, King Wen wearing formal court dress with decorative patterns, king's distinctive tall官帽 ceremonial cap visible, King Wen's characteristic long flowing beard and hair ribbons showing nobility, critically King Wen leaning forward with both hands extended连忙把他扶起 hastily helping sage rise up, king's hands grasping or reaching toward Jiang Ziya to lift him from bowing position, King Wen's body language showing urgent desire to prevent sage from full prostration, king's facial expression showing humble respect refusing to accept sage's deep bow, sense of righteous sovereign recognizing sage's transcendent wisdom deserves equal honor not subservience, cosmic reversal as worldly king insists supernatural sage should not bow so low, famous moment of mutual recognition and respect establishing partnership of equals, King Wen's gesture扶起 helping rise demonstrating humility appropriate for recruiting heaven-sent strategist, both figures positioned on elevated rounded bank or shore creating shared sacred space, spatial arrangement showing two figures meeting as equals despite social hierarchy, lower portion dominated by lush lotus pond荷花 with multiple plants creating natural witness to historic exchange, lotus leaves rendered in bold solid black showing distinctive large circular shapes with radiating vein patterns, several overlapping lotus leaves creating dense aquatic garden, lotus flower blooms visible with delicate outlined petals, right side showing additional lotus buds and leaves creating balanced composition, lotus symbolizing purity and enlightenment appropriate for sacred covenant between sage and sovereign, scattered decorative elements suggesting reeds or aquatic plants, right side showing additional landscape elements rendered as simple curved shapes, entire natural setting creating serene atmosphere befitting momentous spiritual and political alliance, sense of heaven and earth witnessing covenant as righteous king and wise sage formally recognize each other, fateful moment as Jiang Ziya见是文王 seeing this is King Wen immediately忙弃竿 hastily abandons fishing rod to俯首即拜 bow deeply, sage's action confirming King Wen is prophesied sovereign worth serving, King Wen连忙把他扶起 quickly helping him rise showing humble recognition that sage's wisdom transcends worldly rank, animated dynamic movements showing Jiang Ziya's rapid transition from seated fishing to standing bowing posture, sage's body bending forward deeply showing full reverence, fishing rod falling or lying on ground showing hasty abandonment, King Wen stepping forward urgently with extended arms, king's hands reaching to grasp sage's arms or shoulders to lift him, both figures in active motion showing urgency of mutual respect, Jiang Ziya beginning to rise in response to king's insistence, willow branches swaying gently overhead, birds flying across sky in formation, lotus leaves rustling with breeze, sense of multiple simultaneous actions as cosmic appointment crystallizes into human relationship, contrast between sage's initial深 deep bow and king's insistent lifting creating visual dialogue about mutual honor, monochromatic sepia tones with elegant ink wash creating atmosphere of profound mutual recognition, vintage aged paper with historical weathering lending authenticity to legendary first formal exchange, classical Chinese sage and sovereign mutual respect illustration aesthetic emphasizing equality despite hierarchy, masterpiece folkloric covenant formation scene showing both parties recognize heaven's plan uniting them, 4k quality, legendary mutual recognition moment visualization, cosmic destiny manifesting in earthly礼 propriety as Jiang Ziya子牙见是文王 recognizing King Wen immediately忙弃竿俯首即拜 hastily abandons fishing rod to bow deeply showing he acknowledges righteous sovereign, King Wen文王连忙把他扶起 quickly helping sage rise refusing to accept such deep reverence, mutual respect exchange establishing partnership foundation where sage's supernatural wisdom and king's righteous authority will combine as equals to fulfill heaven's mandate overthrowing tyrannical Shang dynasty and establishing virtuous Zhou rule, famous moment crystallizing relationship that will transform Chinese history through their complementary strengths united in cosmic purpose",
+      "clip": [
+        "84",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Positive Prompt)"
+    }
+  },
+  "94": {
+    "inputs": {
+      "fps": 16,
+      "images": [
+        "87",
+        0
+      ]
+    },
+    "class_type": "CreateVideo",
+    "_meta": {
+      "title": "创建视频"
+    }
+  },
+  "95": {
+    "inputs": {
+      "unet_name": "wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "96": {
+    "inputs": {
+      "unet_name": "wan2.2_i2v_low_noise_14B_fp8_scaled.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "97": {
+    "inputs": {
+      "image": "48.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "98": {
+    "inputs": {
+      "width": 832,
+      "height": 640,
+      "length": 121,
+      "batch_size": 1,
+      "positive": [
+        "93",
+        0
+      ],
+      "negative": [
+        "89",
+        0
+      ],
+      "vae": [
+        "90",
+        0
+      ],
+      "start_image": [
+        "97",
+        0
+      ]
+    },
+    "class_type": "WanImageToVideo",
+    "_meta": {
+      "title": "Wan图像到视频"
+    }
+  },
+  "101": {
+    "inputs": {
+      "lora_name": "wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors",
+      "strength_model": 1.0000000000000002,
+      "model": [
+        "95",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "102": {
+    "inputs": {
+      "lora_name": "wan2.2_i2v_lightx2v_4steps_lora_v1_low_noise.safetensors",
+      "strength_model": 1.0000000000000002,
+      "model": [
+        "96",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "103": {
+    "inputs": {
+      "shift": 5.000000000000001,
+      "model": [
+        "102",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingSD3",
+    "_meta": {
+      "title": "采样算法（SD3）"
+    }
+  },
+  "104": {
+    "inputs": {
+      "shift": 5.000000000000001,
+      "model": [
+        "101",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingSD3",
+    "_meta": {
+      "title": "采样算法（SD3）"
+    }
+  },
+  "108": {
+    "inputs": {
+      "filename_prefix": "video/ComfyUI",
+      "format": "auto",
+      "codec": "auto",
+      "video": [
+        "94",
+        0
+      ]
+    },
+    "class_type": "SaveVideo",
+    "_meta": {
+      "title": "保存视频"
+    }
+  }
+}

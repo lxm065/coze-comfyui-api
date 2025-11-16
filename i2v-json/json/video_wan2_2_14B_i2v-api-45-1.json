@@ -1,0 +1,269 @@
+{
+  "84": {
+    "inputs": {
+      "clip_name": "umt5_xxl_fp8_e4m3fn_scaled.safetensors",
+      "type": "wan",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "加载CLIP"
+    }
+  },
+  "85": {
+    "inputs": {
+      "add_noise": "disable",
+      "noise_seed": 0,
+      "steps": 4,
+      "cfg": 1,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "start_at_step": 2,
+      "end_at_step": 4,
+      "return_with_leftover_noise": "disable",
+      "model": [
+        "103",
+        0
+      ],
+      "positive": [
+        "98",
+        0
+      ],
+      "negative": [
+        "98",
+        1
+      ],
+      "latent_image": [
+        "86",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced",
+    "_meta": {
+      "title": "K采样器（高级）"
+    }
+  },
+  "86": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 436598171524569,
+      "steps": 4,
+      "cfg": 1,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "start_at_step": 0,
+      "end_at_step": 2,
+      "return_with_leftover_noise": "enable",
+      "model": [
+        "104",
+        0
+      ],
+      "positive": [
+        "98",
+        0
+      ],
+      "negative": [
+        "98",
+        1
+      ],
+      "latent_image": [
+        "98",
+        2
+      ]
+    },
+    "class_type": "KSamplerAdvanced",
+    "_meta": {
+      "title": "K采样器（高级）"
+    }
+  },
+  "87": {
+    "inputs": {
+      "samples": [
+        "85",
+        0
+      ],
+      "vae": [
+        "90",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "89": {
+    "inputs": {
+      "text": "色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走",
+      "clip": [
+        "84",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Negative Prompt)"
+    }
+  },
+  "90": {
+    "inputs": {
+      "vae_name": "wan_2.1_vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "加载VAE"
+    }
+  },
+  "93": {
+    "inputs": {
+      "text": "Traditional Chinese line drawing illustration style, black ink on aged paper texture, classical folklore narrative aesthetic, momentous scene depicting King Wen's solitary approach to sage's sacred grove showing humble reverence, upper portion dominated by extensive stylized water渭水 Wei River rendered in traditional repeating wave pattern波浪纹 covering top third of composition, waves depicted as countless overlapping curved lines creating rhythmic undulating surface, water emphasizing proximity to Pan Stream磻溪 fishing location, upper center showing lotus plant荷花 emerging from water with outlined flower bloom and solid black leaves showing radiating vein patterns, lotus symbolizing purity appropriate for sacred encounter location, left side featuring decorative fruit tree with distinctive round blossoms or fruits rendered as circular flower-like patterns creating ornamental natural element, tree's branches extending upward with clustered blooms adding aesthetic beauty to scene, center portion dominated by three magnificent willow trees绿柳 forming natural gateway or sacred grove, willows rendered with bold trunk structures and distinctive hanging foliage, willow leaves depicted in characteristic pointed diamond or leaf-shaped patterns densely clustered on drooping branches, three willows creating forest grove树林 mentioned in narrative, willows' dark solid rendering creating strong vertical elements and sense of enclosed sacred space, trees positioned to create natural archway suggesting threshold between mundane and transcendent realms, center-right showing wooden sign board or placard mounted on post displaying Chinese characters隐磻 indicating hidden Pan Stream fishing location, sign creating formal marker identifying sage's hermitage area, signboard's presence showing location has gained reputation requiring directional marker, right side featuring large tree with elaborate detailed foliage rendered in lighter outlined style contrasting with solid willow trees, right tree's leaves depicted as individual outlined shapes creating lush canopy, tree's substantial size and detailed rendering balancing composition, ground level showing scattered dark oval stones or rocks creating natural terrain, lower left foreground showing King Wen's royal entourage士卒 soldiers and officials halted at forest edge林边 waiting as commanded, small figures including mounted officials on horses rendered in miniature scale showing distance perspective, horses visible with riders in formal attire maintaining respectful distance, additional guards or attendants visible on foot in military dress, figures positioned in resting poses歇息 as ordered showing obedience to king's command传旨, sense of substantial royal procession stopping short of sacred space showing proper reverence, retinue's patient waiting demonstrating discipline and respect for king's solitary spiritual approach, critically showing King Wen as single larger figure他一人 alone entering deeper into forest走进林里, King Wen visible in center-upper area passing between willow trees, king's solitary form rendered in traditional court robes suggesting he has dismounted and left entourage behind, sense of righteous sovereign humbling himself by approaching sage on foot without retinue, cosmic significance as king abandons worldly power display to seek wisdom with personal sincerity, three willow trees creating natural temple or sacred threshold king must cross alone, spatial arrangement showing clear division between worldly realm below where armed retinue waits and transcendent realm above where lone king ventures, contrast between earlier elaborate ceremonial procession and current stripped-down solitary approach, famous moment as King Wen recognizes some encounters require abandoning worldly status, ironic reversal as most powerful man in realm becomes humble supplicant, fateful decision showing king's wisdom in understanding sage must be approached with personal humility not institutional authority, sense of threshold crossing as king passes from political to spiritual realm, willow grove serving as natural sanctuary protecting sage's meditation space, hidden磻 character on sign emphasizing this is place of concealment and retreat from mundane world, king's lone approach showing he respects sage's choice of seclusion, cosmic test continuing as proper礼 propriety requires not just ceremonial gifts but personal humble seeking, animated subtle movements showing waiting retinue in various resting poses with horses standing patiently士卒歇息, guards leaning on weapons or sitting, mounted officials remaining in saddles but relaxed, King Wen's solitary figure walking forward between willow trees deeper into sacred grove, sense of respectful silence as retinue waits while sovereign ventures alone toward destiny, willow branches swaying gently suggesting natural world witnesses important approach, water flowing eternally in background emphasizing timeless quality of moment, monochromatic sepia tones with elegant ink wash creating atmosphere of sacred threshold and humble pilgrimage, vintage aged paper with historical weathering lending authenticity to legendary solitary approach scene, classical Chinese sacred grove illustration aesthetic emphasizing natural sanctuary and spiritual humility, masterpiece folkloric humble seeking scene showing righteous king understanding that true wisdom requires personal vulnerable approach not institutional power display, 4k quality, legendary solitary forest entry visualization, cosmic significance as King Wen文王 commanding entourage to来到一个树林前 arrive at forest edge then传旨 issuing order让士卒在林边歇息 letting soldiers rest at forest边 edge while他一人走进林里 he alone enters deeper into grove, king's decision to approach sage personally without protective retinue showing profound respect and humble sincerity, willows creating natural temple threshold between worldly power and transcendent wisdom, fateful solitary walk bringing king face to face with heaven-sent strategist Jiang Ziya in moment that will change both their destinies and alter course of Chinese history through eventual overthrow of tyrannical Shang dynasty and establishment of righteous Zhou rule",
+      "clip": [
+        "84",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Positive Prompt)"
+    }
+  },
+  "94": {
+    "inputs": {
+      "fps": 16,
+      "images": [
+        "87",
+        0
+      ]
+    },
+    "class_type": "CreateVideo",
+    "_meta": {
+      "title": "创建视频"
+    }
+  },
+  "95": {
+    "inputs": {
+      "unet_name": "wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "96": {
+    "inputs": {
+      "unet_name": "wan2.2_i2v_low_noise_14B_fp8_scaled.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "97": {
+    "inputs": {
+      "image": "45.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "98": {
+    "inputs": {
+      "width": 832,
+      "height": 640,
+      "length": 121,
+      "batch_size": 1,
+      "positive": [
+        "93",
+        0
+      ],
+      "negative": [
+        "89",
+        0
+      ],
+      "vae": [
+        "90",
+        0
+      ],
+      "start_image": [
+        "97",
+        0
+      ]
+    },
+    "class_type": "WanImageToVideo",
+    "_meta": {
+      "title": "Wan图像到视频"
+    }
+  },
+  "101": {
+    "inputs": {
+      "lora_name": "wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors",
+      "strength_model": 1.0000000000000002,
+      "model": [
+        "95",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "102": {
+    "inputs": {
+      "lora_name": "wan2.2_i2v_lightx2v_4steps_lora_v1_low_noise.safetensors",
+      "strength_model": 1.0000000000000002,
+      "model": [
+        "96",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "103": {
+    "inputs": {
+      "shift": 5.000000000000001,
+      "model": [
+        "102",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingSD3",
+    "_meta": {
+      "title": "采样算法（SD3）"
+    }
+  },
+  "104": {
+    "inputs": {
+      "shift": 5.000000000000001,
+      "model": [
+        "101",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingSD3",
+    "_meta": {
+      "title": "采样算法（SD3）"
+    }
+  },
+  "108": {
+    "inputs": {
+      "filename_prefix": "video/ComfyUI",
+      "format": "auto",
+      "codec": "auto",
+      "video": [
+        "94",
+        0
+      ]
+    },
+    "class_type": "SaveVideo",
+    "_meta": {
+      "title": "保存视频"
+    }
+  }
+}

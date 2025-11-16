@@ -1,0 +1,269 @@
+{
+  "84": {
+    "inputs": {
+      "clip_name": "umt5_xxl_fp8_e4m3fn_scaled.safetensors",
+      "type": "wan",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "加载CLIP"
+    }
+  },
+  "85": {
+    "inputs": {
+      "add_noise": "disable",
+      "noise_seed": 0,
+      "steps": 4,
+      "cfg": 1,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "start_at_step": 2,
+      "end_at_step": 4,
+      "return_with_leftover_noise": "disable",
+      "model": [
+        "103",
+        0
+      ],
+      "positive": [
+        "98",
+        0
+      ],
+      "negative": [
+        "98",
+        1
+      ],
+      "latent_image": [
+        "86",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced",
+    "_meta": {
+      "title": "K采样器（高级）"
+    }
+  },
+  "86": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 436598171524569,
+      "steps": 4,
+      "cfg": 1,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "start_at_step": 0,
+      "end_at_step": 2,
+      "return_with_leftover_noise": "enable",
+      "model": [
+        "104",
+        0
+      ],
+      "positive": [
+        "98",
+        0
+      ],
+      "negative": [
+        "98",
+        1
+      ],
+      "latent_image": [
+        "98",
+        2
+      ]
+    },
+    "class_type": "KSamplerAdvanced",
+    "_meta": {
+      "title": "K采样器（高级）"
+    }
+  },
+  "87": {
+    "inputs": {
+      "samples": [
+        "85",
+        0
+      ],
+      "vae": [
+        "90",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "89": {
+    "inputs": {
+      "text": "色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走",
+      "clip": [
+        "84",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Negative Prompt)"
+    }
+  },
+  "90": {
+    "inputs": {
+      "vae_name": "wan_2.1_vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "加载VAE"
+    }
+  },
+  "93": {
+    "inputs": {
+      "text": "Traditional Chinese line drawing illustration style, black ink on aged paper texture, classical folklore narrative aesthetic, compassionate farewell scene depicting enlightened deity dispatching disciple to escort recovered sage back to earthly campaign, upper right showing文殊广法天尊 Manjusri Guangfa Tianzun in serene celestial position, Manjusri wearing magnificent divine robes with elaborate decorative patterns showing enlightened being's supreme status, deity seated in meditation posture on lotus throne莲花座 rendered with detailed overlapping petals creating sacred Buddhist seat, critically showing Manjusri's distinctive圆光 circular halo or nimbus behind head depicted as elaborate ornate circle with intricate decorative patterns indicating Buddha or Bodhisattva level enlightenment, halo radiating divine light emphasizing transcendent nature, Manjusri's serene compassionate expression showing satisfaction at wounded sage's complete recovery, one hand raised holding lotus flower莲花 rendered with delicate petals symbolizing Buddhist purity and enlightenment, other hand positioned in blessing mudra让 commanding Jinzha送子牙回到西岐 to escort Jiang Ziya back to Xiqi, deity's authoritative yet compassionate gesture showing he ensures safe return not just healing, Manjusri positioned on substantial云 cloud formation rendered in flowing organic curves creating celestial throne, clouds suggesting deity remains in elevated mountain realm as disciple departs with recovered patient, upper right featuring additional decorative云纹 cloud formations in outlined style with elaborate swirling ruyi patterns, clouds creating supernatural atmospheric farewell setting, scattered云 motifs suggesting transition between celestial healing sanctuary and earthly campaign destination, left side dominated by spectacular金吒 Jinzha divine disciple mounted on magnificent supernatural bird, Jinzha wearing warrior armor or ceremonial robes appropriate for martial disciple, young divine warrior's determined expression showing commitment to master's command, critically showing Jinzha riding spectacular peacock孔雀 or phoenix凤凰 divine mount, celestial bird rendered with extraordinary elaborate plumage, bird's body powerful and majestic with detailed feather patterns, most prominently showing peacock's magnificent tail羽毛 feathers spread in full display, tail feathers rendered as elaborate fan of ornate plumes each featuring distinctive eye spots or decorative patterns, peacock eyes depicted as circular designs creating dramatic visual display, tail spreading creating dramatic backdrop emphasizing mount's supernatural splendor, bird's head featuring distinctive crest or crown-like plumage, peacock's fierce proud expression showing divine bird's intelligent nature, supernatural mount's powerful wings extended showing capability for rapid flight, wings rendered with detailed feather patterns creating sense of power and grace, peacock's claws or talons visible showing predatory divine nature, entire bird creating impression of celestial creature far beyond earthly peacock, divine mount's spectacular appearance appropriate for enlightened deity's favored disciple, Jinzha positioned confidently on peacock's back showing mastery of supernatural mount, disciple presumably escorting recovered姜子牙 Jiang Ziya though sage may not be prominently visible, sense of Jiang Ziya子牙醒过来后 having awakened after divine healing now fully recovered from catastrophic injuries, sage presumably riding with Jinzha on peacock or on separate云 cloud formation being escorted, Jiang Ziya's recovery demonstrating miraculous effectiveness of divine elixir丹药 supernatural medicine, wounded sage transformed from near-death to complete health through celestial healing, lower portion showing extensive云 cloud formations creating celestial pathway, clouds rendered in both solid black and outlined styles with elaborate swirling patterns, cloud formations suggesting journey from mountain healing sanctuary down to earthly Xiqi city, scattered decorative elements possibly indicating direction of travel, ground level suggested through minimal elements allowing focus on celestial farewell and departure, spatial arrangement showing vertical composition with Manjusri elevated on right overseeing departure, Jinzha and peacock mount on left preparing to descend, clouds connecting celestial and earthly realms, cosmic significance as enlightened deity ensures wounded ally not only heals but safely returns to righteous campaign, Manjusri's command送子牙回到西岐 to escort Jiang Ziya back to Xiqi showing complete commitment to Zhou cause, deity ensuring supernatural strategist returns to command position continuing heaven-mandated struggle, famous scene demonstrating Buddhist enlightened being's thorough support extending from combat intervention through healing to safe escort, Jinzha serving multiple roles as warrior who killed Wang Mo healer who administered elixir and now guardian escort ensuring safe return, peacock mount's spectacular display emphasizing importance and honor of escort mission, divine bird's magnificence showing this is ceremonial departure not mere transportation, sense of cosmic cycle completing as crisis intervention transforms to triumphant return, Jiang Ziya's醒过来 awakening marking transition from helpless patient to recovered commander, sage's complete healing validating divine medicine's miraculous power, Manjusri's satisfaction showing enlightened being's compassionate mission accomplished, deity's让 commanding rather than merely permitting showing he maintains authority over disciple's actions, Jinzha's obedient execution of escort mission demonstrating proper hierarchical discipline, famous farewell marking end of celestial intervention and return to earthly campaign, Jiang Ziya's回到西岐 return to Xiqi ensuring Zhou forces regain their supernatural strategist commander, sage's survival and recovery providing critical morale boost after catastrophic near-defeat, ironic complete reversal as apparent total collapse transforms through divine intervention into triumphant restoration, cosmic lesson that heaven's mandate provides not just combat support but complete救援 rescue including healing and safe return, animated graceful movements showing Manjusri's blessing gesture with raised lotus and mudra hand, deity's serene expression radiating compassionate satisfaction, Jinzha bowing respectfully toward master acknowledging command, disciple turning peacock mount toward earthly destination, magnificent peacock spreading tail feathers in full display creating spectacular visual, bird's wings beginning powerful strokes preparing for flight, Jinzha maintaining perfect balance on moving mount, recovered Jiang Ziya presumably seated securely showing restored health, clouds swirling creating pathway for descent, sense of ceremonial departure as divine mission completes, Manjusri remaining serenely seated on lotus throne observing disciple's departure, peacock's elaborate plumage creating dynamic visual as bird begins flight, Jinzha's confident bearing showing he will ensure safe escort, entire scene radiating sense of successful mission and compassionate care, monochromatic sepia tones with elegant ink wash creating atmosphere of serene celestial farewell and triumphant return, vintage aged paper with historical weathering lending authenticity to legendary escort scene, classical Chinese Buddhist compassionate intervention completion illustration aesthetic emphasizing enlightened beings' thorough support, masterpiece folkloric divine escort scene showing celestial intervention's complete cycle from combat through healing to safe return, 4k quality, legendary peacock escort visualization, cosmic compassion completing as Manjusri广法天尊 Guangfa Tianzun after Jiang Ziya子牙醒过来后 awakens from divine healing让金吒送子牙回到西岐 commands Jinzha to escort sage back to Xiqi, famous return journey on spectacular peacock mount demonstrating enlightened deity's complete commitment ensuring not just survival but triumphant restoration to command, celestial intervention's thorough nature guaranteeing Zhou forces regain their supernatural strategist fully healed and divinely protected, successful rescue mission validating heaven's mandate through direct Buddhist enlightened intervention providing combat support miraculous healing and safe escort back to righteous campaign ensuring Zhou victory over Shang in cosmic battle for China's dynastic future through comprehensive celestial assistance transcending mere combat to encompass complete救援 rescue and restoration of heaven's chosen champion commander",
+      "clip": [
+        "84",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Positive Prompt)"
+    }
+  },
+  "94": {
+    "inputs": {
+      "fps": 16,
+      "images": [
+        "87",
+        0
+      ]
+    },
+    "class_type": "CreateVideo",
+    "_meta": {
+      "title": "创建视频"
+    }
+  },
+  "95": {
+    "inputs": {
+      "unet_name": "wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "96": {
+    "inputs": {
+      "unet_name": "wan2.2_i2v_low_noise_14B_fp8_scaled.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "97": {
+    "inputs": {
+      "image": "65.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "98": {
+    "inputs": {
+      "width": 832,
+      "height": 640,
+      "length": 121,
+      "batch_size": 1,
+      "positive": [
+        "93",
+        0
+      ],
+      "negative": [
+        "89",
+        0
+      ],
+      "vae": [
+        "90",
+        0
+      ],
+      "start_image": [
+        "97",
+        0
+      ]
+    },
+    "class_type": "WanImageToVideo",
+    "_meta": {
+      "title": "Wan图像到视频"
+    }
+  },
+  "101": {
+    "inputs": {
+      "lora_name": "wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors",
+      "strength_model": 1.0000000000000002,
+      "model": [
+        "95",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "102": {
+    "inputs": {
+      "lora_name": "wan2.2_i2v_lightx2v_4steps_lora_v1_low_noise.safetensors",
+      "strength_model": 1.0000000000000002,
+      "model": [
+        "96",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "103": {
+    "inputs": {
+      "shift": 5.000000000000001,
+      "model": [
+        "102",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingSD3",
+    "_meta": {
+      "title": "采样算法（SD3）"
+    }
+  },
+  "104": {
+    "inputs": {
+      "shift": 5.000000000000001,
+      "model": [
+        "101",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingSD3",
+    "_meta": {
+      "title": "采样算法（SD3）"
+    }
+  },
+  "108": {
+    "inputs": {
+      "filename_prefix": "video/ComfyUI",
+      "format": "auto",
+      "codec": "auto",
+      "video": [
+        "94",
+        0
+      ]
+    },
+    "class_type": "SaveVideo",
+    "_meta": {
+      "title": "保存视频"
+    }
+  }
+}

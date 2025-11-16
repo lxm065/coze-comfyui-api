@@ -1,0 +1,269 @@
+{
+  "84": {
+    "inputs": {
+      "clip_name": "umt5_xxl_fp8_e4m3fn_scaled.safetensors",
+      "type": "wan",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "加载CLIP"
+    }
+  },
+  "85": {
+    "inputs": {
+      "add_noise": "disable",
+      "noise_seed": 0,
+      "steps": 4,
+      "cfg": 1,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "start_at_step": 2,
+      "end_at_step": 4,
+      "return_with_leftover_noise": "disable",
+      "model": [
+        "103",
+        0
+      ],
+      "positive": [
+        "98",
+        0
+      ],
+      "negative": [
+        "98",
+        1
+      ],
+      "latent_image": [
+        "86",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced",
+    "_meta": {
+      "title": "K采样器（高级）"
+    }
+  },
+  "86": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 436598171524569,
+      "steps": 4,
+      "cfg": 1,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "start_at_step": 0,
+      "end_at_step": 2,
+      "return_with_leftover_noise": "enable",
+      "model": [
+        "104",
+        0
+      ],
+      "positive": [
+        "98",
+        0
+      ],
+      "negative": [
+        "98",
+        1
+      ],
+      "latent_image": [
+        "98",
+        2
+      ]
+    },
+    "class_type": "KSamplerAdvanced",
+    "_meta": {
+      "title": "K采样器（高级）"
+    }
+  },
+  "87": {
+    "inputs": {
+      "samples": [
+        "85",
+        0
+      ],
+      "vae": [
+        "90",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "89": {
+    "inputs": {
+      "text": "色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走",
+      "clip": [
+        "84",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Negative Prompt)"
+    }
+  },
+  "90": {
+    "inputs": {
+      "vae_name": "wan_2.1_vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "加载VAE"
+    }
+  },
+  "93": {
+    "inputs": {
+      "text": "Traditional Chinese line drawing illustration style, black ink on aged paper texture, classical folklore narrative aesthetic, solemn deathbed succession scene depicting righteous king's final testament entrusting sage with heir's guidance, upper left featuring elaborate decorative云纹 cloud formation in outlined style with flowing organic curves suggesting heavenly witness to sacred covenant, clouds extending horizontally creating supernatural presence at momentous transition, upper right portion dominated by ornate palace architectural elements including elaborate canopy structure with decorative carved beams featuring vertical striping patterns suggesting luxurious imperial chamber, canopy supported by ornamental pillar with decorative云纹 cloud patterns and geometric designs, right side showing draped curtain or textile hanging creating sense of enclosed private chamber appropriate for intimate deathbed scene, architectural details emphasizing formal palace bedroom setting, center composition showing profound三代 three generations covenant moment, center featuring ornate ceremonial bed or couch榻 with elaborate decorative framework, bed structure rendered with geometric patterns and ornamental details showing imperial furniture, bed platform elevated on decorative base with云纹 cloud motifs and ruyi patterns carved into woodwork, on bed lying King Wen周文王 in final moments病危 critically ill, King Wen reclined on pillows or cushions in weakened dying posture, king wearing formal robes despite illness showing dignity maintained until end, King Wen's characteristic long beard visible though body appears frail, king's face turned toward figures beside bed showing he maintains consciousness for final instructions, one hand extended weakly托 entrusting or gesturing toward son and sage, King Wen's posture showing physical weakness contrasting with spiritual determination to secure succession, sense of righteous sovereign using final moments to ensure cosmic plan continues after his death, king having把子牙叫到床前 summoned Jiang Ziya to bedside for sacred testament, left side showing Jiang Ziya姜子牙 standing respectfully beside deathbed in position of trusted counselor, sage wearing formal ministerial robes appropriate for丞相 Prime Minister status, Jiang Ziya's characteristic elderly rotund form and long flowing beard showing his venerable status, sage's posture upright but leaning slightly forward showing attentive listening to dying king's final wishes, one hand raised in gesture of solemn acceptance托他辅佐儿子姬发 being entrusted to assist son Ji Fa, other hand positioned formally showing sage receives sacred duty with appropriate gravity, Jiang Ziya's facial expression showing profound responsibility as he accepts guardianship of heir and kingdom, sense of supernatural strategist recognizing this deathbed covenant as continuation of cosmic mission, sage positioned as witness and recipient of dying king's testament, right foreground showing姬发 Ji Fa the crown prince in deep prostration当场让姬发拜子牙为亚父 on the spot ordered to bow to Jiang Ziya as secondary father, Ji Fa rendered in kowtowing position with body bent forward and head lowered touching ground showing deepest respect拜, prince wearing formal heir's robes appropriate for future武王 King Wu, Ji Fa's youth visible contrasting with elderly sage and dying father, prince's prostrate posture showing he accepts father's command to honor Jiang Ziya as亚父 second father inferior only to biological parent, sense of solemn ritual as dying king witnesses son's submission to sage's guidance, cosmic transfer of authority as King Wen ensures sage's supernatural wisdom will guide inexperienced heir, famous亚父 title elevating Jiang Ziya to quasi-parental authority over future king, Ji Fa's bowing demonstrating filial piety to dying father and accepting sage as substitute parent, left foreground showing ornate ceremonial incense burner香炉 on elaborate stand with decorative base, incense burner rendered with geometric patterns and云纹 motifs, smoke rising from burner creating ethereal atmosphere appropriate for sacred deathbed covenant, incense suggesting ritual purification and connection between earthly and heavenly realms, burner's presence emphasizing ceremonial nature of succession moment, scattered decorative elements suggesting palace interior luxury including possible ritual implements or furnishings, ground showing formal palace floor with minimal detail allowing focus on human drama, entire composition radiating solemn gravity of dynastic succession and sacred trust, sense of righteous king ensuring cosmic plan survives his mortality by binding sage to heir through sacred covenant, King Wen's deathbed instructions托他辅佐儿子姬发 entrusting Jiang Ziya to assist son Ji Fa creating unbreakable bond, king forcing heir to拜子牙为亚父 bow to sage as secondary father ensuring prince cannot dismiss sage after succession, famous covenant establishing Jiang Ziya's authority to guide姬发继位为武王 Ji Fa's succession as King Wu, fateful moment as dying King Wen文王死后 after King Wen's death ensures supernatural strategist will continue guiding Zhou destiny, cosmic foresight as king recognizes young heir needs sage's transcendent wisdom to complete heaven's mandate, ironic poignancy as King Wen achieves in death what he sought in life by permanently binding sage to Zhou house, sense of three-generation covenant as grandfather-aged sage accepts parental role over young prince witnessed by dying father, deathbed scene capturing transfer of cosmic mission from righteous founder to supernatural strategist to young warrior who will complete conquest, animated solemn movements showing King Wen's weak gesture托 entrusting with trembling hand, Jiang Ziya's grave bow accepting sacred responsibility, Ji Fa's deep prostration拜 kowtowing showing filial submission, incense smoke rising creating ethereal atmosphere, sense of frozen moment as dying breath carries final command, curtains hanging still creating enclosed sacred space, architectural elements remaining stable while human drama unfolds, monochromatic sepia tones with somber ink wash creating atmosphere of profound transition and sacred covenant, vintage aged paper with historical weathering lending authenticity to legendary deathbed succession scene, classical Chinese dynastic succession illustration aesthetic emphasizing sacred trust and generational continuity, masterpiece folkloric testament scene showing righteous king's final act ensuring cosmic plan survives his mortality, 4k quality, legendary deathbed covenant visualization, cosmic continuity ensured as dying King Wen文王病危 critically ill把子牙叫到床前 summons Jiang Ziya to bedside托他辅佐儿子姬发 entrusting sage to assist son Ji Fa当场让姬发拜子牙为亚父 immediately ordering prince to bow to sage as secondary father, sacred covenant binding supernatural strategist to young heir ensuring that文王死后姬发继位为武王 after King Wen's death when Ji Fa succeeds as King Wu the sage's transcendent wisdom will continue guiding Zhou house toward heaven's mandate overthrowing tyrannical Shang dynasty and establishing virtuous Zhou rule completing cosmic plan that righteous father initiated but young son must finish under supernatural sage's paternal guidance",
+      "clip": [
+        "84",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Positive Prompt)"
+    }
+  },
+  "94": {
+    "inputs": {
+      "fps": 16,
+      "images": [
+        "87",
+        0
+      ]
+    },
+    "class_type": "CreateVideo",
+    "_meta": {
+      "title": "创建视频"
+    }
+  },
+  "95": {
+    "inputs": {
+      "unet_name": "wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "96": {
+    "inputs": {
+      "unet_name": "wan2.2_i2v_low_noise_14B_fp8_scaled.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "97": {
+    "inputs": {
+      "image": "50.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "98": {
+    "inputs": {
+      "width": 832,
+      "height": 640,
+      "length": 121,
+      "batch_size": 1,
+      "positive": [
+        "93",
+        0
+      ],
+      "negative": [
+        "89",
+        0
+      ],
+      "vae": [
+        "90",
+        0
+      ],
+      "start_image": [
+        "97",
+        0
+      ]
+    },
+    "class_type": "WanImageToVideo",
+    "_meta": {
+      "title": "Wan图像到视频"
+    }
+  },
+  "101": {
+    "inputs": {
+      "lora_name": "wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors",
+      "strength_model": 1.0000000000000002,
+      "model": [
+        "95",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "102": {
+    "inputs": {
+      "lora_name": "wan2.2_i2v_lightx2v_4steps_lora_v1_low_noise.safetensors",
+      "strength_model": 1.0000000000000002,
+      "model": [
+        "96",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "103": {
+    "inputs": {
+      "shift": 5.000000000000001,
+      "model": [
+        "102",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingSD3",
+    "_meta": {
+      "title": "采样算法（SD3）"
+    }
+  },
+  "104": {
+    "inputs": {
+      "shift": 5.000000000000001,
+      "model": [
+        "101",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingSD3",
+    "_meta": {
+      "title": "采样算法（SD3）"
+    }
+  },
+  "108": {
+    "inputs": {
+      "filename_prefix": "video/ComfyUI",
+      "format": "auto",
+      "codec": "auto",
+      "video": [
+        "94",
+        0
+      ]
+    },
+    "class_type": "SaveVideo",
+    "_meta": {
+      "title": "保存视频"
+    }
+  }
+}

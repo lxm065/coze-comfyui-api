@@ -1,0 +1,269 @@
+{
+  "84": {
+    "inputs": {
+      "clip_name": "umt5_xxl_fp8_e4m3fn_scaled.safetensors",
+      "type": "wan",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "加载CLIP"
+    }
+  },
+  "85": {
+    "inputs": {
+      "add_noise": "disable",
+      "noise_seed": 0,
+      "steps": 4,
+      "cfg": 1,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "start_at_step": 2,
+      "end_at_step": 4,
+      "return_with_leftover_noise": "disable",
+      "model": [
+        "103",
+        0
+      ],
+      "positive": [
+        "98",
+        0
+      ],
+      "negative": [
+        "98",
+        1
+      ],
+      "latent_image": [
+        "86",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced",
+    "_meta": {
+      "title": "K采样器（高级）"
+    }
+  },
+  "86": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 436598171524569,
+      "steps": 4,
+      "cfg": 1,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "start_at_step": 0,
+      "end_at_step": 2,
+      "return_with_leftover_noise": "enable",
+      "model": [
+        "104",
+        0
+      ],
+      "positive": [
+        "98",
+        0
+      ],
+      "negative": [
+        "98",
+        1
+      ],
+      "latent_image": [
+        "98",
+        2
+      ]
+    },
+    "class_type": "KSamplerAdvanced",
+    "_meta": {
+      "title": "K采样器（高级）"
+    }
+  },
+  "87": {
+    "inputs": {
+      "samples": [
+        "85",
+        0
+      ],
+      "vae": [
+        "90",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "89": {
+    "inputs": {
+      "text": "色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走",
+      "clip": [
+        "84",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Negative Prompt)"
+    }
+  },
+  "90": {
+    "inputs": {
+      "vae_name": "wan_2.1_vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "加载VAE"
+    }
+  },
+  "93": {
+    "inputs": {
+      "text": "Traditional Chinese line drawing illustration style, black ink on aged paper texture, classical folklore narrative aesthetic, triumphant ceremonial appointment scene depicting sage's elevation to highest ministerial rank after lifetime of waiting, upper portion dominated by elaborate ornate curtain canopy stretched horizontally across entire composition, curtain rendered with repeating scalloped or draped pattern creating theatrical formal atmosphere, curtain's regular geometric folds showing luxurious palace textile, decorative tassels or ornamental elements hanging from curtain edge creating sense of ceremonial grandeur, upper curtain creating formal theatrical frame appropriate for momentous state appointment, left and right sides featuring massive ornate ceremonial pillars or columns rendered in solid black creating strong vertical elements, pillars decorated with elaborate云纹 cloud patterns in lighter outlined style showing swirling ruyi motifs flowing up columns, cloud decorations suggesting supernatural blessing and auspicious occasion, pillars' substantial size emphasizing imperial palace宫内 interior setting, left pillar showing decorative elements including hanging ornamental lantern or ceremonial object rendered with detailed patterns, right pillar similarly adorned with hanging ceremonial implements, both pillars creating monumental gateway framing central action, scattered云纹 cloud motifs floating throughout composition in various sizes suggesting heavenly approval of appointment, upper center featuring rectangular banner or tapestry displaying mythical creature image, banner showing四不像 Si Bu Xiang divine mount in running or leaping pose rendered in simple bold lines, creature's distinctive mixed animal features visible, banner's decorative geometric borders framing divine beast image, tapestry serving as auspicious symbol recalling Jiang Ziya's miraculous escape on supernatural mount, banner's presence connecting past divine protection to current earthly reward, center composition showing formal court appointment ceremony封为丞相, left side showing Jiang Ziya姜子牙 in distinguished scholarly robes now elevated to Prime Minister status, sage wearing formal ministerial attire with contrasting dark outer robe over light inner garments, Jiang Ziya's characteristic rotund elderly form showing his已八十岁了 eighty years of age, sage's long flowing beard extending downward showing wisdom accumulated over eight decades, Jiang Ziya's posture upright and dignified befitting newly appointed丞相 Chancellor position, one hand raised in formal gesture of acceptance or gratitude, other hand holding ceremonial implement or positioned formally, sage's facial expression showing serene satisfaction as lifetime of patient waiting culminates in cosmic appointment, sense of enlightened elder finally receiving earthly recognition matching supernatural status, Jiang Ziya positioned on left showing he has been请到宫内 invited into palace interior, center showing King Wen周文王 in magnificent imperial court robes performing formal appointment ceremony, King Wen wearing elaborate ceremonial dress with rich decorative patterns, king's distinctive tall官帽 royal cap showing sovereign authority, king's characteristic long flowing beard indicating wisdom and nobility, King Wen's posture formal and ceremonial as he封为 confers title of丞相 Prime Minister, king's hands positioned in official conferring gesture granting highest ministerial rank, sense of righteous sovereign recognizing sage's transcendent wisdom by elevating him to掌管国家大事 manage state affairs, King Wen's bearing showing satisfaction at securing heaven-sent strategist, cosmic significance as earthly king formally appoints supernatural sage to position matching his true capabilities, right side showing court official or minister witnessing historic appointment, official wearing formal court dress with distinctive cap, witness's presence validating formal nature of ceremony, additional官员 official serving as ceremonial attendant, lower portion showing ornate palace floor rendered with geometric patterns or simple lines suggesting formal court chamber, scattered ceremonial objects possibly including incense burners or ritual implements rendered as dark shapes at base of pillars, entire setting radiating imperial grandeur and formal ceremony appropriate for highest ministerial appointment, sense of culmination as sage's eight decades八十岁 of life including years of humble fishing and supernatural trials finally recognized with supreme earthly position, ironic fulfillment as man who fished with straight hook unwilling to deceive or force destiny now receives willing appointment from righteous king, cosmic justice manifested as patient faith rewarded with exact role prophesied, famous appointment marking transformation from hermit fisherman to Prime Minister掌管国家大事 managing state affairs, fateful moment as Jiang Ziya's elevation to丞相 Chancellor provides him platform to exercise supernatural strategic wisdom, partnership officially formalized as sage's transcendent knowledge combines with king's righteous authority, animated subtle ceremonial movements showing Jiang Ziya bowing in acceptance of appointment, King Wen's formal gesture conferring title with authority, witnessing officials maintaining respectful formal positions, sense of solemn ritual as cosmic destiny manifests in earthly ceremony, curtains and decorative elements creating stable formal frame while human figures perform historic appointment, Si Bu Xiang banner overhead connecting supernatural past to political present, monochromatic sepia tones with dramatic contrasts between solid black architectural elements and lighter central figures creating theatrical atmosphere, vintage aged paper with historical weathering lending authenticity to legendary appointment scene, classical Chinese imperial appointment ceremony illustration aesthetic emphasizing formal grandeur and cosmic fulfillment, masterpiece folkloric destiny achievement scene showing patient sage finally receiving earthly recognition, 4k quality, legendary Prime Minister appointment visualization, cosmic culmination as King Wen文王把子牙请到宫内 invites Jiang Ziya into palace封为丞相 appointing him as Chancellor掌管国家大事 to manage state affairs, sage's lifetime of supernatural trials humble fishing and patient faith rewarded at age这时子牙已八十岁了 eighty years old, famous moment marking beginning of partnership where Jiang Ziya's divine strategic wisdom will guide King Wen's righteous campaigns eventually overthrowing tyrannical Shang dynasty establishing virtuous Zhou rule fulfilling heaven's mandate and prophecy that真主现 true lord has united with heaven-sent strategist to transform Chinese history through their cosmic appointed collaboration",
+      "clip": [
+        "84",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Positive Prompt)"
+    }
+  },
+  "94": {
+    "inputs": {
+      "fps": 16,
+      "images": [
+        "87",
+        0
+      ]
+    },
+    "class_type": "CreateVideo",
+    "_meta": {
+      "title": "创建视频"
+    }
+  },
+  "95": {
+    "inputs": {
+      "unet_name": "wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "96": {
+    "inputs": {
+      "unet_name": "wan2.2_i2v_low_noise_14B_fp8_scaled.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "97": {
+    "inputs": {
+      "image": "49.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "98": {
+    "inputs": {
+      "width": 832,
+      "height": 640,
+      "length": 121,
+      "batch_size": 1,
+      "positive": [
+        "93",
+        0
+      ],
+      "negative": [
+        "89",
+        0
+      ],
+      "vae": [
+        "90",
+        0
+      ],
+      "start_image": [
+        "97",
+        0
+      ]
+    },
+    "class_type": "WanImageToVideo",
+    "_meta": {
+      "title": "Wan图像到视频"
+    }
+  },
+  "101": {
+    "inputs": {
+      "lora_name": "wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors",
+      "strength_model": 1.0000000000000002,
+      "model": [
+        "95",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "102": {
+    "inputs": {
+      "lora_name": "wan2.2_i2v_lightx2v_4steps_lora_v1_low_noise.safetensors",
+      "strength_model": 1.0000000000000002,
+      "model": [
+        "96",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "103": {
+    "inputs": {
+      "shift": 5.000000000000001,
+      "model": [
+        "102",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingSD3",
+    "_meta": {
+      "title": "采样算法（SD3）"
+    }
+  },
+  "104": {
+    "inputs": {
+      "shift": 5.000000000000001,
+      "model": [
+        "101",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingSD3",
+    "_meta": {
+      "title": "采样算法（SD3）"
+    }
+  },
+  "108": {
+    "inputs": {
+      "filename_prefix": "video/ComfyUI",
+      "format": "auto",
+      "codec": "auto",
+      "video": [
+        "94",
+        0
+      ]
+    },
+    "class_type": "SaveVideo",
+    "_meta": {
+      "title": "保存视频"
+    }
+  }
+}

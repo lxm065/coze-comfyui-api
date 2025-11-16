@@ -1,0 +1,269 @@
+{
+  "84": {
+    "inputs": {
+      "clip_name": "umt5_xxl_fp8_e4m3fn_scaled.safetensors",
+      "type": "wan",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "加载CLIP"
+    }
+  },
+  "85": {
+    "inputs": {
+      "add_noise": "disable",
+      "noise_seed": 0,
+      "steps": 4,
+      "cfg": 1,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "start_at_step": 2,
+      "end_at_step": 4,
+      "return_with_leftover_noise": "disable",
+      "model": [
+        "103",
+        0
+      ],
+      "positive": [
+        "98",
+        0
+      ],
+      "negative": [
+        "98",
+        1
+      ],
+      "latent_image": [
+        "86",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced",
+    "_meta": {
+      "title": "K采样器（高级）"
+    }
+  },
+  "86": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 436598171524569,
+      "steps": 4,
+      "cfg": 1,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "start_at_step": 0,
+      "end_at_step": 2,
+      "return_with_leftover_noise": "enable",
+      "model": [
+        "104",
+        0
+      ],
+      "positive": [
+        "98",
+        0
+      ],
+      "negative": [
+        "98",
+        1
+      ],
+      "latent_image": [
+        "98",
+        2
+      ]
+    },
+    "class_type": "KSamplerAdvanced",
+    "_meta": {
+      "title": "K采样器（高级）"
+    }
+  },
+  "87": {
+    "inputs": {
+      "samples": [
+        "85",
+        0
+      ],
+      "vae": [
+        "90",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "89": {
+    "inputs": {
+      "text": "色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走",
+      "clip": [
+        "84",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Negative Prompt)"
+    }
+  },
+  "90": {
+    "inputs": {
+      "vae_name": "wan_2.1_vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "加载VAE"
+    }
+  },
+  "93": {
+    "inputs": {
+      "text": "Traditional Chinese line drawing illustration style, black ink on aged paper texture, classical folklore narrative aesthetic, pivotal encounter scene depicting curious observer discovering sage's mysterious fishing method, upper portion featuring scattered decorative云纹 cloud formations in both solid black and outlined styles creating dynamic sky composition, clouds positioned at various points suggesting passage of time throughout long fishing day, small bird silhouettes in flight including distinctive crane or heron shape on left side diving downward toward water suggesting natural wildlife observing scene, birds adding vitality and witness to unusual tableau, right side dominated by same elegant sweeping willow tree绿柳 with graceful drooping branches extending across composition, willow rendered with flowing curved lines and alternating dark and light striped pattern showing cascading leaf tendrils, tree positioned on elevated bank creating natural frame, willow's presence emphasizing continuity with previous tranquil hermitage scene, upper center-left showing woodcutter樵夫 character positioned on elevated vantage point observing fishing sage below, woodcutter wearing simple work clothes with contrasting dark vest or tunic over light garments, distinctive headgear or cap suggesting laborer status, woodcutter holding long pole or staff across shoulders with bundles of gathered firewood suspended from both ends creating balanced carrying configuration, firewood bundles rendered as tied cylindrical shapes showing peasant's daily labor, woodcutter's posture leaning forward with interest peering down at strange fishing scene, one hand raised near face in gesture of puzzlement or amazement, woodcutter's facial expression showing curiosity and confusion at seeing fisherman who半天也钓不上一条 hasn't caught single fish after half day of sitting, sense of practical working man encountering incomprehensible behavior, woodcutter positioned higher on bank suggesting he has stopped during his mountain labor to observe peculiar sight below, center showing long fishing rod extending from upper level down toward water creating strong diagonal compositional line, fishing line visible as thin line dropping into water but notably without any visible fish despite extended time, rod's angle and position emphasizing patient unproductive fishing creating mystery for observer, lower left showing Jiang Ziya in simple scholar's robes seated in relaxed contemplative pose on lower riverbank section, sage's characteristic rotund form appearing completely serene and patient despite lack of catches, Jiang Ziya holding fishing rod with casual grip showing no concern about empty results, sage's posture remaining peaceful and meditative throughout long fruitless day, sense of man fishing for something other than fish, sage's expression showing contentment rather than frustration revealing deeper purpose, Jiang Ziya positioned on lower level creating vertical separation from curious woodcutter above, spatial arrangement allowing woodcutter's elevated perspective to observe full fishing tableau, lower portion showing stylized water渭水 rendered in traditional repeating wave pattern波浪纹 with overlapping curved lines creating flowing surface, water continuing across composition suggesting river's constancy, foreground showing detailed lotus plant荷花 emerging from water with large leaf rendered in bold black showing radiating vein pattern, lotus flower bloom visible among leaves with delicate petals outlined, additional lotus elements and scattered dark spots on shore suggesting stones or aquatic plants, riverbank environment lush and peaceful creating contemplative setting, fishing line extending into water but producing no results creating central mystery一天...半天也钓不上一条鱼, sense of entire day passing as indicated by text with patient sage never catching anything, famous setup for revelation that Jiang Ziya fishes with straight unbent hook姜太公钓鱼愿者上钩 showing he waits not for fish but for destiny, woodcutter's confusion representing normal worldly perspective unable to comprehend supernatural purpose, ironic situation where failure to catch fish is actual success as sage demonstrates patient faith in cosmic timing, encounter marking beginning of sage's discovery as curious observers spread word of mysterious wise hermit by river, fateful meeting as woodcutter will likely tell others about strange old man fishing without success beginning reputation that will eventually reach King Wen's ears, animated movements showing woodcutter gesturing in puzzlement and leaning to observe better, Jiang Ziya maintaining absolutely still patient pose showing meditative discipline, fishing rod remaining motionless over water, willow branches swaying gently in breeze, water flowing with steady rhythm, lotus leaves rustling, birds gliding across sky, sense of one figure in agitated confusion while other remains in perfect tranquil patience, contrast between worldly busy woodcutter carrying burden of daily labor and transcendent sage free from mundane concerns, vertical composition emphasizing social and spiritual hierarchy with questioning peasant above earthly realm and enlightened sage connected to water element below, monochromatic sepia tones with elegant ink wash creating contemplative atmosphere with hint of comedy in encounter, vintage aged paper with historical weathering lending authenticity to legendary meeting, classical Chinese observer-sage encounter illustration aesthetic emphasizing gap between mundane and transcendent understanding, masterpiece folkloric discovery beginning scene showing ordinary person first noticing extraordinary sage, 4k quality, legendary mysterious fisherman observation moment visualization, cosmic destiny's mechanism beginning as curious woodcutter becomes first witness to sage's supernatural patience and strange fishing method creating seed of reputation that will grow and spread until virtuous king hears tales of wise hermit by Wei River and comes seeking counsel beginning final transformation of persecuted exile into legendary military strategist and architect of dynastic change",
+      "clip": [
+        "84",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Positive Prompt)"
+    }
+  },
+  "94": {
+    "inputs": {
+      "fps": 16,
+      "images": [
+        "87",
+        0
+      ]
+    },
+    "class_type": "CreateVideo",
+    "_meta": {
+      "title": "创建视频"
+    }
+  },
+  "95": {
+    "inputs": {
+      "unet_name": "wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "96": {
+    "inputs": {
+      "unet_name": "wan2.2_i2v_low_noise_14B_fp8_scaled.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "97": {
+    "inputs": {
+      "image": "36.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "98": {
+    "inputs": {
+      "width": 832,
+      "height": 640,
+      "length": 121,
+      "batch_size": 1,
+      "positive": [
+        "93",
+        0
+      ],
+      "negative": [
+        "89",
+        0
+      ],
+      "vae": [
+        "90",
+        0
+      ],
+      "start_image": [
+        "97",
+        0
+      ]
+    },
+    "class_type": "WanImageToVideo",
+    "_meta": {
+      "title": "Wan图像到视频"
+    }
+  },
+  "101": {
+    "inputs": {
+      "lora_name": "wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors",
+      "strength_model": 1.0000000000000002,
+      "model": [
+        "95",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "102": {
+    "inputs": {
+      "lora_name": "wan2.2_i2v_lightx2v_4steps_lora_v1_low_noise.safetensors",
+      "strength_model": 1.0000000000000002,
+      "model": [
+        "96",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "103": {
+    "inputs": {
+      "shift": 5.000000000000001,
+      "model": [
+        "102",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingSD3",
+    "_meta": {
+      "title": "采样算法（SD3）"
+    }
+  },
+  "104": {
+    "inputs": {
+      "shift": 5.000000000000001,
+      "model": [
+        "101",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingSD3",
+    "_meta": {
+      "title": "采样算法（SD3）"
+    }
+  },
+  "108": {
+    "inputs": {
+      "filename_prefix": "video/ComfyUI",
+      "format": "auto",
+      "codec": "auto",
+      "video": [
+        "94",
+        0
+      ]
+    },
+    "class_type": "SaveVideo",
+    "_meta": {
+      "title": "保存视频"
+    }
+  }
+}

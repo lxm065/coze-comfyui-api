@@ -1,0 +1,269 @@
+{
+  "84": {
+    "inputs": {
+      "clip_name": "umt5_xxl_fp8_e4m3fn_scaled.safetensors",
+      "type": "wan",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "加载CLIP"
+    }
+  },
+  "85": {
+    "inputs": {
+      "add_noise": "disable",
+      "noise_seed": 0,
+      "steps": 4,
+      "cfg": 1,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "start_at_step": 2,
+      "end_at_step": 4,
+      "return_with_leftover_noise": "disable",
+      "model": [
+        "103",
+        0
+      ],
+      "positive": [
+        "98",
+        0
+      ],
+      "negative": [
+        "98",
+        1
+      ],
+      "latent_image": [
+        "86",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced",
+    "_meta": {
+      "title": "K采样器（高级）"
+    }
+  },
+  "86": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 436598171524569,
+      "steps": 4,
+      "cfg": 1,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "start_at_step": 0,
+      "end_at_step": 2,
+      "return_with_leftover_noise": "enable",
+      "model": [
+        "104",
+        0
+      ],
+      "positive": [
+        "98",
+        0
+      ],
+      "negative": [
+        "98",
+        1
+      ],
+      "latent_image": [
+        "98",
+        2
+      ]
+    },
+    "class_type": "KSamplerAdvanced",
+    "_meta": {
+      "title": "K采样器（高级）"
+    }
+  },
+  "87": {
+    "inputs": {
+      "samples": [
+        "85",
+        0
+      ],
+      "vae": [
+        "90",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "89": {
+    "inputs": {
+      "text": "色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走",
+      "clip": [
+        "84",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Negative Prompt)"
+    }
+  },
+  "90": {
+    "inputs": {
+      "vae_name": "wan_2.1_vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "加载VAE"
+    }
+  },
+  "93": {
+    "inputs": {
+      "text": "Traditional Chinese line drawing illustration style, black ink on aged paper texture, classical folklore narrative aesthetic, spectacular supernatural warfare scene depicting divine champions clashing in multi-level cosmic battle, upper left showing ceremonial banner bearer in military armor holding large flag with Chinese character王 indicating royal Zhou forces, banner flowing dramatically showing organized military formation, banner bearer's formal military dress emphasizing legitimate army status, upper center-left showing mounted warrior in elaborate armor on supernatural云 cloud formation riding into battle, warrior wearing ornate helmet with decorative elements and scaled armor with geometric patterns, general wielding ceremonial weapon showing commanding officer status, cloud mount rendered in bold swirling云纹 patterns suggesting divine cavalry, upper center showing fierce warrior in dark elaborate armor engaged in aerial combat, warrior's distinctive helmet with horns or ornamental elements showing supernatural warrior status, combatant riding stylized云 cloud mount creating sense of battle occurring in multiple dimensions simultaneously, warrior wielding weapon in aggressive striking pose, upper center-right showing哪吒 Nezha the divine youth warrior in dynamic aerial combat pose, Nezha wearing distinctive armor with decorative patterns and characteristic youthful appearance, young deity's fierce martial expression showing supernatural combat prowess, Nezha positioned on风火轮 Wind Fire Wheels rendered as swirling circular云纹 cloud formations beneath feet登开风火轮 mounting Wind Fire Wheels, divine wheels creating supernatural propulsion allowing flight and rapid movement, Nezha wielding weapon possibly spear or staff in battle-ready position战住王魔 engaging Wang Mo in combat, sense of young divine warrior matching Nine Dragon Island Daoist in supernatural duel, upper right showing additional banner bearer with flag displaying Zhou insignia, second banner creating symmetry and emphasizing organized military nature of Zhou forces, scattered云纹 cloud formations throughout upper portion suggesting entire battle occurring in supernatural realm between heaven and earth, clouds rendered in both solid black and outlined styles creating atmospheric depth, sense of divine combat transcending earthly limitations, upper portion establishing aerial supernatural battlefield, lower left showing mounted warrior general in elaborate armor on horse or mythical mount, warrior wearing ornate helmet and decorated armor with contrasting dark and light sections, general's commanding posture showing leadership role in Zhou forces, mount decorated with ceremonial harness showing elite cavalry, lower center-left showing王魔 Wang Mo from Nine Dragon Island骑怪狂 riding monstrous beast in aggressive attack, Wang Mo wearing dark Daoist robes with decorative patterns showing immortal cultivator status, Nine Dragon Island Daoist's fierce expression showing supernatural warrior nature, Wang Mo举剑来砍子牙 raising sword to strike Jiang Ziya in direct assault, monstrous beast rendered with fearsome features creating terrifying appearance designed to overwhelm opponents, beast's supernatural nature visible in exaggerated or impossible anatomy, Wang Mo's aggressive forward-leaning posture showing violent attack intent, sword raised high in preparation for devastating strike, lower center showing姜子牙 Jiang Ziya on magnificent四不相 Si Bu Xiang divine mount, sage wearing formal ministerial robes with decorative elements now equipped for supernatural combat, Jiang Ziya's characteristic elderly rotund form maintaining composure despite being attacked, Jiang Ziya回到西岐 having returned to Xiqi now领哪吒等 leading Nezha and others与四个道人大战起来 in great battle against four Daoist cultivators, sage presumably wielding打神鞭 God-Striking Whip though specific weapon may not be prominently visible, Si Bu Xiang divine mount rendering showing distinctive chimeric features with calm dignified bearing unafraid of opponent's monstrous beast, divine mount's supernatural nature allowing it to match enemy creatures, sense of Jiang Ziya directing overall battle while individual champions engage opponents, lower center-right showing哪吒 Nezha again in ground-level combat position战住王魔 engaging Wang Mo, young divine warrior's dynamic pose showing rapid movement and martial skill, Nezha's Wind Fire Wheels风火轮 possibly visible as swirling elements beneath or around feet, divine youth intercepting Wang Mo's attack on Jiang Ziya demonstrating protective role, sense of supernatural champion defending earthly commander, lower right showing additional mounted warrior in elaborate armor possibly Zhou general or supernatural ally, warrior riding decorative mount creating balanced composition, entire lower portion showing coordinated Zhou counterattack with multiple champions engaging Nine Dragon Island Daoists, ground level combat mixing earthly and divine elements, scattered云纹 cloud formations at ground level suggesting supernatural energy permeating entire battlefield, clouds creating atmospheric connection between aerial and ground combat, sense of multi-dimensional battle as warriors fight on clouds in air and on mounts on ground simultaneously, cosmic significance as Jiang Ziya's divine armament from Yuanshi Tianzun now deployed in actual combat, Si Bu Xiang mount proving immune to monstrous beasts' terror allowing sage to maintain position, Nezha demonstrating supernatural martial prowess against accomplished Daoist immortal, famous battle marking Zhou forces' transformation from helpless victims to competitive supernatural army, ironic reversal as previously routed Zhou forces now confidently engage Nine Dragon Island Daoists, Wang Mo's direct assault on Jiang Ziya showing Shang forces recognize sage as key target, Nezha's intervention战住 engaging and stopping Wang Mo demonstrating divine youth's protective role and combat capability, sense of evenly matched supernatural warriors creating genuine contest, cosmic battle escalating as both sides deploy increasingly powerful champions and implements, multiple simultaneous duels creating complex chaotic battlefield, banners indicating organized military structure despite supernatural nature of combat, animated explosive dynamic movements showing warriors in various aggressive combat poses, Wang Mo's sword descending in violent strike toward Jiang Ziya, Nezha's rapid interception moving on Wind Fire Wheels to intercept attack, Si Bu Xiang maintaining steady position allowing Jiang Ziya to direct forces, monstrous beasts lunging with supernatural ferocity, cloud mounts swirling with riders' movements, aerial warriors diving and climbing in three-dimensional combat, ground warriors clashing with weapons raised, banners streaming showing rapid movement, entire composition radiating chaotic energy of supernatural warfare, clouds churning from释放 released divine power, sense of multiple simultaneous explosive confrontations, cosmic forces clashing as heaven-backed Zhou meets Shang's recruited immortals, monochromatic sepia tones with dramatic contrasts between solid black elements and lighter figures creating visual chaos appropriate for battle scene, vintage aged paper with historical weathering lending authenticity to legendary supernatural warfare illustration, classical Chinese divine combat illustration aesthetic emphasizing multi-level simultaneous action and supernatural dimensions, masterpiece folkloric cosmic battle scene showing fully equipped divine champions engaged in legitimate supernatural warfare, 4k quality, legendary Nezha versus Wang Mo combat visualization, cosmic conflict fully engaged as姜子牙回到西岐 Jiang Ziya returning to Xiqi领哪吒等与四个道人大战起来 leading Nezha and others in great battle against four Daoist cultivators, Wang Mo王魔骑怪狂举剑来砍子牙 riding monstrous beast raising sword to strike Jiang Ziya直接攻击 directly attacking, Nezha哪吒登开风火轮战住王魔 mounting Wind Fire Wheels engaging and stopping Wang Mo protecting sage and demonstrating divine youth's supernatural combat prowess, famous battle marking transformation as previously helpless Zhou forces now equipped with divine implements and supernatural allies successfully compete against Nine Dragon Island immortals in escalating cosmic warfare determining dynastic fate through supernatural champions fighting for heaven's mandate",
+      "clip": [
+        "84",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Positive Prompt)"
+    }
+  },
+  "94": {
+    "inputs": {
+      "fps": 16,
+      "images": [
+        "87",
+        0
+      ]
+    },
+    "class_type": "CreateVideo",
+    "_meta": {
+      "title": "创建视频"
+    }
+  },
+  "95": {
+    "inputs": {
+      "unet_name": "wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "96": {
+    "inputs": {
+      "unet_name": "wan2.2_i2v_low_noise_14B_fp8_scaled.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "97": {
+    "inputs": {
+      "image": "56.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "98": {
+    "inputs": {
+      "width": 832,
+      "height": 640,
+      "length": 121,
+      "batch_size": 1,
+      "positive": [
+        "93",
+        0
+      ],
+      "negative": [
+        "89",
+        0
+      ],
+      "vae": [
+        "90",
+        0
+      ],
+      "start_image": [
+        "97",
+        0
+      ]
+    },
+    "class_type": "WanImageToVideo",
+    "_meta": {
+      "title": "Wan图像到视频"
+    }
+  },
+  "101": {
+    "inputs": {
+      "lora_name": "wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors",
+      "strength_model": 1.0000000000000002,
+      "model": [
+        "95",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "102": {
+    "inputs": {
+      "lora_name": "wan2.2_i2v_lightx2v_4steps_lora_v1_low_noise.safetensors",
+      "strength_model": 1.0000000000000002,
+      "model": [
+        "96",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "103": {
+    "inputs": {
+      "shift": 5.000000000000001,
+      "model": [
+        "102",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingSD3",
+    "_meta": {
+      "title": "采样算法（SD3）"
+    }
+  },
+  "104": {
+    "inputs": {
+      "shift": 5.000000000000001,
+      "model": [
+        "101",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingSD3",
+    "_meta": {
+      "title": "采样算法（SD3）"
+    }
+  },
+  "108": {
+    "inputs": {
+      "filename_prefix": "video/ComfyUI",
+      "format": "auto",
+      "codec": "auto",
+      "video": [
+        "94",
+        0
+      ]
+    },
+    "class_type": "SaveVideo",
+    "_meta": {
+      "title": "保存视频"
+    }
+  }
+}

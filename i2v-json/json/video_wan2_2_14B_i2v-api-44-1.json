@@ -1,0 +1,269 @@
+{
+  "84": {
+    "inputs": {
+      "clip_name": "umt5_xxl_fp8_e4m3fn_scaled.safetensors",
+      "type": "wan",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "加载CLIP"
+    }
+  },
+  "85": {
+    "inputs": {
+      "add_noise": "disable",
+      "noise_seed": 0,
+      "steps": 4,
+      "cfg": 1,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "start_at_step": 2,
+      "end_at_step": 4,
+      "return_with_leftover_noise": "disable",
+      "model": [
+        "103",
+        0
+      ],
+      "positive": [
+        "98",
+        0
+      ],
+      "negative": [
+        "98",
+        1
+      ],
+      "latent_image": [
+        "86",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced",
+    "_meta": {
+      "title": "K采样器（高级）"
+    }
+  },
+  "86": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 436598171524569,
+      "steps": 4,
+      "cfg": 1,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "start_at_step": 0,
+      "end_at_step": 2,
+      "return_with_leftover_noise": "enable",
+      "model": [
+        "104",
+        0
+      ],
+      "positive": [
+        "98",
+        0
+      ],
+      "negative": [
+        "98",
+        1
+      ],
+      "latent_image": [
+        "98",
+        2
+      ]
+    },
+    "class_type": "KSamplerAdvanced",
+    "_meta": {
+      "title": "K采样器（高级）"
+    }
+  },
+  "87": {
+    "inputs": {
+      "samples": [
+        "85",
+        0
+      ],
+      "vae": [
+        "90",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "89": {
+    "inputs": {
+      "text": "色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走",
+      "clip": [
+        "84",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Negative Prompt)"
+    }
+  },
+  "90": {
+    "inputs": {
+      "vae_name": "wan_2.1_vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "加载VAE"
+    }
+  },
+  "93": {
+    "inputs": {
+      "text": "Traditional Chinese line drawing illustration style, black ink on aged paper texture, classical folklore narrative aesthetic, grand ceremonial procession scene depicting King Wen's formal respectful return to seek sage with proper礼 propriety, upper portion dominated by extensive stylized willow tree branches绿柳 sweeping across entire composition, willow rendered with flowing curved lines creating graceful drooping tendrils extending horizontally, willow canopy covering upper third creating natural ceremonial arch, branches depicted with elegant striped pattern suggesting cascading foliage, sense of same Pan Stream磻溪 location returned to with proper ceremony, upper corners featuring decorative云纹 cloud formations in solid black with swirling ruyi patterns suggesting heavenly approval of righteous king's proper礼仪 etiquette, clouds positioned symmetrically framing scene showing cosmic witness to respectful approach, right side showing bird silhouette in flight rendered as dynamic dark shape suggesting natural world observing important procession, left foreground showing two ceremonial banner carriers in matching military dress with distinctive armor featuring striped patterns, banner bearers wearing formal military caps and carrying large ceremonial flags on poles, left banner displaying bold Chinese character王文 indicating King Wen's royal authority, banners rendered with flowing fabric creating sense of movement and formal processional grandeur, flags' text and decorative borders showing official nature of expedition, banner carriers' synchronized marching poses showing disciplined ceremonial formation, sense of proper royal protocol being observed, center-left showing two ceremonial attendants carrying ornate covered palanquin轿子 or sedan chair on shoulder poles抬着聘礼, palanquin featuring elaborate architectural roof structure with decorative elements and hanging tassels or ornamental fringe, covered sedan rendered with geometric patterns and ceremonial details, palanquin containing聘礼 betrothal gifts or formal recruitment presents showing King Wen comes bearing proper offerings, attendants wearing formal ceremonial dress with distinctive caps, carriers' synchronized walking poses showing coordinated procession, palanquin's elevated position emphasizing precious nature of礼物 gifts, sense of substantial investment showing king's sincerity in recruiting sage, center showing magnificent ceremonial parasol or canopy carried on pole creating focal point of procession, parasol featuring ornate multi-tiered roof structure with decorative hanging tassels or beaded fringe creating luxurious appearance, canopy rendered with bold geometric patterns and studded or medallion decorations, parasol's elaborate design indicating it shades person of highest rank presumably King Wen himself walking beneath, parasol carrier visible holding pole maintaining shade over sovereign, sense of imperial dignity and proper ceremonial protocol, center-right showing mounted officials or guards on decorated horses, horses adorned with ornate ceremonial harnesses featuring studded saddle blankets with circular medallion patterns, riders wearing formal court or military attire with distinctive官帽 caps, mounted figures' upright dignified postures showing elite status, horses in walking poses with legs extended showing forward processional movement, right foreground showing additional guards or officials on foot in formal military dress, guards carrying ceremonial weapons or implements showing protective escort role, guards wearing distinctive armor with geometric patterns and formal military caps, figures' synchronized marching creating sense of disciplined orderly队伍 formation, lower portion showing ground rendered as dark band with horizontal striping suggesting prepared ceremonial pathway, ground creating stable foundation for formal procession, entire composition showing substantial royal entourage列着队伍 arranged in formal procession, sense of King Wen following minister Sanyisheng's advice about礼当虔诚 propriety requiring sincerity, king having选了个好日子 selected auspicious date showing he consulted calendars and prepared properly, processional formation showing respect appropriate for recruiting exceptional worthy不是匆匆而来 not coming hastily, cosmic significance as proper ceremony demonstrates King Wen's worthiness to receive heaven-sent strategist, contrast with earlier hasty hunting trip approach now replaced by formal礼仪 ritual protocol, famous second visit又来磻溪寻子牙 coming again to Pan Stream to seek Jiang Ziya with proper credentials and ceremony, ironic anticipation as elaborate preparation may still result in sage's absence continuing testing period, fateful procession showing righteous king willing to humble himself and observe proper etiquette in recruiting wisdom, spatial arrangement showing processional line extending from left to right creating sense of movement toward sage's dwelling, banners at front announcing royal authority, gift palanquin demonstrating sincerity, parasol marking king's position, mounted and foot guards completing escort, animated synchronized movements showing banner carriers marching in step with flags flowing, palanquin bearers walking in coordinated rhythm maintaining level carry, parasol carrier maintaining steady shade, mounted officials riding in stately pace, foot guards marching in formation, horses walking with dignified measured steps, entire procession moving as unified ceremonial display, willow branches swaying gently overhead blessing procession, clouds drifting suggesting passage of time since first visit, sense of grand formal approach meant to honor sage's worth through proper ritual demonstration, monochromatic sepia tones with elegant ink wash creating atmosphere of solemn ceremonial occasion, vintage aged paper with historical weathering lending authenticity to legendary formal recruitment procession, classical Chinese royal礼仪 ceremonial illustration aesthetic emphasizing proper protocol and sincere respect, masterpiece folkloric proper approach scene showing righteous king learning from minister's counsel and returning with appropriate ceremony, 4k quality, legendary formal recruitment procession visualization, cosmic test continuing as King Wen文王 having选了个好日子 selected auspicious date now抬着聘礼 carries formal betrothal gifts列着队伍 arranged in proper ceremonial formation又来磻溪寻子牙 coming again to Pan Stream to seek Jiang Ziya, king's elaborate preparation with banners gifts parasol and substantial escort demonstrating虔诚 sincere reverence appropriate for recruiting heaven-sent sage, proper礼 propriety potentially earning heavenly approval for destined meeting that will unite righteous sovereign with supernatural strategist beginning partnership to overthrow tyrannical Shang and establish virtuous Zhou dynasty",
+      "clip": [
+        "84",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Positive Prompt)"
+    }
+  },
+  "94": {
+    "inputs": {
+      "fps": 16,
+      "images": [
+        "87",
+        0
+      ]
+    },
+    "class_type": "CreateVideo",
+    "_meta": {
+      "title": "创建视频"
+    }
+  },
+  "95": {
+    "inputs": {
+      "unet_name": "wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "96": {
+    "inputs": {
+      "unet_name": "wan2.2_i2v_low_noise_14B_fp8_scaled.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "97": {
+    "inputs": {
+      "image": "44.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "98": {
+    "inputs": {
+      "width": 832,
+      "height": 640,
+      "length": 121,
+      "batch_size": 1,
+      "positive": [
+        "93",
+        0
+      ],
+      "negative": [
+        "89",
+        0
+      ],
+      "vae": [
+        "90",
+        0
+      ],
+      "start_image": [
+        "97",
+        0
+      ]
+    },
+    "class_type": "WanImageToVideo",
+    "_meta": {
+      "title": "Wan图像到视频"
+    }
+  },
+  "101": {
+    "inputs": {
+      "lora_name": "wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors",
+      "strength_model": 1.0000000000000002,
+      "model": [
+        "95",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "102": {
+    "inputs": {
+      "lora_name": "wan2.2_i2v_lightx2v_4steps_lora_v1_low_noise.safetensors",
+      "strength_model": 1.0000000000000002,
+      "model": [
+        "96",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "103": {
+    "inputs": {
+      "shift": 5.000000000000001,
+      "model": [
+        "102",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingSD3",
+    "_meta": {
+      "title": "采样算法（SD3）"
+    }
+  },
+  "104": {
+    "inputs": {
+      "shift": 5.000000000000001,
+      "model": [
+        "101",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingSD3",
+    "_meta": {
+      "title": "采样算法（SD3）"
+    }
+  },
+  "108": {
+    "inputs": {
+      "filename_prefix": "video/ComfyUI",
+      "format": "auto",
+      "codec": "auto",
+      "video": [
+        "94",
+        0
+      ]
+    },
+    "class_type": "SaveVideo",
+    "_meta": {
+      "title": "保存视频"
+    }
+  }
+}

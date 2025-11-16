@@ -1,0 +1,269 @@
+{
+  "84": {
+    "inputs": {
+      "clip_name": "umt5_xxl_fp8_e4m3fn_scaled.safetensors",
+      "type": "wan",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "加载CLIP"
+    }
+  },
+  "85": {
+    "inputs": {
+      "add_noise": "disable",
+      "noise_seed": 0,
+      "steps": 4,
+      "cfg": 1,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "start_at_step": 2,
+      "end_at_step": 4,
+      "return_with_leftover_noise": "disable",
+      "model": [
+        "103",
+        0
+      ],
+      "positive": [
+        "98",
+        0
+      ],
+      "negative": [
+        "98",
+        1
+      ],
+      "latent_image": [
+        "86",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced",
+    "_meta": {
+      "title": "K采样器（高级）"
+    }
+  },
+  "86": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 436598171524569,
+      "steps": 4,
+      "cfg": 1,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "start_at_step": 0,
+      "end_at_step": 2,
+      "return_with_leftover_noise": "enable",
+      "model": [
+        "104",
+        0
+      ],
+      "positive": [
+        "98",
+        0
+      ],
+      "negative": [
+        "98",
+        1
+      ],
+      "latent_image": [
+        "98",
+        2
+      ]
+    },
+    "class_type": "KSamplerAdvanced",
+    "_meta": {
+      "title": "K采样器（高级）"
+    }
+  },
+  "87": {
+    "inputs": {
+      "samples": [
+        "85",
+        0
+      ],
+      "vae": [
+        "90",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "89": {
+    "inputs": {
+      "text": "色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走",
+      "clip": [
+        "84",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Negative Prompt)"
+    }
+  },
+  "90": {
+    "inputs": {
+      "vae_name": "wan_2.1_vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "加载VAE"
+    }
+  },
+  "93": {
+    "inputs": {
+      "text": "Traditional Chinese line drawing illustration style, black ink on aged paper texture, classical folklore narrative aesthetic, climactic final pursuit and execution scene depicting last Nine Dragon Island Daoist's desperate flight ending in swift divine justice, left side showing李兴霸 Li Xingba fourth and final九龙岛道人 Nine Dragon Island Daoist cultivator in desperate panicked flight骑兽奔逃走 riding beast fleeing running away, Li Xingba wearing elaborate dark Daoist robes with intricate decorative patterns now in complete disarray showing panicked retreat, cultivator's expression showing terror and desperation as sole survivor witnessing three comrades killed, Li Xingba's body language showing frantic urgency urging mount to maximum speed, cultivator possibly looking back over shoulder showing awareness of pursuing divine champion, Li Xingba mounted on fierce monstrous beast rendered with distinctive supernatural features, beast's powerful muscular form in full galloping escape pose with legs fully extended showing desperate sprint, creature's flowing mane and tail streaming backward from rapid flight, monstrous mount's aggressive features transformed to panic matching rider's terror, beast responding to rider's desperate commands for maximum escape speed, sense of powerful supernatural creature fleeing rather than fighting showing recognition of overwhelming opposition, scattered云纹 cloud formations suggesting elevated aerial pursuit above earthly realm, clouds rendered in flowing swirling patterns creating atmospheric chase scene, right upper showing金吒 Jinzha Manjusri's divine disciple in relentless pursuit正遇上 directly encountering fleeing cultivator, Jinzha wearing distinctive warrior armor or ceremonial robes with decorative patterns showing enlightened deity's martial disciple status, divine youth warrior's fierce determined expression showing intent to完成歼灭 complete annihilation of Nine Dragon Island forces, Jinzha's posture dynamic showing rapid pursuit movement intercepting fleeing opponent, critically showing Jinzha飞起一剑 flying up with single sword strike, divine disciple's powerful sword motion with blade raised high preparing devastating downward strike, sword rendered as elegant deadly weapon possibly with supernatural properties gleaming, Jinzha's entire body committed to perfect sword technique showing supreme martial cultivation, divine warrior's aerial position elevated above fleeing Li Xingba creating superior attack angle, sense of inevitable interception as faster more skilled opponent overtakes desperate fugitive, upper center showing long graceful curved line possibly representing Jinzha's pursuit trajectory or sword's striking arc, curved line creating elegant flowing path from divine warrior to doomed cultivator, trajectory emphasizing supernatural flight capability and perfect intercept timing, center-right showing catastrophic decapitation moment把李兴霸的头斩了下来 single sword strike cutting off Li Xingba's head, Li Xingba's severed head visible flying or separated from body showing instant fatal execution, head rendered with final expression of shock and terror frozen in death, severed head possibly still wearing道冠 Daoist cap or showing elaborate hairstyle, dramatic visualization of swift divine justice through decapitation, Li Xingba's headless body possibly still in saddle or beginning to fall showing immediate aftermath of fatal strike, body's continued forward momentum despite decapitation creating tragic dynamic, sense of fourth and final九龙岛道人 Nine Dragon Island Daoist eliminated completing total annihilation of Shang-allied immortal force, lower center showing Li Xingba's monstrous beast possibly in confused reaction to rider's sudden death, beast rendered with fearsome supernatural features now purposeless without immortal master's control, creature's panicked flight transformed to aimless confusion as rider executed, scattered云纹 cloud motifs throughout suggesting supernatural aerial chase and execution, additional decorative elements possibly including energy effects or battlefield atmosphere, lower portion showing stylized ground or云 cloud formations suggesting elevated battlefield location, ground elements minimal allowing focus on dramatic aerial pursuit and execution, cosmic significance as all four九龙岛道人 Nine Dragon Island Daoists now eliminated, Wang Mo王魔 decapitated by Jinzha, Gao Youqian高友乾 killed by Jiang Ziya's打神鞭 God-Striking Whip, Yang Sen杨森 crushed by Nezha's乾坤圈 Qiankun Circle, and now Li Xingba李兴霸 beheaded by Jinzha completing systematic destruction, strategic importance as all Shang-allied supernatural forces recruited by闻太师 Grand Preceptor Wen Zhong completely destroyed, famous total victory demonstrating Zhou forces' overwhelming superiority through coordinated tactics superior divine weapons and Buddhist enlightened beings' support, Li Xingba's desperate flight showing recognition that resistance is futile after witnessing three comrades killed, cultivator's奔逃 fleeing running showing he abandons mission attempting只求生存 merely seeking survival, Jinzha's relentless pursuit showing divine warriors will not permit escape, 正遇上 directly encountering emphasizing fateful inevitable interception, cosmic justice as Li Xingba who struck Jiang Ziya with聚地珠 Earth-Gathering Pearl nearly killing Zhou commander now himself executed by divine retribution, ironic reversal as confident powerful immortal who deployed devastating magical treasure now desperately fleeing and summarily executed, sense of complete role reversal from earlier battle where Li Xingba attacked with impunity, Jinzha's飞起一剑 flying up single sword strike showing economy of divine combat where true master needs only one perfect blow, sword technique's perfection demonstrated through clean decapitation, Li Xingba's magical implements including聚地珠 useless when fleeing in panic, cultivator's superior cultivation level meaningless against perfectly executed sword strike from pursuing divine champion, famous lesson that supernatural warfare requires courage to face opponents not merely powerful magical treasures, fleeing immortal's terror preventing effective deployment of implements, Jinzha representing younger generation of divine warriors trained by enlightened masters proving superior to older Daoist immortals, disciple's second kill after earlier decapitating Wang Mo demonstrating consistent deadly effectiveness, sense of Jinzha as especially lethal divine champion specializing in swift executions, Buddha-aligned martial tradition's superiority over Daoist magical implements proven through systematic elimination, complete victory marking dramatic turning point in cosmic warfare, Shang-allied forces' most powerful supernatural recruits totally destroyed, Zhou forces demonstrating overwhelming superiority requiring Grand Preceptor Wen Zhong to escalate further or accept defeat, animated explosive dynamic movements showing Li Xingba frantically urging beast to maximum escape speed, cultivator's terrified backward glance seeing pursuing divine warrior, monstrous beast's desperate gallop with muscles straining, Jinzha's rapid pursuit with supernatural speed overtaking fleeing opponent, divine warrior's powerful sword motion飞起 flying up executing perfect downward strike, blade cutting through air with devastating precision toward target, sword edge striking Li Xingba's neck with lethal accuracy, head separating cleanly from body in expert decapitation, severed head飞 flying through air in arc, shocked dying expression frozen on face, headless body remaining briefly upright before collapsing, blood or supernatural energy erupting from severed neck, monstrous beast suddenly without rider's control stumbling in confusion, Jinzha's follow-through motion completing perfect killing stroke, divine disciple's robes flowing from rapid pursuit and strike, clouds churning from supernatural energies and rapid movement, sense of swift inevitable justice as desperate flight ends in summary execution, cosmic culmination as final enemy eliminated, monochromatic sepia tones with dramatic contrasts creating visual impact of desperate chase and fatal interception, vintage aged paper with historical weathering lending authenticity to legendary final execution scene, classical Chinese divine warfare total victory illustration aesthetic emphasizing relentless pursuit and perfect execution, masterpiece folkloric complete annihilation scene showing systematic elimination of all opposition, 4k quality, legendary final Nine Dragon Island Daoist execution visualization, cosmic total victory as Li Xingba李兴霸骑兽奔逃走 riding beast fleeing running away正遇上金吒 directly encountering Jinzha who金吒飞起一剑 flies up with single sword strike把李兴霸的头斩了下来 cutting off Li Xingba's head, famous final execution completing total elimination of all four九龙岛道人 Nine Dragon Island Daoist cultivators, systematic destruction demonstrating Zhou forces' overwhelming superiority backed by Buddhist enlightened beings armed with superior divine implements employing coordinated tactics, complete annihilation of Shang-allied supernatural forces marking decisive turning point requiring Grand Preceptor Wen Zhong闻太师 to either escalate with even more powerful immortal allies or accept defeat, cosmic warfare's escalating pattern where each side recruits increasingly powerful supernatural champions continues as Zhou victory over Nine Dragon Island Daoists forces Shang to seek even stronger allies in endless escalating cosmic battle determining China's dynastic future through heaven's manifest support for righteous Zhou cause demonstrated by systematic divine elimination of tyrannical Shang dynasty's supernatural defenders",
+      "clip": [
+        "84",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Positive Prompt)"
+    }
+  },
+  "94": {
+    "inputs": {
+      "fps": 16,
+      "images": [
+        "87",
+        0
+      ]
+    },
+    "class_type": "CreateVideo",
+    "_meta": {
+      "title": "创建视频"
+    }
+  },
+  "95": {
+    "inputs": {
+      "unet_name": "wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "96": {
+    "inputs": {
+      "unet_name": "wan2.2_i2v_low_noise_14B_fp8_scaled.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "97": {
+    "inputs": {
+      "image": "69.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "98": {
+    "inputs": {
+      "width": 832,
+      "height": 640,
+      "length": 121,
+      "batch_size": 1,
+      "positive": [
+        "93",
+        0
+      ],
+      "negative": [
+        "89",
+        0
+      ],
+      "vae": [
+        "90",
+        0
+      ],
+      "start_image": [
+        "97",
+        0
+      ]
+    },
+    "class_type": "WanImageToVideo",
+    "_meta": {
+      "title": "Wan图像到视频"
+    }
+  },
+  "101": {
+    "inputs": {
+      "lora_name": "wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors",
+      "strength_model": 1.0000000000000002,
+      "model": [
+        "95",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "102": {
+    "inputs": {
+      "lora_name": "wan2.2_i2v_lightx2v_4steps_lora_v1_low_noise.safetensors",
+      "strength_model": 1.0000000000000002,
+      "model": [
+        "96",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "103": {
+    "inputs": {
+      "shift": 5.000000000000001,
+      "model": [
+        "102",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingSD3",
+    "_meta": {
+      "title": "采样算法（SD3）"
+    }
+  },
+  "104": {
+    "inputs": {
+      "shift": 5.000000000000001,
+      "model": [
+        "101",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingSD3",
+    "_meta": {
+      "title": "采样算法（SD3）"
+    }
+  },
+  "108": {
+    "inputs": {
+      "filename_prefix": "video/ComfyUI",
+      "format": "auto",
+      "codec": "auto",
+      "video": [
+        "94",
+        0
+      ]
+    },
+    "class_type": "SaveVideo",
+    "_meta": {
+      "title": "保存视频"
+    }
+  }
+}

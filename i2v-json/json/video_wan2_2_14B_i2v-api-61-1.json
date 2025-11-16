@@ -1,0 +1,269 @@
+{
+  "84": {
+    "inputs": {
+      "clip_name": "umt5_xxl_fp8_e4m3fn_scaled.safetensors",
+      "type": "wan",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "加载CLIP"
+    }
+  },
+  "85": {
+    "inputs": {
+      "add_noise": "disable",
+      "noise_seed": 0,
+      "steps": 4,
+      "cfg": 1,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "start_at_step": 2,
+      "end_at_step": 4,
+      "return_with_leftover_noise": "disable",
+      "model": [
+        "103",
+        0
+      ],
+      "positive": [
+        "98",
+        0
+      ],
+      "negative": [
+        "98",
+        1
+      ],
+      "latent_image": [
+        "86",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced",
+    "_meta": {
+      "title": "K采样器（高级）"
+    }
+  },
+  "86": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 436598171524569,
+      "steps": 4,
+      "cfg": 1,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "start_at_step": 0,
+      "end_at_step": 2,
+      "return_with_leftover_noise": "enable",
+      "model": [
+        "104",
+        0
+      ],
+      "positive": [
+        "98",
+        0
+      ],
+      "negative": [
+        "98",
+        1
+      ],
+      "latent_image": [
+        "98",
+        2
+      ]
+    },
+    "class_type": "KSamplerAdvanced",
+    "_meta": {
+      "title": "K采样器（高级）"
+    }
+  },
+  "87": {
+    "inputs": {
+      "samples": [
+        "85",
+        0
+      ],
+      "vae": [
+        "90",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "89": {
+    "inputs": {
+      "text": "色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走",
+      "clip": [
+        "84",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Negative Prompt)"
+    }
+  },
+  "90": {
+    "inputs": {
+      "vae_name": "wan_2.1_vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "加载VAE"
+    }
+  },
+  "93": {
+    "inputs": {
+      "text": "Traditional Chinese line drawing illustration style, black ink on aged paper texture, classical folklore narrative aesthetic, miraculous divine intervention scene depicting celestial rescue at critical moment saving defeated sage from execution, scattered decorative云纹 cloud formations in solid black with swirling ruyi patterns positioned throughout composition suggesting heavenly realm intersecting earthly battlefield, clouds creating supernatural atmosphere appropriate for divine appearance, upper left showing王魔 Wang Mo on spotted monstrous beast in moment of triumph正要取子牙首级 about to take Jiang Ziya's head, Wang Mo wearing dark elaborate Daoist robes with intricate decorative patterns showing immortal cultivator status, cultivator's fierce expression showing intent to execute defeated opponent, Wang Mo mounted on fearsome beast rendered with distinctive spotted or patterned hide creating terrifying appearance, monstrous creature in aggressive pose showing it has cornered defeated prey, Wang Mo's posture leaning forward with weapon raised preparing to deliver fatal blow, sense of imminent execution as Nine Dragon Island Daoist prepares to完成胜利 complete victory by beheading Zhou commander, cosmic significance as righteous cause faces catastrophic end with sage's execution, critically showing moment frozen before death blow as divine intervention arrives, lower left showing defeated姜子牙 Jiang Ziya helpless on ground after being knocked from Si Bu Xiang, sage in vulnerable defenseless position lying or kneeling showing complete defeat, Jiang Ziya presumably wounded and unable to resist impending execution, sense of supernatural strategist at absolute mercy of victorious opponent, cosmic crisis at peak as heaven's chosen champion faces imminent death, center-upper showing magnificent divine intervention只听半山中有人作歌 suddenly hearing someone singing from halfway up mountain, center-upper dominated by spectacular appearance of文殊广法天尊 Manjusri Guangfa Tianzun celestial deity arriving at critical moment, Manjusri rendered as majestic divine figure wearing elaborate celestial robes with rich decorative patterns showing supreme enlightened status, deity's distinctive features including圆光 circular halo or nimbus behind head indicating佛 Buddha or Bodhisattva level enlightenment, halo rendered as perfect circle with radiating lines or decorative patterns showing divine light, Manjusri's serene compassionate expression showing enlightened being's transcendent calm despite dramatic rescue situation, deity's powerful commanding presence radiating supernatural authority, critically showing Manjusri riding magnificent dragon or supernatural mount, divine mount rendered as spectacular elongated serpentine creature with flowing organic forms, dragon featuring elaborate scaled body depicted with detailed pattern work, creature's head showing fierce divine features with flowing whiskers or tendrils, dragon's body creating elegant S-curve composition as it flies through air, supernatural mount's flowing form suggesting rapid celestial flight, sense of divine cavalry descending from heavenly realm, Manjusri wielding ceremonial implement possibly sword staff or magical treasure showing readiness to intervene in combat, deity's arrival作歌 while singing creating dramatic theatrical entrance, celestial song announcing divine presence and warning opponents, famous rescue technique where singing from半山中 halfway up mountain creates mystery before visual revelation, Wang Mo抬头一看 looking up seeing divine apparition, upper right showing young attendant or disciple accompanying Manjusri, boy wearing formal celestial servant robes appropriate for divine master's acolyte, attendant possibly riding smaller mount or云 cloud formation, youth's presence emphasizing Manjusri's high status worthy of retinue, lower right showing additional supernatural mount possibly Manjusri's secondary divine beast or attendant's creature, beast rendered with distinctive features showing celestial origin, creature's powerful form suggesting supernatural cavalry, multiple divine mounts creating sense of substantial celestial intervention force, spatial arrangement showing dramatic vertical composition with Wang Mo and Jiang Ziya at ground level while Manjusri descends from above, divine intervention literally coming from heaven above to救 rescue earthly champion, cosmic hierarchy visualized through vertical positioning, sense of celestial realm intervening directly in mortal conflict, Manjusri's appearance representing escalation as higher-level enlightened being enters battle beyond mere Daoist immortals, famous rescue marking turning point as superior divine authority overrules Nine Dragon Island Daoists' victory, Wang Mo's imminent triumph interrupted by unexpected celestial interference, Jiang Ziya's desperate situation resolved through divine intervention validating heaven's mandate for Zhou cause, ironic reversal as apparent total defeat transforms into miraculous salvation, cosmic justice manifesting as enlightened being prevents execution of righteous champion, Manjusri's identity文殊广法天尊 indicating this is Manjusri Bodhisattva in Daoist cosmology showing Buddhist-Daoist synthesis, deity's high status suggesting Yuanshi Tianzun sent superior reinforcement after earlier gifts proved insufficient, divine mount's dragon form showing Manjusri's supreme status as only highest deities ride dragons, singing arrival作歌 creating dramatic tension as sound heard before visual appearance, Wang Mo's shocked expression抬头一看 looking up showing surprise at unexpected powerful opponent, sense of Nine Dragon Island Daoist recognizing superior authority has arrived, cosmic shift as battle's outcome reversed by celestial intervention, animated dynamic movements showing Wang Mo's raised weapon frozen in moment before strike, Wang Mo's head turning upward in shocked reaction to celestial song, defeated Jiang Ziya possibly looking up with desperate hope, Manjusri's majestic descent on dragon mount flying downward with supernatural grace, dragon's serpentine body undulating creating flowing movement, divine robes flowing from rapid celestial flight, attendant maintaining perfect balance on accompanying mount, clouds swirling from supernatural energies released by deity's arrival, sense of frozen moment as imminent execution interrupted by miraculous intervention, Wang Mo's triumph transformed to uncertainty as superior opponent appears, cosmic reversal unfolding as heaven directly intervenes to preserve righteous cause, monochromatic sepia tones with elegant ink wash creating atmosphere of divine manifestation and miraculous rescue, vintage aged paper with historical weathering lending authenticity to legendary celestial intervention scene, classical Chinese divine rescue illustration aesthetic emphasizing dramatic timing and hierarchical intervention, masterpiece folkloric miraculous salvation scene showing heaven's direct protection of righteous champion, 4k quality, legendary Manjusri rescue visualization, cosmic intervention as Wang Mo王魔正要取子牙首级 about to take Jiang Ziya's head in execution只听半山中有人作歌 suddenly hearing someone singing from halfway up mountain抬头一看 looking up seeing是文殊广法天尊 Manjusri Guangfa Tianzun celestial deity arriving, famous last-moment rescue demonstrating heaven's mandate protecting Zhou cause through direct intervention of enlightened being, Manjusri's appearance representing escalation to higher divine authority resolving crisis that Yuanshi Tianzun's earlier gifts could not prevent, dramatic salvation validating that righteous cause receives direct celestial protection ensuring Zhou victory and Shang defeat in cosmic battle for China's dynastic future through heaven's manifest intervention at critical moments preserving chosen champions from defeat",
+      "clip": [
+        "84",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Positive Prompt)"
+    }
+  },
+  "94": {
+    "inputs": {
+      "fps": 16,
+      "images": [
+        "87",
+        0
+      ]
+    },
+    "class_type": "CreateVideo",
+    "_meta": {
+      "title": "创建视频"
+    }
+  },
+  "95": {
+    "inputs": {
+      "unet_name": "wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "96": {
+    "inputs": {
+      "unet_name": "wan2.2_i2v_low_noise_14B_fp8_scaled.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "97": {
+    "inputs": {
+      "image": "61.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "98": {
+    "inputs": {
+      "width": 832,
+      "height": 640,
+      "length": 121,
+      "batch_size": 1,
+      "positive": [
+        "93",
+        0
+      ],
+      "negative": [
+        "89",
+        0
+      ],
+      "vae": [
+        "90",
+        0
+      ],
+      "start_image": [
+        "97",
+        0
+      ]
+    },
+    "class_type": "WanImageToVideo",
+    "_meta": {
+      "title": "Wan图像到视频"
+    }
+  },
+  "101": {
+    "inputs": {
+      "lora_name": "wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors",
+      "strength_model": 1.0000000000000002,
+      "model": [
+        "95",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "102": {
+    "inputs": {
+      "lora_name": "wan2.2_i2v_lightx2v_4steps_lora_v1_low_noise.safetensors",
+      "strength_model": 1.0000000000000002,
+      "model": [
+        "96",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "103": {
+    "inputs": {
+      "shift": 5.000000000000001,
+      "model": [
+        "102",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingSD3",
+    "_meta": {
+      "title": "采样算法（SD3）"
+    }
+  },
+  "104": {
+    "inputs": {
+      "shift": 5.000000000000001,
+      "model": [
+        "101",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingSD3",
+    "_meta": {
+      "title": "采样算法（SD3）"
+    }
+  },
+  "108": {
+    "inputs": {
+      "filename_prefix": "video/ComfyUI",
+      "format": "auto",
+      "codec": "auto",
+      "video": [
+        "94",
+        0
+      ]
+    },
+    "class_type": "SaveVideo",
+    "_meta": {
+      "title": "保存视频"
+    }
+  }
+}
