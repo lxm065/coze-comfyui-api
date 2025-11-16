@@ -116,7 +116,7 @@
   },
   "93": {
     "inputs": {
-      "text": "76.Traditional Chinese black ink illustration, on aged paper, classical aesthetic, night ritual scene, starry sky, flowing clouds, crescent moon, Jiang Ziya with disheveled hair and sword, standing on three-foot-tall earthen platform, worshipping eastward to Kunlun Mountain, epic Taoist ritual atmosphere, bold ink lines, monochromatic contrast, vintage aging spots, Fengshen Yanyi narrative style, masterpiece, 4k",
+      "text": "Traditional Chinese black and white line drawing illustration, on ancient thread-bound book paper texture, classical Fengshen Yanyi narrative style, Qishan mountain top scene, bare and treeless, blazing sun with fiery rays in the sky, Zhou soldiers in ancient armor suffering from heat, sweating profusely, expressions of agony, crying out in distress, Shang soldiers in Yin Dynasty armor standing under a banner with '纣' character, looking on mockingly with triumphant expressions, rocky mountain top with textured patterns, swirling clouds, detailed line art, high contrast, vintage book page feel, 4k quality",
       "clip": [
         "84",
         0
@@ -162,7 +162,7 @@
   },
   "97": {
     "inputs": {
-      "image": "3.png"
+      "image": "74.png"
     },
     "class_type": "LoadImage",
     "_meta": {

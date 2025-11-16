@@ -116,7 +116,7 @@
   },
   "93": {
     "inputs": {
-      "text": "77.Traditional Chinese ink illustration, aged rice paper texture, classical fantasy narrative style, central powerful figure in ancient Taoist robe with mystical patterns, standing on rocky platform, summoning fierce wind and swirling snowflakes, dynamic cloud movements with flowing brushstrokes, monochromatic black and white aesthetic, expressive gestures, vintage comic book panel composition, detailed character features with dramatic posture, stormy weather effects, traditional Chinese folklore scene, 4k resolution, masterful brushwork, atmospheric ancient story visualization",
+      "text": "Traditional Chinese classical illustration style, black and white ink on aged rice paper texture, narrative of Fengshen Yanyi, Qishan Mountain summit scene, blazing sun with radiating flame lines in sky, rolling cloud patterns, Jiang Ziya (Ziya) personally distributing cotton-padded jackets and bamboo hats to soldiers, soldiers in ancient military attire lining up on mountain slope, soldiers showing confused expressions (sweating yet receiving winter clothes), textured mountain terrain with diagonal hatching, ancient Chinese military ranks, 75th scene of epic story, monochromatic high contrast, vintage paper aging spots, classical narrative aesthetic, historical military distribution scene, 4k quality, ancient Chinese legendary story illustration",
       "clip": [
         "84",
         0
@@ -162,7 +162,7 @@
   },
   "97": {
     "inputs": {
-      "image": "4.png"
+      "image": "75.png"
     },
     "class_type": "LoadImage",
     "_meta": {

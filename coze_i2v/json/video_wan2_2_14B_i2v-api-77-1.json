@@ -116,7 +116,7 @@
   },
   "93": {
     "inputs": {
-      "text": "74.Traditional Chinese black and white line drawing illustration, on ancient thread-bound book paper texture, classical Fengshen Yanyi narrative style, Qishan mountain top scene, bare and treeless, blazing sun with fiery rays in the sky, Zhou soldiers in ancient armor suffering from heat, sweating profusely, expressions of agony, crying out in distress, Shang soldiers in Yin Dynasty armor standing under a banner with '纣' character, looking on mockingly with triumphant expressions, rocky mountain top with textured patterns, swirling clouds, detailed line art, high contrast, vintage book page feel, 4k quality",
+      "text": "Traditional Chinese ink illustration, aged rice paper texture, classical fantasy narrative style, central powerful figure in ancient Taoist robe with mystical patterns, standing on rocky platform, summoning fierce wind and swirling snowflakes, dynamic cloud movements with flowing brushstrokes, monochromatic black and white aesthetic, expressive gestures, vintage comic book panel composition, detailed character features with dramatic posture, stormy weather effects, traditional Chinese folklore scene, 4k resolution, masterful brushwork, atmospheric ancient story visualization",
       "clip": [
         "84",
         0
@@ -162,7 +162,7 @@
   },
   "97": {
     "inputs": {
-      "image": "1.png"
+      "image": "77.png"
     },
     "class_type": "LoadImage",
     "_meta": {

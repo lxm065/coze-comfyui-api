@@ -1,6 +1,7 @@
 import json
 import os
 from urllib import request
+import re
 
 # 定义路径
 PROMPT_FILE = r"D:\pythoncode\comfyui-api-py\coze_i2v\Positive_Prompt.txt"
@@ -23,27 +24,31 @@ def queue_prompt(prompt):
     req = request.Request("http://127.0.0.1:8188/prompt", data=data)
     request.urlopen(req)
 
-# 解析 Positive_Prompt.txt 文件
+# 解析 prom.txt 文件
 def parse_prompt_file(file_path):
     """
-    解析 Positive_Prompt.txt 文件，返回 [(序号, 提示词), ...] 列表
-    每行是一个提示词，行号作为序号
-    返回：[(1, "Traditional Chinese..."), (2, "Ancient scene..."), ...]
+    解析 prom.txt 文件，返回 [(序号, 提示词), ...] 列表
+    例如：6.传统中国插画风格...
+    返回：[(6, "传统中国插画风格..."), ...]
     """
     prompts = []
     try:
         with open(file_path, "r", encoding="utf-8") as f:
-            for line_num, line in enumerate(f, start=1):
+            for line in f:
                 line = line.strip()
                 if not line:
                     continue
 
-                # 行号作为序号
-                prompts.append((str(line_num), line))
+                # 匹配序号.提示词 格式
+                match = re.match(r'^(\d+)\.(.+)$', line)
+                if match:
+                    seq_num = match.group(1)
+                    prompt_text = match.group(2).strip()
+                    prompts.append((seq_num, prompt_text))
 
         return prompts
     except Exception as e:
-        print(f"读取 Positive_Prompt.txt 失败: {str(e)}")
+        print(f"读取 prom.txt 失败: {str(e)}")
         return []
 
 # 修改 JSON 配置
@@ -77,9 +82,6 @@ def save_json(json_data, output_path):
 
 # 主流程
 if __name__ == "__main__":
-    # 确保输出目录存在
-    os.makedirs(OUTPUT_DIR, exist_ok=True)
-
     # 检查文件是否存在
     if not os.path.exists(PROMPT_FILE):
         print(f"错误: 找不到文件 {PROMPT_FILE}")
@@ -115,13 +117,13 @@ if __name__ == "__main__":
         current_count = seq_count[seq_num]
 
         print(f"\n正在处理序号 {seq_num} (第 {current_count} 次出现)...")
-        print(f"提示词: {prompt_text[:80]}...")  # 只显示前80个字符
+        print(f"提示词: {prompt_text[:50]}...")  # 只显示前50个字符
 
         # 修改 JSON
         modified_json = modify_json_for_prompt(template, seq_num, prompt_text)
 
         # 保存新的 JSON 文件 - 如果序号重复，添加后缀
-        output_filename = f"coze_i2v-{seq_num}-{current_count}.json"
+        output_filename = f"video_wan2_2_14B_i2v-api-{seq_num}-{current_count}.json"
         output_path = os.path.join(OUTPUT_DIR, output_filename)
 
         if not save_json(modified_json, output_path):

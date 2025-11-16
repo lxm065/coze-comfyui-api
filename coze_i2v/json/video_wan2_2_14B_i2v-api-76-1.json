@@ -116,7 +116,7 @@
   },
   "93": {
     "inputs": {
-      "text": "78.Traditional Chinese classical comic illustration style, black and white line art with aged paper texture, narrative scene of Zhou camp soldiers, soldiers in lined cotton jackets and bamboo hats, holding long spears with decorative flags, standing in formation on a sloping terrain, background with stylized clouds, rocky mountains, and dense vegetation, determined expressions, retro comic panel layout, ancient Chinese military camp theme, 4k quality, vintage ink drawing aesthetic, historical narrative illustration",
+      "text": "Traditional Chinese black ink illustration, on aged paper, classical aesthetic, night ritual scene, starry sky, flowing clouds, crescent moon, Jiang Ziya with disheveled hair and sword, standing on three-foot-tall earthen platform, worshipping eastward to Kunlun Mountain, epic Taoist ritual atmosphere, bold ink lines, monochromatic contrast, vintage aging spots, Fengshen Yanyi narrative style, masterpiece, 4k",
       "clip": [
         "84",
         0
@@ -162,7 +162,7 @@
   },
   "97": {
     "inputs": {
-      "image": "5.png"
+      "image": "76.png"
     },
     "class_type": "LoadImage",
     "_meta": {

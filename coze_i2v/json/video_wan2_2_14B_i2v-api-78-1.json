@@ -116,7 +116,7 @@
   },
   "93": {
     "inputs": {
-      "text": "75.Traditional Chinese classical illustration style, black and white ink on aged rice paper texture, narrative of Fengshen Yanyi, Qishan Mountain summit scene, blazing sun with radiating flame lines in sky, rolling cloud patterns, Jiang Ziya (Ziya) personally distributing cotton-padded jackets and bamboo hats to soldiers, soldiers in ancient military attire lining up on mountain slope, soldiers showing confused expressions (sweating yet receiving winter clothes), textured mountain terrain with diagonal hatching, ancient Chinese military ranks, 75th scene of epic story, monochromatic high contrast, vintage paper aging spots, classical narrative aesthetic, historical military distribution scene, 4k quality, ancient Chinese legendary story illustration",
+      "text": "Traditional Chinese classical comic illustration style, black and white line art with aged paper texture, narrative scene of Zhou camp soldiers, soldiers in lined cotton jackets and bamboo hats, holding long spears with decorative flags, standing in formation on a sloping terrain, background with stylized clouds, rocky mountains, and dense vegetation, determined expressions, retro comic panel layout, ancient Chinese military camp theme, 4k quality, vintage ink drawing aesthetic, historical narrative illustration",
       "clip": [
         "84",
         0
@@ -162,7 +162,7 @@
   },
   "97": {
     "inputs": {
-      "image": "2.png"
+      "image": "78.png"
     },
     "class_type": "LoadImage",
     "_meta": {
