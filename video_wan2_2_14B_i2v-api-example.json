@@ -171,8 +171,8 @@
   },
   "98": {
     "inputs": {
-      "width": 640,
-      "height": 624,
+      "width": 832,
+      "height": 640,
       "length": 121,
       "batch_size": 1,
       "positive": [
@@ -253,7 +253,7 @@
   },
   "108": {
     "inputs": {
-      "filename_prefix": "video/hy",
+      "filename_prefix": "video/nxq",
       "format": "auto",
       "codec": "auto",
       "video": [

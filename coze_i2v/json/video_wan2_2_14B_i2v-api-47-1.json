@@ -116,7 +116,7 @@
   },
   "93": {
     "inputs": {
-      "text": "传统中国插画风格，一条阴森恐怖的黑色鱼妖从西湖深水中浮现，神秘生物喷吐着雾气，向上喷射水柱，巨大的水柱从湖面升腾而起，鱼腥雨倾泻在古老的杭州城上空，乌云密布，波光粼粼的水面泛着神秘的光芒，诡异的绿蓝色光影交错，传统的中国建筑被雨水浸透，忧心忡忡的市民抬头望天，撑开雨伞，水流潺潺，雾气和水花翻腾飞舞，水墨画风浓郁，暗色调运用，神话生物的鳞片闪闪发光，构图阴森而优雅，水滴缓缓落下，波光粼粼，营造出一种超凡脱俗的氛围，城市和湖泊的全景镜头极具电影质感，4K高清画质，展现了传奇故事般的视觉风格。",
+      "text": "Traditional Chinese watercolor folk illustration style, soft ink washes on aged paper, classical narrative aesthetic, desolate humble home scene, wooden doorframe framing a dark interior draped in spiderwebs, Xiangru in faded blue scholar's robe sitting on uneven stone floor at the door, head bowed in sorrow, empty rice jar and cobwebbed stove visible inside, bare earthen walls, dim lighting emphasizing loneliness, somber atmosphere, detailed textures of worn clothing and aged stone, flowing lines, warm yet melancholic color palette, vintage aged paper effect, ancient Chinese folk storytelling illustration, masterpiece desolation scene, 4k quality",
       "clip": [
         "84",
         0
@@ -162,7 +162,7 @@
   },
   "97": {
     "inputs": {
-      "image": "4.png"
+      "image": "47.png"
     },
     "class_type": "LoadImage",
     "_meta": {

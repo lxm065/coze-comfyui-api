@@ -116,7 +116,7 @@
   },
   "93": {
     "inputs": {
-      "text": "传统中国插画风格，一条阴森恐怖的黑色鱼妖从西湖深水中浮现，神秘生物喷吐着雾气，向上喷射水柱，巨大的水柱从湖面升腾而起，鱼腥雨倾泻在古老的杭州城上空，乌云密布，波光粼粼的水面泛着神秘的光芒，诡异的绿蓝色光影交错，传统的中国建筑被雨水浸透，忧心忡忡的市民抬头望天，撑开雨伞，水流潺潺，雾气和水花翻腾飞舞，水墨画风浓郁，暗色调运用，神话生物的鳞片闪闪发光，构图阴森而优雅，水滴缓缓落下，波光粼粼，营造出一种超凡脱俗的氛围，城市和湖泊的全景镜头极具电影质感，4K高清画质，展现了传奇故事般的视觉风格。",
+      "text": "Traditional Chinese ancient style illustration, Chinese folk painting elements, indoor scene in an old house, Wei Lao-tou leading Xiangru to the inner room to meet his mother-in-law, the girl sitting with her mother, too late to hide, so she stands shyly behind her mother, Xiangru steals a glance, seeing she is plainly dressed but dignified and beautiful, feeling secretly happy, classical costumes, red curtain with patterns, wooden furniture, delicate lines, warm colors, folk illustration style, high quality, 4k",
       "clip": [
         "84",
         0
@@ -162,7 +162,7 @@
   },
   "97": {
     "inputs": {
-      "image": "4.png"
+      "image": "16.png"
     },
     "class_type": "LoadImage",
     "_meta": {
